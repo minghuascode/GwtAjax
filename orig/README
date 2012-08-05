@@ -5,3 +5,45 @@ gwt-linux-1.7.1.tar.bz2
 https://developers.google.com/web-toolkit/versions
 
 
+Install
+==========
+
+JDK and NetBeans
+Installed in $HOME/bin/jdk1.6.0_25 and $HOME/bin/netbeans.
+Will use the ant coming with NetBeans.
+
+Set .bash_profile:
+
+ JAVA_HOME=$HOME/bin/jdk1.6.0_25
+ export JAVA_HOME
+
+ ANT_HOME=$HOME/bin/netbeans/java/ant
+ export ANT_HOME
+
+ PATH=$JAVA_HOME/bin:$PATH
+ PATH=$ANT_HOME/bin:$PATH
+
+ export PATH
+
+On Fedora 14, install compat-libstdc++-33 for the hosted mode to work. 
+
+
+Run Example Hello
+==================
+
+cd work/gwt-linux-1.7.1/samples/Hello
+ant hosted
+
+
+Run Example Hello Out-of-the-tree
+==================================
+
+cd work
+mkdir build
+cp -a gwt-linux-1.7.1/samples/Hello ./build
+cd build/Hello
+
+Edit build.xml to change gwt.sdk pointing to ../../gwt-linux-1.7.1
+
+ant hosted
+
