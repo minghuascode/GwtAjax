@@ -47,3 +47,78 @@ Edit build.xml to change gwt.sdk pointing to ../../gwt-linux-1.7.1
 
 ant hosted
 
+
+Run Example Hello Out-of-the-tree in NetBeans
+==============================================
+
+Create a java project with existing code using the same work/Hello 
+directory for the project. Netbeans will add two files to Hello 
+directory. Ignore them. Use file window in Netbeans, right click 
+on build.xml node, and run build or hosted target. The ant inside 
+Netbeans will just build everything as if you are doing it from 
+command line. 
+
+To have the sample Hello to build please add the gwt-user.jar 
+to the library. To have the sample Showcase to build please 
+add also gwt-dev-<os>.jar, because the java code need to generate 
+also the source code into the HTML pages. 
+
+
+Run on Windows 64bit 
+======================
+
+Install JDK 64bit. 
+Install Netbeans JavaSE.
+Install JRE 32bit. 
+
+Edit build.xml: 
+[1] "gwt.sdk" same as mentioned above.
+[2] Change the target "java" under "hosted" to have an extra value for 
+    property jvm: jvm="C:\\Users\\whoami\\Programs\\jre6.32\\bin\\java".
+    The path is the jre 32bit installation.
+
+
+Debug with Java Debugger
+=========================
+
+Refer to page 96 of "Beginning Google Web Toolkit From Novice to Professional" 
+ by Bram Smeets, Uri Boness, and Ronald Bankras
+ Apress, 2008
+
+java -Xdebug \
+  -Xrunjdmp:transport-dt_socket,address=127.0.0.1:52996,suspend=y,server=n \
+  -cp "$APPDIR/src:$APPDIR/bin:$GWT_HOME/gwt-user.jar:$GWT_HOME/gwt-dev-linux.jar" \
+  com.google.gwt.dev.GWTShell -out "$APPDIR/www" "$@" \
+  com.abc.gwt.GWTasks/GWTasks.html
+
+
+Options for Hosted Mode 
+=========================
+
+java -cp gwt-dev-<your platform here>.jar com.google.gwt.dev.HostedMode
+Missing required argument 'module[s]'
+Google Web Toolkit 1.7.0
+HostedMode [-noserver] [-port port-number | "auto"] [-whitelist whitelist-string]
+  [-blacklist blacklist-string] [-logLevel level] [-gen dir] [-style style] [-ea]
+  [-server servletContainerLauncher] [-startupUrl url] [-war dir] [-extra dir]
+  [-workDir dir] [-localWorkers count] module[s]
+
+where
+  -noserver      Prevents the embedded web server from running
+  -port          Specifies the TCP port for the embedded web server (defaults to 8888)
+  -whitelist     Allows the user to browse URLs that match the specified regexes (comma or space separated)
+  -blacklist     Prevents the user browsing URLs that match the specified regexes (comma or space separated)
+  -logLevel      The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL
+  -gen           The directory into which generated files will be written for review
+  -style         Script output style: OBF[USCATED], PRETTY, or DETAILED (defaults to OBF)
+  -ea            Debugging: causes the compiled output to check assert statements.
+  -server        Specifies a different embedded web server to run (must implement ServletContainerLauncher)
+  -startupUrl    Automatically launches the specified URL
+  -war           The war directory to write output files into (defaults to war)
+  -extra         The directory into which extra, non-deployed files will be written
+  -workDir       The compiler work directory (must be writeable; defaults to a system temp dir)
+  -localWorkers  Specifies the number of local workers to use when compiling permutations
+and
+  module[s]      Specifies the name(s) of the module(s) to host
+
+

@@ -1,0 +1,2400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+  
+  <title>Coding Basics - Google Web Toolkit &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    <div id="sandbar">
+      
+      <a href="/sandbar?q=&page_url=/web-toolkit/doc/1.6/DevGuideCodingBasics"></a>
+      <div id="gc-googlebar"></div>
+      <img src="/images/google-logo.png" style="display:none;"/>
+      
+    </div>
+    
+    
+
+    <div id="gc-wrapper">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Events</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      <div id="gc-appbar">
+        
+        <h1>
+          
+
+  <a href="/web-toolkit/">Google Web Toolkit</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/web-toolkit/"
+      data-size="medium"
+      data-count="count"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+
+        </h1>
+        
+      </div>
+      
+
+      
+      <div id="gc-main">
+        
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><span class="tlw-title" data-title="Docs:">Docs:</span></li><li class=""><a href="/web-toolkit/doc/latest" data-title="Latest Version"><span>Latest Version</span></a></li><li class=""><span class="tlw-title" data-title="Older Versions">Older Versions</span><ul><li class=""><a href="/web-toolkit/doc/2.4" data-title="2.4"><span>2.4</span></a></li><li class=""><a href="/web-toolkit/doc/2.3" data-title="2.3"><span>2.3</span></a></li><li class=""><a href="/web-toolkit/doc/2.2" data-title="2.2"><span>2.2</span></a></li><li class=""><a href="/web-toolkit/doc/2.1" data-title="2.1"><span>2.1</span></a></li><li class=""><a href="/web-toolkit/doc/2.0" data-title="2.0"><span>2.0</span></a></li></ul></li></ul><hr/><ul><li class=""><a href="/web-toolkit/download" data-title="Downloads"><span>Downloads</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/" data-title="GWT Designer"><span>GWT Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/download-gwtdesigner" data-title="Download"><span>Download</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/quick_start" data-title="Quick Start"><span>Quick Start</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/whatsnew" data-title="What&#39;s New"><span>What&#39;s New</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation" data-title="Installation"><span>Installation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/system" data-title="System Requirements"><span>System Requirements</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.7" data-title="Using update site for Eclipse 3.7"><span>Using update site for Eclipse 3.7</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.6" data-title="Using update site for Eclipse 3.6"><span>Using update site for Eclipse 3.6</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.5" data-title="Using update site for Eclipse 3.5"><span>Using update site for Eclipse 3.5</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.4" data-title="Using update site for Eclipse 3.4"><span>Using update site for Eclipse 3.4</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/uninstall" data-title="Uninstall"><span>Uninstall</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface" data-title="User Interface"><span>User Interface</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/design_view" data-title="Design View"><span>Design View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/source_view" data-title="Source View"><span>Source View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/structure_view" data-title="Structure View"><span>Structure View</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/component_tree" data-title="Component Tree"><span>Component Tree</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane" data-title="Property Pane"><span>Property Pane</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane_context_menu" data-title="Property Pane Context Menu"><span>Property Pane Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string" data-title="String Editor"><span>String Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string_array" data-title="String Array Editor"><span>String Array Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_color" data-title="Color Editor"><span>Color Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_font" data-title="Font Editor"><span>Font Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_image" data-title="Icon / Image Editor"><span>Icon / Image Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_point" data-title="Point Editor"><span>Point Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_rectangle" data-title="Rectangle Editor"><span>Rectangle Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_inset" data-title="Inset Editor"><span>Inset Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_taborder" data-title="Tab Order Editor"><span>Tab Order Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/properties/property_editor_style_name" data-title="Style Name Editor"><span>Style Name Editor</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette" data-title="Palette"><span>Palette</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_context_menu" data-title="Palette Context Menu"><span>Palette Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_manager" data-title="Palette Manager"><span>Palette Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/palettes/gwt_palette" data-title="GWT Designer Palette"><span>GWT Designer Palette</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/NewComponentsTutorial.pdf" data-title="New Components Tutorial (PDF)"><span>New Components Tutorial (PDF)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/DesignerCustomizationAPI.pdf" data-title="Designer Customization API (PDF)"><span>Designer Customization API (PDF)</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/toolbar" data-title="Toolbar"><span>Toolbar</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/context_menu" data-title="Context Menu"><span>Context Menu</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features" data-title="Features"><span>Features</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/bidirectional" data-title="Bi-directional Code Generation"><span>Bi-directional Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt_code_generation" data-title="GWT Code Generation"><span>GWT Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/custom_composites" data-title="Custom Panels"><span>Custom Panels</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/factories" data-title="Factories"><span>Factories</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/visual_inheritance" data-title="Visual Inheritance"><span>Visual Inheritance</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/event_handling" data-title="Event Handling"><span>Event Handling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/menu_editing" data-title="Menu Editing"><span>Menu Editing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/morphing" data-title="Morphing"><span>Morphing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/editing_existing_window" data-title="Editing Existing Windows"><span>Editing Existing Windows</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_compiling" data-title="Application Compiling"><span>Application Compiling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_launching" data-title="Application Launching"><span>Application Launching</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/module_deployment" data-title="Build &amp; Deployment"><span>Build &amp; Deployment</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/css_support" data-title="CSS Support"><span>CSS Support</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/enhanced_compilation" data-title="Enhanced Compilation"><span>Enhanced Compilation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/image_bundles" data-title="Image Bundles"><span>Image Bundles</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/internationalization" data-title="Internationalization (i18n)"><span>Internationalization (i18n)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/junit_testcase" data-title="JUnit Test Creation"><span>JUnit Test Creation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/project" data-title="Projects"><span>Projects</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/refactoring" data-title="Refactoring"><span>Refactoring</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/remoteservice" data-title="Remote Services"><span>Remote Services</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gwt-ext" data-title="Using GWT-Ext"><span>Using GWT-Ext</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gxt" data-title="Using Ext GWT (GXT)"><span>Using Ext GWT (GXT)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/smartgwt" data-title="Using SmartGWT"><span>Using SmartGWT</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt" data-title="Panels"><span>Panels</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/absolutepanel" data-title="AbsolutePanel"><span>AbsolutePanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/dockpanel" data-title="Dock[Layout]Panel"><span>Dock[Layout]Panel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flextable" data-title="FlexTable"><span>FlexTable</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flowpanel" data-title="FlowPanel"><span>FlowPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/gridpanel" data-title="Grid"><span>Grid</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/layoutpanel" data-title="LayoutPanel"><span>LayoutPanel</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt" data-title="Wizards"><span>Wizards</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/entrypoint" data-title="Java EntryPoint"><span>Java EntryPoint</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/composite" data-title="Java Composite"><span>Java Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/dialogbox" data-title="Java DialogBox"><span>Java DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/popuppanel" data-title="Java PopupPanel"><span>Java PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_composite" data-title="UiBinder Composite"><span>UiBinder Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_dialogbox" data-title="UiBinder DialogBox"><span>UiBinder DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_popuppanel" data-title="UiBinder PopupPanel"><span>UiBinder PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/module" data-title="GWT Module"><span>GWT Module</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/library" data-title="GWT Library"><span>GWT Library</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences" data-title="Preferences"><span>Preferences</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_code_parsing" data-title="Code Parsing"><span>Code Parsing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt" data-title="GWT"><span>GWT</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_builder" data-title="Builder"><span>Builder</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_code_generation" data-title="Code Generation"><span>Code Generation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_nls" data-title="NLS"><span>NLS</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_variables" data-title="Variables"><span>Variables</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts" data-title="Layouts"><span>Layouts</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts_absolute" data-title="Absolute"><span>Absolute</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer" data-title="Google-Web Toolkit-Designer"><span>Google-Web Toolkit-Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_absolute_layout" data-title="Absolute Layout"><span>Absolute Layout</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_code_style" data-title="Code Style"><span>Code Style</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_uitoolkits" data-title="UI Toolkits"><span>UI Toolkits</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_export" data-title="Export/Import"><span>Export/Import</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials" data-title="Tutorials"><span>Tutorials</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/loginmanager" data-title="GWT Login Manager"><span>GWT Login Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/stockwatcher" data-title="GWT Stock Watcher"><span>GWT Stock Watcher</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/product_support" data-title="Product Support"><span>Product Support</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/error_reporting" data-title="Error Reporting"><span>Error Reporting</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/test_cases" data-title="Reproducible Test Cases"><span>Reproducible Test Cases</span></a></li><li class=""><a href="http://groups.google.com/group/google-web-toolkit" data-title="Forum"><span>Forum</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/accessibility" data-title="Accessibility"><span>Accessibility</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tipsandtricks" data-title="Tips &amp; Tricks"><span>Tips &amp; Tricks</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tos" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></li></ul><hr/><ul><li class=""><span class="tlw-title" data-title="Resources:">Resources:</span></li><li class=""><a href="/web-toolkit/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="/web-toolkit/books" data-title="Books"><span>Books</span></a></li><li class=""><a href="/web-toolkit/casestudies" data-title="Case Studies"><span>Case Studies</span></a></li><li class=""><a href="/web-toolkit/community" data-title="Community"><span>Community</span></a><ul><li class=""><a href="http://gwtgallery.appspot.com" data-title="App Gallery"><span>App Gallery</span></a></li><li class=""><a href="/web-toolkit/developer_spotlight" data-title="Developer Spotlight"><span>Developer Spotlight</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools" data-title="Tools &amp; Libraries"><span>Tools &amp; Libraries</span></a></li><li class=""><a href="/web-toolkit/media_gallery" data-title="Presentations"><span>Presentations</span></a></li><li class=""><a href="/web-toolkit/makinggwtbetter" data-title="Making GWT Better"><span>Making GWT Better</span></a></li><li class=""><a href="/web-toolkit/lifeofanissue" data-title="Issue Tracking"><span>Issue Tracking</span></a></li><li class=""><a href="http://googlewebtoolkit.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="/web-toolkit/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 class="page-title" >Coding Basics</h1>
+  
+  
+
+
+
+<ol class="toc" id="pageToc">
+  <li><a href="#DevGuideClientSide">Client-side code</a></li>
+  <li><a href="#DevGuideJavaCompatibility">Compatibility with the Java Language and Libraries</a></li>
+  <li><a href="#DevGuideHistory">History</a></li>
+  <li><a href="#DevGuideDateAndNumberFormat">Number and Date Formatting</a></li>
+  <li><a href="#DevGuideDeferredCommand">Programming Delayed Logic</a></li>
+  <li><a href="#DevGuideJSON">Working with JSON</a></li>
+  <li><a href="#DevGuideXML">Working with XML</a></li>
+  <li><a href="#DevGuideJavaScriptNativeInterface">JavaScript Native Interface (JSNI)</a></li>
+  <li><a href="#DevGuideOverlayTypes">JavaScript Overlay Types</a></li>
+  <li><a href="#DevGuideDeferredBinding">Deferred Binding</a></li>
+</ol>
+
+<h1 id="DevGuideClientSide">Client-side code</h1>
+
+<p>Your application is sent across a network to a user, where it runs as JavaScript inside his or her web browser. Everything that happens within the user's web browser is
+referred to as <i>client-side processing</i>. When you write client-side code that is intended to run in the web browser, remember that it ultimately becomes JavaScript. Thus, it
+is important to use only <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaCompatibility">libraries and Java language constructs</a> that can be translated into JavaScript.</p>
+
+<h2>Creating an EntryPoint Class</h2>
+
+<p>To begin writing a GWT module, subclass the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/EntryPoint.html">EntryPoint</a> class.</p>
+
+<p><strong>Tip:</strong> GWT applicationCreator creates a starter application for you with a sample EntryPoint subclass defined.</p>
+
+<pre class="prettyprint">
+package com.example.foo.client;
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
+
+/**
+ * Entry point classes define onModuleLoad().
+ */
+public class Foo implements EntryPoint {
+
+  /**
+   * This is the entry point method. Initialize you GWT module here.
+   */
+  public void onModuleLoad() { 
+
+    // Writes Hello World to the Hosted Browser log window.
+    GWT.log(&quot;Hello World!&quot;, null);
+  }
+}
+</pre>
+
+<h3>Writing the entry point method</h3>
+
+<p>The entry point method is onModuleLoad(). It contains the code that executes when you launch the application. Typically, the types of things you do in the onModuleLoad() method
+are:</p>
+
+<ul>
+<li>create new user interface components</li>
+
+<li>set up handlers for <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideEventsAndHandlers">events</a></li>
+
+<li>modify the browser DOM in some way</li>
+</ul>
+
+
+
+<p>
+The example above logs a message to the Hosted Browser console. 
+If you try to run this example application in web mode, you won't see anything because the GWT.log() method is compiled away when the client-side code is translated into JavaScript.
+</p>
+
+<h2>Hello World Example</h2>
+
+<p>Included with the GWT distribution is a sample &quot;Hello World&quot; program that looks like this when run in hosted mode:</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/HelloWorld.png"/></p>
+
+<pre class="prettyprint">
+package com.google.gwt.sample.hello.client;
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * Hello World application.
+ */
+public class Hello implements EntryPoint {
+
+  public void onModuleLoad() {
+    Button b = new Button(&quot;Click me&quot;, new ClickHandler() {
+      public void onClick(ClickEvent event) {
+        Window.alert(&quot;Hello, AJAX&quot;);
+      }
+    });
+
+    RootPanel.get().add(b);
+  }
+}
+</pre>
+
+<p>In the entry point method for the Hello World application, the following actions were taken:</p>
+
+<ul>
+<li>a new Button widget was created with the text &quot;Click me&quot;</li>
+
+<li>a handler was created to respond to the user clicking the button</li>
+
+<li>the handler pops up an Alert dialog</li>
+
+<li>the button is added to the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RootPanel.html">Root panel</a></li>
+</ul>
+
+
+
+<h1 id="DevGuideJavaCompatibility">Compatibility with the Java Language and Libraries</h1>
+
+<h2>Language support</h2>
+
+<p>GWT supports most of the core Java language syntax and semantics, but there are a few differences you will want to be aware of.</p>
+
+<blockquote>Note: As of GWT 1.5, GWT compiles the Java language syntax that is compatible with J2SE 1.5 or earlier. Versions of GWT prior to GWT 1.5 are limited to Java 1.4 source
+compatibility. For example, GWT 1.6 supports generics, whereas GWT 1.4 does not.</blockquote>
+
+<p>It is important to remember that the target language of your GWT application is ultimately JavaScript, so there are some differences between running your application in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideHostedMode">hosted mode</a> and <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideWebMode">web mode</a>:</p>
+
+<ul>
+<li><strong>Intrinsic types</strong>: Primitive types (<tt>boolean</tt>, <tt>byte</tt>, <tt>char</tt>, <tt>short</tt>, <tt>int</tt>, <tt>long</tt>, <tt>float</tt>, and
+<tt>double</tt>), <tt>Object</tt>, <tt>String</tt>, arrays, user-defined classes, etc. are all supported, with a couple of caveats.</li>
+
+<li style="list-style: none">
+<ul>
+<li><strong>Arithmetic</strong>: In JavaScript, the only available numeric type is a 64-bit floating point value. All Java primitive numeric types (except for long, see below),
+are therefore implemented in web mode as if on doubles. Primarily, that means overflowing an integral data type (<tt>byte</tt>, <tt>char</tt>, <tt>short</tt>, <tt>int</tt>) will
+not wrap the underlying value as Java specifies. Instead, the resulting value will outside of the legal range for that data type. Operations on <tt>float</tt> are performed as
+<tt>double</tt> and will result in more-than-expected precision. Integer division is implemented to explicitly round to the correct value.</li>
+
+<li><strong><tt>long</tt></strong>: JavaScript has no 64-bit integral type, so <tt>long</tt> needs special consideration. Prior to GWT 1.5, the <tt>long</tt> type was was simply
+mapped to the integral range of a 64-bit JavaScript <i>floating-point</i> value, giving <tt>long</tt> variables an actual range less than the full 64 bits. As of GWT 1.5,
+<tt>long</tt> primitives are emulated as a pair of 32-bit integers, and work reliably over the entire 64-bit range. Overflow is emulated to match the expected behavior. There are
+a couple of caveats. Heavy use of <tt>long</tt> operations will have a performance impact due to the underlying emulation. Additionally, long primitives cannot be used in <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI code</a> because they are not a native JavaScript numeric type.</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><strong>Exceptions</strong>: <tt>try</tt>, <tt>catch</tt>, <tt>finally</tt> and user-defined exceptions are supported as normal, although <tt>Throwable.getStackTrace()</tt> is
+not meaningfully supported in web mode.</li>
+</ul>
+
+<blockquote>Note: Several fundamental exceptions implicitly produced by the Java VM, most notably <tt>NullPointerException</tt>, <tt>StackOverflowError</tt>, and
+<tt>OutOfMemoryError</tt>, do not occur in web mode as such. Instead, a <tt>JavaScriptException</tt> is produced for any implicitly generated exceptions. This is because the
+nature of the underlying JavaScript exception cannot be reliably mapped onto the appropriate Java exception type.</blockquote>
+
+<p/>
+
+<ul>
+<li><strong>Assertions</strong>: <tt>assert</tt> statements are always active in hosted mode because it's a great way for GWT libraries to provide lots of helpful error checking
+while you're debugging. The GWT compiler removes and ignores all assertions by default, but you can enable them in web mode by specifying the <tt>-ea</tt> flag to
+<tt>GWTCompiler</tt>.</li>
+</ul>
+
+
+
+<ul>
+<li><strong>Multithreading and Synchronization</strong>: JavaScript interpreters are single-threaded, so while GWT silently accepts the <tt>synchronized</tt> keyword, it has no
+real effect. Synchronization-related library methods are not available, including <tt>Object.wait()</tt>, <tt>Object.notify()</tt>, and <tt>Object.notifyAll().</tt> The compiler
+will ignore the synchronized keyword but will refuse to compile your code if the <tt>Object</tt>'s related synchronization methods are invoked.</li>
+</ul>
+
+<ul>
+<li><strong>Reflection</strong>: For maximum efficiency, GWT compiles your Java source into a monolithic script, and does not support subsequent dynamic loading of classes. This
+and other optimizations preclude general support for reflection. However, it is possible to query an object for its class name using Object.getClass().<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html#getName()">getName()</a>.</li>
+</ul>
+
+<ul>
+<li><strong>Finalization</strong>: JavaScript does not support object finalization during garbage collection, so GWT is not able to be honor Java finalizers in web mode.</li>
+</ul>
+
+<ul>
+<li><strong>Strict Floating-Point</strong>: The Java language specification precisely defines floating-point support, including single-precision and double-precision numbers as
+well as the <tt>strictfp</tt> keyword. GWT does not support the <tt>strictfp</tt> keyword and can not ensure any particular degree of floating-point precision in translated code,
+so you may want to avoid calculations in client-side code that require a guaranteed level of floating-point precision.</li>
+</ul>
+
+<h2>Runtime library support</h2>
+
+<p>GWT supports only a small subset of the classes available in the Java 2 Standard and Enterprise Edition libraries, as these libraries are quite large and rely on functionality
+that is unavailable within web browsers. To find out exactly which classes and methods are supported for core Java runtime packages, see the GWT <a href="/web-toolkit/doc/1.6/RefJreEmulation">JRE Emulation Reference</a>.</p>
+
+<blockquote><i>Tip: You will save yourself a lot of frustration if you make sure that you use only <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideJavaToJavaScriptCompiler">translatable</a> classes in your <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideClientSide">client-side code</a> from the
+very beginning. To help you identify problems early, your code is checked against the JRE emulation library whenever you run in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideHostedMode">hosted mode</a>. As a result, most uses of unsupported libraries will be caught the first time you attempt to run your
+application. So,</i> run early and often<i>.</i></blockquote>
+
+<h2>Differences between JRE and emulated classes</h2>
+
+<p>Some specific areas in which GWT emulation differs from the standard Java runtime:</p>
+
+<ul>
+<li><strong>Regular Expressions</strong>: The syntax of <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html" rel="nofollow">Java regular expressions</a>
+is similar, but not identical, to <a href="http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Guide:Regular_Expressions" rel="nofollow">JavaScript regular expressions</a>.
+For example, the <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#replaceAll(java.lang.String,%20java.lang.String)" rel="nofollow">replaceAll</a> and <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#split(java.lang.String)" rel="nofollow">split</a> methods use regular expressions. So, you will probably want
+to be careful to only use Java regular expressions that have the same meaning in JavaScript.</li>
+</ul>
+
+<ul>
+<li><strong>Serialization</strong>: Java serialization relies on a few mechanisms that are not available in compiled JavaScript, such as dynamic class loading and reflection. As a
+result, GWT does not support standard Java serialization. Instead, GWT has an <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideRemoteProcedureCalls">RPC</a> facility that provides
+automatic object serialization to and from the server for the purpose of invoking remote methods.</li>
+</ul>
+
+<blockquote><i>Note: For a list of JRE classes that GWT can translate out of the box, see the GWT <a href="/web-toolkit/doc/1.6/RefJreEmulation">JRE Emulation
+Reference</a>.</i></blockquote>
+
+<h2>Classes that provide similar functionality</h2>
+
+<p>In some classes, the functionality of the class is too expensive to be emulated entirely, so a similar routine in another package is provided instead. Here are some commonly
+used routines that provide a subset of the native JRE functionality:</p>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html">com.google.gwt.i18n.client.DateTimeFormat</a> : Supports a subset of <tt>java.util.DateTimeFormat</tt>. See examples in the <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDateAndNumberFormat">date and number formatting</a> section.</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html">com.google.gwt.i18n.client.NumberFormat</a> : Supports a subset of <tt>java.util.NumberFormat</tt>. See examples in the <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDateAndNumberFormat">date and number format</a> section.</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/rpc/IsSerializable.html">com.google.gwt.user.client.rpc</a>
+: A marker class used similarly to <tt>java.io.Serializable</tt> for GWT RPC.</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/Timer.html" >com.google.gwt.user.client.Timer</a> : A
+simplified, browser-safe timer class. This class serves the same purpose as <tt>java.util.Timer</tt>, but is simplified because of the single-threaded environment.</li>
+</ul>
+
+<h1 id="DevGuideHistory">History</h1>
+
+<p>Ajax applications sometimes fail to meet user's expectations because they do not interact with the browser in the same way as static web pages. This is often apparent -- and
+frustrating for users -- when an Ajax application does not integrate with browser history. For example, users expect browsers to be able to navigate back to previous pages visited
+using back and forward actions. Because an Ajax application is a usually single page running JavaScript logic and not a series of pages, the browser history needs help from the
+application to support this use case. Thankfully, GWT's history mechanism makes history support fairly straightforward.</p>
+
+<h2>The GWT History Mechanism</h2>
+
+<p>GWT's History mechanism has a lot in common with other Ajax history implementations, such as <a href="http://code.google.com/p/reallysimplehistory" rel="nofollow">RSH (Really
+Simple History)</a>. The basic premise is to keep track of the application's &quot;internal state&quot; in the url fragment identifier. This works because updating the fragment doesn't
+typically cause the page to be reloaded.</p>
+
+<p>This approach has several benefits:</p>
+
+<ul>
+<li>It's about the only way to control the browser's history reliably.</li>
+
+<li>It provides good feedback to the user.</li>
+
+<li>It's &quot;bookmarkable&quot;. I.e., the user can create a bookmark to the current state and save it, email it, et cetera.</li>
+</ul>
+
+
+
+<h2>History Tokens</h2>
+
+<p>GWT includes a mechanism to help Ajax developers activate browser history. For each page that is to be navigable in the history, the application should generate a unique
+history token. A token is simply a string that the application can parse to return to a particular state. This token will be saved in browser history as a URL fragment (in the
+location bar, after the &quot;#&quot;), and this fragment is passed back to the application when the user goes back or forward in history, or follows a link.</p>
+
+<p>For example, a history token named &quot;page1&quot; would be added to a URL as follows:</p>
+
+<pre class="prettyprint">
+http://www.example.com/com.example.gwt.HistoryExample/HistoryExample.html#page1
+</pre>
+
+<p>When the application wants to push a placeholder onto the browser's history stack, it simply invokes <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/History.html#newItem(java.lang.String)">History.newItem(token)</a>. When
+the user uses the back button, a call will be made to any object that was added as a handler with <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/History.html#addValueChangeHandler(com.google.gwt.event.logical.shared.ValueChangeHandler)">History.addValueChangeHandler()</a>. It is up to the application to restore the state according to the value of the new token.</p>
+
+<h2>Example</h2>
+
+<p>To use GWT History support, you must first embed an iframe into your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML page</a>.</p>
+
+<pre class="prettyprint">
+  &lt;iframe src=&quot;javascript:''&quot; 
+          id=&quot;__gwt_historyFrame&quot; 
+          style=&quot;width:0;height:0;border:0&quot;&gt;&lt;/iframe&gt;
+</pre>
+
+<p>Then, in your GWT application, perform the following steps:</p>
+
+<ul>
+<li>Add a history token to the history stack when you want to enable a history event.</li>
+
+<li>Create an object that implements the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/event/logical/shared/ValueChangeHandler.html">ValueChangeHandler</a> interface, parses the new token (available by calling <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/event/logical/shared/ValueChangeEvent.html#getValue()">ValueChangeEvent.getValue()</a>) and changes the application state to match.</li>
+</ul>
+
+<p>The following short example shows how to add a history event each time the user selects a new tab in a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a>.</p>
+
+<pre class="prettyprint">
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.user.client.History;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TabPanel;
+
+/**
+ * Entry point classes define &lt;code&gt;onModuleLoad()&lt;/code&gt;.
+ */
+public class BrowserHistoryExample implements EntryPoint {
+
+  TabPanel tabPanel;
+  /**
+   * This is the entry point method.
+   */
+  public void onModuleLoad() {
+    tabPanel = new TabPanel();
+
+    tabPanel.add(new HTML(&quot;&lt;h1&gt;Page 0 Content: Llamas&lt;/h1&gt;&quot;), &quot; Page 0 &quot;);
+    tabPanel.add(new HTML(&quot;&lt;h1&gt;Page 1 Content: Alpacas&lt;/h1&gt;&quot;), &quot; Page 1 &quot;);
+    tabPanel.add(new HTML(&quot;&lt;h1&gt;Page 2 Content: Camels&lt;/h1&gt;&quot;), &quot; Page 2 &quot;);
+
+    tabPanel.addSelectionHandler(new SelectionHandler&lt;Integer&gt;(){
+      public void onSelection(SelectionEvent&lt;Integer&gt; event) {
+        // TODO Auto-generated method stub
+        History.newItem(&quot;page&quot; + event.getSelectedItem());
+      }});
+
+    History.addValueChangeHandler(new ValueChangeHandler&lt;String&gt;() {
+      public void onValueChange(ValueChangeEvent&lt;String&gt; event) {
+        String historyToken = event.getValue();
+
+        // Parse the history token
+        try {
+          if (historyToken.substring(0, 4).equals(&quot;page&quot;)) {
+            String tabIndexToken = historyToken.substring(4, 5);
+            int tabIndex = Integer.parseInt(tabIndexToken);
+            // Select the specified tab panel
+            tabPanel.selectTab(tabIndex);
+          } else {
+            tabPanel.selectTab(0);
+          }
+
+        } catch (IndexOutOfBoundsException e) {
+          tabPanel.selectTab(0);
+        }
+      }
+    });
+
+    tabPanel.selectTab(0);
+    RootPanel.get().add(tabPanel);
+  }
+}
+</pre>
+
+<h2>Hyperlink Widgets</h2>
+
+<p>Hyperlinks are convenient to use to incorporate history support into an application. Hyperlink widgets are GWT widgets that look like regular HTML anchors. You can associate a
+history token with the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Hyperlink.html">Hyperlink</a>, and when it is
+clicked, the history token is automatically added to the browser's history stack. The <tt>History.newItem(token)</tt> step is done automatically.</p>
+
+<h2>Stateful applications</h2>
+
+<p>Special care must be taken in handling history for applications that store state. Enough information must be coded into the history token to restore the application state back
+to the point at which the history token was set. The application must also be careful to clear away any state not relevant to navigating back to a previously visited page.</p>
+
+<p>As an example, an application that presents a multi-page questionnaire could encode the page number as a token as well as some other states. When a new page in the
+questionnaire is presented, a history token is added to the history stack. Note that with stateful applications, such as a questionnaire, some careful thought needs to be given to
+implementing the history callback. When returning to a page using a token, some logic needs to restore the previous state.</p>
+
+<table>
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">Token</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Action</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">&quot;info&quot;</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Navigate to page where user enters biographic info. Restore previously entered data</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">&quot;page1&quot;</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Navigate to page 1 in the questionnaire. Restore previous answers.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">&quot;page2&quot;</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Navigate to page 2 in the questionnaire. Restore previous answers.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">&quot;page&quot;
+
+<pre>
+<span class="error">&lt;n&gt;</span>
+</pre>
+</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Navigate to page 
+
+<pre>
+<span class="error">&lt;n&gt;</span>
+</pre>
+
+...</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">&quot;end&quot;</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Navigate to the end of the questionnaire. Validate that all questions were answered. Make sure not to re-submit the
+questionnaire.</td>
+</tr>
+</table>
+
+
+
+<p>In the above case, navigating back to a page would be possible, but there isn't enough information in the history token to restore the user's previous answers. A better
+encoding for the token would be a syntax such as:</p>
+
+<pre class="prettyprint">
+  page=&lt;pagename&gt;;session=&lt;sessionname&gt;
+</pre>
+
+<p>Where <tt>&lt;pagename&gt;</tt> tells the application which page to go to and <tt>&lt;sessionname&gt;</tt> is a key to finding the user's previously entered data in a
+database.</p>
+
+<h2>Handling an onValueChange() callback</h2>
+
+<p>The first step of handling the <tt>onValueChange()</tt> callback method in a <tt>ValueChangeHandler</tt> is to get the new history token with <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/event/logical/shared/ValueChangeEvent.html#getValue()">ValueChangeEvent.getValue()</a>; you'll then want to parse the token. Keep in mind that your parsing needs to be robust! A user may type a URL by hand or have a URL
+stored from an old version of your application. Once the token is parsed, you can reset the state of the application.</p>
+
+<p>When the <tt>onValueChange()</tt> method is invoked, your application must handle two cases:</p>
+
+<ol>
+<li>The application was just started and was passed a history token.</li>
+
+<li>The application is already running and was passed a history token.</li>
+</ol>
+
+<p>In the first case, the application must properly initialize itself before handing the state token. In the second case, some parts of the application may need to be
+re-initialized.</p>
+
+<h1 id="DevGuideDateAndNumberFormat">Number and Date Formatting in GWT</h1>
+
+<p>GWT does not provide full emulation for the date and number formatting classes (java.text.DateFormat, java.text.DecimalFormat, java.text.NumberFormat, java.TimeFormat, et
+cetera). Instead, a subset of the functionality of the JRE classes is provided by <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html">com.google.gwt.i18n.client.NumberFormat</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html">com.google.gwt.i18n.client.DateTimeFormat</a>.</p>
+
+<p>The major difference between the standard Java classes and the GWT classes are is ability to switch between different locales for formating dates and numbers at runtime. In
+GWT, the <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">deferred binding</a> mechanism is used to load only the logic needed for the current locale into the
+application.</p>
+
+<p>In order to use the <tt>NumberFormat</tt> or <tt>DateTimeFormat</tt> classes you should update your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a> with
+the following <i>inherits</i> line:</p>
+
+<pre class="prettyprint">
+  &lt;inherits name=&quot;com.google.gwt.i18n.I18N&quot;/&gt;
+</pre>
+
+<p>See the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideInternationalization">internationalization topic</a> for more information about setting up locale.</p>
+
+<h2>Using NumberFormat</h2>
+
+<p>When using the <tt>NumberFormat</tt> class, you do not instantiate it directly. Instead, you retrieve an instance by calling one of its static <tt>get...Format()</tt> methods.
+For most cases, you probably want to use the default decimal format:</p>
+
+<pre class="prettyprint">
+    NumberFormat fmt = NumberFormat.getDecimalFormat();
+    double value = 12345.6789;
+    String formatted = fmt.format(value);
+    // Prints 1,2345.6789 in the default locale
+    GWT.log(&quot;Formatted string is&quot; + formatted, null);
+</pre>
+
+<p>The class can also be used to convert a numeric string back into a double:</p>
+
+<pre class="prettyprint">
+    double value = NumberFormat.getDecimalFormat().parse(&quot;12345.6789&quot;);
+    GWT.log(&quot;Parsed value is&quot; + value, null);
+</pre>
+
+<p>The <tt>NumberFormat</tt> class also provides defaults for scientific notation:</p>
+
+<pre class="prettyprint">
+    double value = 12345.6789;
+    String formatted = NumberFormat.getScientificFormat().format(value);
+    // prints 1.2345E4 in the default locale
+    GWT.log(&quot;Formatted string is&quot; + formatted, null);
+</pre>
+
+<p>Note that you can also specify your own pattern for formatting numbers. In the example below, we want to show 6 digits of precision on the right hand side of the decimal and
+format the left hand side with zeroes up to the hundred thousands place:</p>
+
+<pre class="prettyprint">
+    double value = 12345.6789;
+    String formatted = NumberFormat.getFormat(&quot;000000.000000&quot;).format(value);
+    // prints 012345.678900 in the default locale
+    GWT.log(&quot;Formatted string is&quot; + formatted, null);
+</pre>
+
+<p>Here are the most commonly used pattern symbols for decimal formats:</p>
+
+<table>
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">Symbol</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Meaning</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">0</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Digit, zero forced</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">#</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Digit, zero shows as absent</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">.</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Decimal separator or monetary decimal separator</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">-</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Minus sign</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;">,</td>
+<td style="border: 1px solid #aaa; padding: 5px;">Grouping separator</td>
+</tr>
+</table>
+
+
+
+<p>Specifying an invalid pattern will cause the <tt>NumberFormat.getFormat()</tt> method to throw an <tt>java.lang.IllegalArgumentException</tt>. The <tt>pattern</tt>
+specification is very rich. Refer to the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html">class
+documentation</a> for the full set of features.</p>
+
+<p>If you will be using the same number format pattern more than once, it is most efficient to cache the format handle returned from <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html#getFormat(java.lang.String)">NumberFormat.getFormat(pattern)</a>.</p>
+
+<h2>Using DateTimeFormat</h2>
+
+<p>GWT provides the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html">DateTimeFormat</a> class to
+replace the functionality of the <tt>DateFormat</tt> and <tt>TimeFormat</tt> classes from the JRE.</p>
+
+<p>For the <tt>DateTimeFormat</tt> class, there are a large number of default formats defined.</p>
+
+<pre class="prettyprint">
+    Date today = new Date();
+
+    // prints Tue Dec 18 12:01:26 GMT-500 2007 in the default locale.
+    GWT.log(today.toString(), null);
+
+    // prints 12/18/07 in the default locale
+    GWT.log(DateTimeFormat.getShortDateFormat().format(today), null);
+
+    // prints December 18, 2007 in the default locale
+    GWT.log(DateTimeFormat.getLongDateFormat().format(today), null);
+
+    // prints 12:01 PM in the default locale
+    GWT.log(DateTimeFormat.getShortTimeFormat().format(today), null);
+
+    // prints 12:01:26 PM GMT-05:00 in the default locale
+    GWT.log(DateTimeFormat.getLongTimeFormat().format(today), null);
+
+    // prints Dec 18, 2007 12:01:26 PM in the default locale
+    GWT.log(DateTimeFormat.getMediumDateTimeFormat().format(today), null);
+</pre>
+
+<p>Like the <tt>NumberFormat</tt> class, you can also use this class to parse a date from a <tt>String</tt> into a <tt>Date</tt> representation. You also have the option of using
+the default formats for date and time combinations, or you may build your own using a pattern string. See the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html">DateTimeFormat</a> class documentation for specifics on how to create your own patterns.</p>
+
+<p>Be cautious when straying from the default formats and defining your own patterns. Displaying dates and times incorrectly can be extremely aggravating to international users.
+Consider the date:</p>
+
+<blockquote><tt>12/04/07</tt></blockquote>
+
+<p>In some countries this is understood to mean the date December 4th, 2007 in others, it would be April 12th, 2007, in yet another locale, it might mean April 7th, 2012. For
+displaying in a common format such as this, use the default formats and let the localization mechanism in the DateTimeFormat do the work for you.</p>
+
+<h1 id="DevGuideDeferredCommand">Programming Delayed Logic</h1>
+
+<p>Do you need to do any of the following?</p>
+
+<ul>
+<li>schedule an activity for some time in the future</li>
+
+<li>periodically query the server or update the interface</li>
+
+<li>queue up work to do that must wait for other initialization to finish</li>
+
+<li>perform a large amount of computation</li>
+</ul>
+
+
+
+<p>GWT provides three classes that you can use to defer running code until a later point in time: Timer, DeferredCommand, and IncrementalCommand.</p>
+
+<h2>Scheduling work: the Timer class</h2>
+
+<p>Use the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/Timer.html">Timer</a> class to schedule work to be done in
+the future.</p>
+
+<p>To create a timer, create a new instance of the Timer class and then override the run() method entry point.</p>
+
+<pre class="prettyprint">
+   Timer timer = new Timer() {
+      public void run() {
+    Window.alert (&quot;Timer expired!&quot;);
+      }
+    };
+
+    // Execute the timer to expire 2 seconds in the future
+    timer.schedule(2000);
+</pre>
+
+<p>Notice that the timer will not have a chance to execute the run() method until after control returns to the JavaScript event loop.</p>
+
+<h3>Creating Timeout Logic</h3>
+
+<p>One typical use for a timer is to timeout a long running command. There are a few rules of thumb to remember in this situation:</p>
+
+<ul>
+<li>Store the timer in an instance variable.</li>
+
+<li>Always check to see that the timer is not currently running before starting a new one. (Check the instance variable to see that it is null.)</li>
+
+<li>Remember to cancel the timer when the command completes successfully.</li>
+
+<li>Always set the instance variable to null when the command completes or the timer expires.</li>
+</ul>
+
+<p>Below is a an example of using a timeout with a <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideRemoteProcedureCalls">Remote Procedure Call</a> (RPC).</p>
+
+<pre class="prettyprint">
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+
+public class Foo {
+
+  // A keeper of the timer instance in case we need to cancel it
+  private Timer timeoutTimer = null;
+
+  // An indicator when the computation should quit
+  private boolean abortFlag = false;
+
+  static final int TIMEOUT = 30; // 30 second timeout
+
+  void startWork () {
+
+    // ...
+
+    // Check to make sure the timer isn't already running.
+    if (timeoutTimer != null) {
+        Window.alert(&quot;Command is already running!&quot;);
+        return;
+    }
+
+    // Create a timer to abort if the RPC takes too long
+    timeoutTimer = new Timer() {
+      public void run() {
+        Window.alert(&quot;Timeout expired.&quot;);
+        timeoutTimer = null;
+        abortFlag = true;
+      }
+    };
+
+    // (re)Initialize the abort flag and start the timer.
+    abortFlag = false;
+    timeoutTimer.schedule(TIMEOUT * 1000); // timeout is in milliseconds
+
+    // Kick off an RPC
+    myService.myRpcMethod(arg, new AsyncCallback() {
+
+      public void onFailure(Throwable caught) {
+         Window.alert(&quot;RPC Failed:&quot; + caught);
+         cancelTimer();
+      }  
+
+      public void onSuccess(Object result) {
+         cancelTimer();
+         if (abortFlag) {
+           // Timeout already occurred. discard result
+           return;
+         }
+         Window.alert (&quot;RPC returned: &quot;+ (String)result);
+      }
+    }
+  }
+
+  // Stop the timeout timer if it is running
+  private void cancelTimer() {
+    if (timeoutTimer != null) {
+       timeoutTimer.cancel();
+       timeoutTimer = null;
+    }
+  }
+}
+</pre>
+
+<h3>Periodically Running Logic</h3>
+
+<p>In order to keep a user interface up to date, you sometimes want to perform an update periodically. You might want to run a poll to the server to check for new data, or update
+some sort of animation on the screen. In this case, use the Timer class scheduleRepeating() method:</p>
+
+<pre class="prettyprint">
+public class Foo {
+
+  // A timer to update the elapsed time count
+  private Timer elapsedTimer;
+  private Label elapsedLabel = new Label();
+  private long startTime;
+
+  public Foo () {
+
+    // ... Add elapsedLabel to a Panel ...
+
+    // Create a new timer
+    elapsedTimer = new Timer () {
+      public void run() {
+    showElapsed();
+      }
+    };
+    
+    startTime = System.currentTimeMillis();
+
+    // Schedule the timer for every 1/2 second (500 milliseconds)
+    elapsedTimer.scheduleRepeating(500);
+
+    // ... The elapsed timer has started ...
+  }
+
+  /**
+   * Show the current elapsed time in the elapsedLabel widget.
+   */
+  private void showElapsed () {
+    double elapsedTime = (System.currentTimeMillis() - startTime) / 1000.0;
+    NumberFormat n = NumberFormat.getFormat(&quot;#,##0.000&quot;);
+    elapsedLabel.setText(&quot;Elapsed: &quot; + n.format(elapsedTime));
+  }
+}
+</pre>
+
+<h2>Deferring some logic into
+the immediate future: the DeferredCommand class</h2>
+
+<p>Sometimes you want to break up your logic loop so that the JavaScript event loop gets a chance to run between two pieces of code. The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/DeferredCommand.html">DeferredCommand</a> class will allow you to do that.
+The logic that you pass to DeferredCommand will run at some point in the future, after control has been returned to the JavaScript event loop. This little delay may give the
+interface a chance to process some user events or initialize other code. To use the DeferredCommand class in its simplest form, you create a subclass of the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/Command.html">Command</a> class, overriding the execute() method and pass
+it to DeferredCommand.addCommand().</p>
+
+<pre class="prettyprint">
+ 
+  TextBox dataEntry;
+
+  // Set the focus on the widget after setup completes.
+  DeferredCommand.addCommand(new Command() {
+    public void execute () { 
+      dataEntry.setFocus();
+    }
+  }
+
+  dataEntry = new TextBox();
+</pre>
+
+<h2>Avoiding Slow Script Warnings: the
+IncrementalCommand class</h2>
+
+<p>AJAX developers need to be aware of keeping the browser responsive to the user. When JavaScript code is running, user interface components like buttons and text areas will not
+respond to user input. If the browser were to allow this to continue, the user might think the browser is &quot;hung&quot; and be tempted to restart it. But browsers have a built-in defense
+mechanism, the <i>unresponsive script warning</i>.</p>
+
+<blockquote><img src="/web-toolkit/doc/1.6/images/UnresponsiveScriptDialog.png"/></blockquote>
+
+<p>Any script that runs without returning control to the JavaScript main event loop for more than 10 seconds or so runs the risk of having the browser popup this dialog to the
+user. The dialog is there because a poorly written script might have an infinite loop or some other bug that is keeping the browser from responding. But in AJAX applications, the
+script may be doing legitimate work.</p>
+
+<p>GWT provides an <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/IncrementalCommand.html">IncrementalCommand</a>
+class that helps perform long running calculations. It works by repeatedly calling an 'execute()' entry point until the computation is complete.</p>
+
+<p>The following example is an outline of how to use the IncrementalCommand class to do some computation in a way that allows the browser's user interface to be responsive:</p>
+
+<pre class="prettyprint">
+public class IncrementalCommandTest implements EntryPoint {
+ 
+  // Number of times doWork() is called
+  static final int MAX_LOOPS = 10000;
+
+  // Tight inner loop in doWork()
+  static final int WORK_LOOP_COUNT = 50;
+  
+  // Number of times doWork() is called in IncrementalCommand before
+  // returning control to the event loop
+  static final int WORK_CHUNK = 100; 
+  
+  // A button to kick off the computation
+  Button button;
+
+  public void onModuleLoad() {
+    button = new Button(&quot;Start Computation&quot;);
+
+    button.addClickHandler(new ClickHandler () {
+      public void onClick(ClickEvent event) {
+       doWorkIncremental();
+      }
+    }
+  }
+
+  /**
+   * Create a IncrementalCommand instance that gets called back every so often
+   * until all the work it has to do is complete.
+   */
+  private void doWorkIncremental () {
+
+    // Turn off the button so it won't start processing again.
+    button.setEnabled(false);
+
+    IncrementalCommand ic = new IncrementalCommand(){
+      int counter = 0;
+     
+      public boolean execute() {
+        for (int i=0;i&lt;WORK_CHUNK;i++) {
+          counter++;   
+
+          result += doWork();
+
+          // If we have done all the work, exit with a 'false'
+          // return value to terminate further execution.
+          if (counter == MAX_LOOPS) {
+
+        // Re-enable button
+        button.setEnabled(true);
+
+            // ... other end of computation processing ...
+
+            return false;
+          }
+        }
+        // Call the execute function again.
+        return true;
+      }
+    };
+    
+    // Schedule the IncrementalCommand instance to run when 
+    // control returns to the event loop by returning 'true'
+    DeferredCommand.addCommand(ic);
+  }
+
+  /**
+   * Routine that keeps the CPU busy for a while.
+   * @return an integer result of the calculation
+   */
+  private int doWork() {
+    int result;
+
+    // ... computation...
+
+    return result;
+  }
+</pre>
+
+<h1 id="DevGuideJSON">Working with JSON</h1>
+
+<p>Many AJAX application developers have adopted <a href="http://www.json.org/" rel="nofollow">JSON</a> as the data format of choice for server communication. It is a relatively
+simple format based on the object-literal notation of JavaScript. If you choose to use JSON-encoded data within your application, GWT contains classes you can use to parse and manipulate JSON objects, as well as the very useful and elegant concept of <a href="#DevGuideOverlayTypes">JavaScript Overlay Types</a>.</p>
+
+<h2>JSON encoding</h2>
+
+<p>The JSON format is based on the syntax and data types of the JavaScript language. It supports strings, numbers, booleans, and null values. You can also combine multiple values
+into arrays and objects. JSON objects are simply unordered sets of name/value pairs, where the name is always a string and the value is any other valid JSON type (even another
+object). Here's an example of encoding product data in JSON:</p>
+
+<pre class="prettyprint">
+{
+  &quot;product&quot;: {
+    &quot;name&quot;: &quot;Widget&quot;,
+    &quot;company&quot;: &quot;ACME, Inc&quot;,
+    &quot;partNumber&quot;: &quot;7402-129&quot;,
+    &quot;prices&quot;: [
+      { &quot;minQty&quot;: 1, &quot;price&quot;: 12.49 },
+      { &quot;minQty&quot;: 10, &quot;price&quot;: 9.99 },
+      { &quot;minQty&quot;: 50, &quot;price&quot;: 7.99 }
+    ]
+  }
+}
+</pre>
+
+<p>See <a href="http://www.json.org/example.html" rel="nofollow">json.org/example.html</a> for more JSON examples.</p>
+
+<h2>Parsing JSON</h2>
+
+<p>GWT's JSON types are contained in a separate module, so you'll need to add the necessary <tt>&lt;inherits&gt;</tt> tag to your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a>:</p>
+
+<pre class="prettyprint">
+&lt;inherits name=&quot;com.google.gwt.json.JSON&quot; /&gt;
+</pre>
+
+<p>Typically, you will receive JSON data as the response text of an <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideHttpRequests">HTTP request</a>. Thus, you'll first have to convert
+that <tt>String</tt> into a data structure you can navigate and manipulate. GWT includes the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONParser.html">JSONParser</a> class to handle that transformation. Its
+lone static method <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONParser.html#parse(java.lang.String)">parse(String)</a> will accept the JSON text and parses is into a set of <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONValue.html">JSONValue</a>-derived objects.</p>
+
+<p><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONValue.html">JSONValue</a> is the superclass of all JSON types.
+Each of the basic JSON types is represented by a class in the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/package-summary.html">com.google.gwt.json.client</a> package. JSONValue contains a series of methods you can use to determine which specific subtype the value represents, and if possible
+perform the conversion. For example, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONValue.html#isBoolean()">isBoolean()</a> method will return a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONBoolean.html">JSONBoolean</a> if the JSONValue is really a JSONBoolean, or <tt>null</tt> if it is not.</p>
+
+<p>Composite JSON types contain specialized methods for accessing their members. <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONObject.html">JSONObject</a> has <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONObject.html#get(java.lang.String)">get(String)</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONObject.html#put(java.lang.String,%20com.google.gwt.json.client.JSONValue)">put(String, JSONValue)</a> methods for getting and setting the object's properties. <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONArray.html">JSONArray</a> has corresponding methods named <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONArray.html#get(int)">get(int)</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/json/client/JSONArray.html#set(int,%20com.google.gwt.json.client.JSONValue)">set(int,
+JSONValue)</a>.</p>
+
+<p class="note">For a complete example of parsing JSON, see the <a href="/web-toolkit/tutorials/1.6/JSON">JSON section</a> in the GWT tutorials.</p>
+
+<h2>Mashups with JSON and JSNI</h2>
+
+<p>If you're loading JSON-encoded data from your own server, you'll typically use the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/http/client/RequestBuilder.html">RequestBuilder</a> and related classes to <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideHttpRequests">make HTTP requests</a>. However, you can also retrieve JSON from remote servers in true mashup fashion using GWT's <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JavaScript Native Interface (JSNI)</a> functionality. The techniques for cross-site JSON is explained more fully in the getting started tutorial. To see a working example, check out the <a href="/web-toolkit/tutorials/1.6/Xsite">Cross-site Client-Server Communication section</a> of the <a href="/web-toolkit/tutorials/1.6/gettingstarted">Getting Started guide</a>.</p>
+
+<h1 id="DevGuideXML">Working with XML</h1>
+
+<p><a href="http://www.w3.org/XML/" rel="nofollow">Extensible Markup Language (XML)</a> is a data format commonly used in modern web applications. XML uses custom tags to describe
+data and is encoded as plain text, making it both flexible and easy to work with. The GWT class library contains a set of types designed for processing XML data.</p>
+
+<h2>XML types</h2>
+
+<p>The XML types provided by GWT can be found in the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/package-summary.html">com.google.gwt.xml.client</a> package. In order to use these in your application, you'll need to add the following <tt>&lt;inherits&gt;</tt> tag to your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a>:</p>
+
+<pre class="prettyprint">
+&lt;inherits name=&quot;com.google.gwt.xml.XML&quot; /&gt;
+</pre>
+
+<h2>Parsing XML</h2>
+
+<p>To demonstrate how to parse XML with GWT, we'll use the following XML document that contains an email message:</p>
+
+<pre class="prettyprint">
+&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;message&gt;
+  &lt;header&gt;
+    &lt;to displayName=&quot;Richard&quot; address=&quot;rick@school.edu&quot; /&gt;
+    &lt;from displayName=&quot;Joyce&quot; address=&quot;joyce@website.com&quot; /&gt;
+    &lt;sent&gt;2007-05-12T12:03:55Z&lt;/sent&gt;
+    &lt;subject&gt;Re: Flight info&lt;/subject&gt;
+  &lt;/header&gt;
+  &lt;body&gt;I'll pick you up at the airport at 8:30.  See you then!&lt;/body&gt;
+&lt;/message&gt;
+</pre>
+
+<p>Suppose that you're writing an email application and need to extract the name of the sender, the subject line, and the message body from the XML. Here is sample code that will
+do just that (we'll explain the code in just a bit):</p>
+
+<pre class="prettyprint">
+private void parseMessage(String messageXml) {
+  try {
+    // parse the XML document into a DOM
+    Document messageDom = XMLParser.parse(messageXml);
+    
+    // find the sender's display name in an attribute of the &lt;from&gt; tag
+    Node fromNode = messageDom.getElementsByTagName(&quot;from&quot;).item(0);
+    String from = ((Element)fromNode).getAttribute(&quot;displayName&quot;); 
+    fromLabel.setText(from);
+    
+    // get the subject using Node's getNodeValue() function
+    String subject = messageDom.getElementsByTagName(&quot;subject&quot;).item(0).getFirstChild().getNodeValue();
+    subjectLabel.setText(subject);
+    
+    // get the message body by explicitly casting to a Text node
+    Text bodyNode = (Text)messageDom.getElementsByTagName(&quot;body&quot;).item(0).getFirstChild();
+    String body = bodyNode.getData();
+    bodyLabel.setText(body);    
+    
+  } catch (DOMException e) {
+    Window.alert(&quot;Could not parse XML document.&quot;);
+  }
+}
+</pre>
+
+<p>The first step is to parse the raw XML text into an <a href="http://www.w3schools.com/dom/default.asp" rel="nofollow">XML DOM</a> structure we can use to navigate the data.
+GWT's XML parser is contained in the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/XMLParser.html">XMLParser</a>
+class. Call its <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/XMLParser.html#parse(java.lang.String)">parse(String)</a> static method to parse the XML and return a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html">Document</a> object. If an error occurs during parsing (for
+example, if the XML is not <a href="http://en.wikipedia.org/wiki/Well-formed_XML_document">well-formed</a>), the XMLParser will throw a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/DOMException.html">DOMException</a>.</p>
+
+<p>If parsing succeeds, the Document object we receive represents the XML document in memory. It is a tree composed of generic <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html">Node</a> objects. A node in the XML DOM is the basic unit of
+data in an XML document. GWT contains several subinterfaces of Node which provide specialized methods for processing the various types of nodes:</p>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Element.html">Element</a> - represents DOM elements, which are
+specified by tags in XML: <tt>&lt;someElement&gt;&lt;/someElement&gt;</tt>.</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Text.html">Text</a> - represents the text between the opening and
+closing tag of an element: <tt>&lt;someElement&gt;Here is some text.&lt;/someElement&gt;</tt>.</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Comment.html">Comment</a> - represents an XML comment: <tt>&lt;!--
+notes about this data --&gt;</tt>.</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Attr.html">Attr</a> - represents an attribute of an element:
+<tt>&lt;someElement myAttribute=&quot;123&quot; /&gt;</tt>.</li>
+</ul>
+
+<p>Refer to the documentation for the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html">Node</a> interface for
+a complete list of types that derive from Node.</p>
+
+<p>To get to the DOM nodes from the Document object, we can use one of three methods. The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html#getDocumentElement()">getDocumentElement()</a> method
+retrieves the <i>document element</i> (the top element at the root of the DOM tree) as an <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Element.html">Element</a>. We can then use the navigation methods of the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html">Node</a> class from which Element derives (e.g., <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#getChildNodes()">getChildNodes()</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#getNextSibling()">getNextSibling()</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#getParentNode()">getParentNode()</a>, etc.) to drill down and
+retrieve the data we need.</p>
+
+<p>We can also go directly to a particular node or list of nodes using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html#getElementById(java.lang.String)">getElementById(String)</a>
+and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html#getElementsByTagName(java.lang.String)">getElementsByTagName(String)</a> methods. The getElementById(String) method will retrieve the Element with the specified ID. If you want to use ID's in your XML,
+you'll need to supply the name of the attribute to use as the ID in the <a href="http://www.w3schools.com/dtd/default.asp" rel="nofollow">DTD</a> of the XML document (just setting
+an attribute named <tt>id</tt> will not work). The getElementsByTagName(String) method is useful if you want to retrieve one or more elements with a particular tag name. The list
+of elements will be returned in the form of a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/NodeList.html">NodeList</a> object, which can be iterated over to get the individual Nodes it contains.</p>
+
+<p>In the example code, we use the getElementsByTagName(String) method to retrieve the necessary elements from the XML containing the email message. The sender's name is stored as
+an attribute of the <tt>&lt;from&gt;</tt> tag, so we use <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Element.html#getAttribute(java.lang.String)">getAttribute(String)</a>. The
+subject line is stored as text inside the <tt>&lt;subject&gt;</tt> tag, so we first find the subject element, and then retrieve its first (and only) child node and call <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#getNodeValue()">getNodeValue()</a> on it to get the text.
+Finally, the message body is stored in the same way (text within the <tt>&lt;body&gt;</tt> tag), but this time we explicitly cast the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html">Node</a> to a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Text.html">Text</a> object and extract the text using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/CharacterData.html#getData()">getData()</a>.</p>
+
+<h2>Building an XML document</h2>
+
+<p>In addition to parsing existing documents, the GWT XML types can also be used to create and modify XML. To create a new XML document, call the static <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/XMLParser.html#createDocument()">createDocument()</a> method of the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/XMLParser.html">XMLParser</a> class. You can then use the methods of the
+resulting <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html">Document</a> to <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html#createElement(java.lang.String)">create elements</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Document.html#createTextNode(java.lang.String)">text nodes</a>, and other XML nodes. These nodes can be added to the DOM tree using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#appendChild(com.google.gwt.xml.client.Node)">appendChild(Node)</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#insertBefore(com.google.gwt.xml.client.Node,%20com.google.gwt.xml.client.Node)">insertBefore(Node, Node)</a> methods. <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html">Node</a> also has methods for replacing and removing child nodes (<a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#replaceChild(com.google.gwt.xml.client.Node,%20com.google.gwt.xml.client.Node)">replaceChild(Node, Node)</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/xml/client/Node.html#removeChild(com.google.gwt.xml.client.Node)">removeChild(Node)</a>, respectively).</p>
+
+<h1 id="DevGuideJavaScriptNativeInterface">JavaScript Native Interface (JSNI)</h1>
+
+<p>Often, you will need to integrate GWT with existing handwritten JavaScript or with a third-party JavaScript library. Occasionally you may need to access low-level browser
+functionality not exposed by the GWT class API's. The JavaScript Native Interface (JSNI) feature of GWT can
+solve both of these problems by allowing you to integrate JavaScript directly into your application's Java source code.</p>
+
+<p>The <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideJavaToJavaScriptCompiler">GWT compiler</a> translates Java source into JavaScript. Sometimes it's very useful to mix handwritten
+JavaScript into your Java source code. For example, the lowest-level functionality of certain core GWT classes are handwritten in JavaScript. GWT borrows from the Java Native
+Interface (JNI) concept to implement JavaScript Native Interface (JSNI). Writing JSNI methods is a powerful technique, but should be used sparingly because writing bulletproof
+JavaScript code is notoriously tricky. JSNI code is potentially less portable across browsers, more likely to leak memory, less amenable to Java tools, and harder for the compiler
+to optimize.</p>
+
+<p>We think of JSNI as the web equivalent of inline assembly code. You can use it in many ways:</p>
+
+<ul>
+<li>Implement a Java method directly in JavaScript</li>
+
+<li>Wrap type-safe Java method signatures around existing JavaScript</li>
+
+<li>Call from JavaScript code into Java code and vice-versa</li>
+
+<li>Throw exceptions across Java/JavaScript boundaries</li>
+
+<li>Read and write Java fields from JavaScript</li>
+
+<li>Use hosted mode to debug both Java source (with a Java debugger) and JavaScript (with a script debugger, only in Windows right now)</li>
+</ul>
+
+<h2>Writing Native JavaScript Methods</h2>
+
+<p>JSNI methods are declared <tt>native</tt> and contain JavaScript code in a specially formatted comment block between the end of the parameter list and the trailing semicolon. A
+JSNI comment block begins with the exact token <tt>/*-{</tt> and ends with the exact token <tt>}-*/</tt>. JSNI methods are called just like any normal Java method. They can be
+static or instance methods.</p>
+
+<p>The JSNI syntax is a directive to the Java-to-JavaScript Compiler to accept any text between the comment statements as valid JS code and inject it inline in the generated GWT
+files. At compile time, the GWT compiler performs some syntax checks on the JavaScript inside the method, then generates interface code for converting method arguments and return
+values properly.</p>
+
+<p>As of the GWT 1.5 release, the Java varargs construct is supported. The GWT compiler will translate varargs calls between 2 pieces of Java code. However, calling a varargs
+JavaScript method from Java will result in the callee receiving the arguments in an array.</p>
+
+<h2>Examples</h2>
+
+<p>Here is a simple example of how to code a JSNI method that puts up a JavaScript alert dialog:</p>
+
+<pre class="prettyprint">
+public static native void alert(String msg) /*-{
+  $wnd.alert(msg);
+}-*/;
+</pre>
+
+<p>Note that the code did not reference the JavaScript <tt>window</tt> object directly inside the method. When accessing the browser's window and document objects from JSNI, you
+must reference them as <tt>$wnd</tt> and <tt>$doc</tt>, respectively. Your compiled script runs in a nested frame, and <tt>$wnd</tt> and <tt>$doc</tt> are automatically
+initialized to correctly refer to the host page's window and document.</p>
+
+<p>Here is another example with a problem:</p>
+
+<pre class="prettyprint">
+public static native int badExample() /*-{
+  return &quot;Not A Number&quot;;
+}-*/;
+  
+ public void onClick () {
+   try {
+      int myValue = badExample();
+      GWT.log(&quot;Got value &quot; + myValue, null);
+   } catch (Exception e) {
+      GWT.log(&quot;JSNI method badExample() threw an exception:&quot;, e);
+   }
+ }
+</pre>
+
+<p>This example compiles as Java, and its syntax is verified by the GWT compiler as valid JavaScript. But when you run the example code in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideHostedMode">hosted mode</a>, it returns an exception. Click on the line in the hosted mode browser to display the exception in the message
+area below:</p>
+
+<pre>
+com.google.gwt.dev.shell.DevGuideHostedModeException: invokeNativeInteger(@com.example.client.GWTObjectNotifyTest::badExample()): JS value of type string, expected int
+    at com.google.gwt.dev.shell.JsValueGlue.getIntRange(JsValueGlue.java:343)
+    at com.google.gwt.dev.shell.JsValueGlue.get(JsValueGlue.java:179)
+    at com.google.gwt.dev.shell.ModuleSpace.invokeNativeInt(ModuleSpace.java:233)
+    at com.google.gwt.dev.shell.JavaScriptHost.invokeNativeInt(JavaScriptHost.java:97)
+    at com.example.client.GWTObjectNotifyTest.badExample(GWTObjectNotifyTest.java:29)
+    at com.example.client.GWTObjectNotifyTest$1.onClick(GWTObjectNotifyTest.java:52)
+    ...
+</pre>
+
+<p>In this case, neither the Java IDE nor the GWT compiler could tell that there was a type mismatch between the code inside the JSNI method and the Java declaration. The GWT
+generated interface code caught the problem at runtime in hosted mode. When running in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideWebMode">web mode</a>, you will not see an
+exception. JavaScript's dynamic typing obscures this kind of problem.</p>
+
+<blockquote><i>Tip: Since JSNI code is just regular JavaScript, you will not be able to use Java debugging tools inside your JSNI methods when running in hosted mode. However, you
+can set a breakpoint on the source line containing the opening brace of a JSNI method, allowing you to see invocation arguments. Also, the Java compiler and GWT compiler do not
+perform any syntax or semantic checks on JSNI code, so any errors in the JavaScript body of the method will not be seen until run time.</i></blockquote>
+
+<h2 id="accessing">Accessing Java Methods and Fields from JavaScript</h2>
+
+<p>It can be very useful to manipulate Java objects from within the JavaScript implementation of a JSNI method. However, since JavaScript uses dynamic typing and Java uses static
+typing, you must use a special syntax.</p>
+
+<blockquote><i>When writing JSNI code, it is helpful to occasionally run in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideWebMode">web mode</a>. The <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideJavaToJavaScriptCompiler">JavaScript compiler</a> checks your JSNI code and can flag errors at compile time that you would not catch until
+runtime in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideHostedMode">hosted mode</a>.</i></blockquote>
+
+<h3>Invoking Java methods from JavaScript</h3>
+
+<p>Calling Java methods from JavaScript is somewhat similar to calling Java methods from C code in <a href="http://java.sun.com/j2se/1.4.2/docs/guide/jni/index.html" rel="nofollow">JNI</a>. In particular, JSNI borrows the JNI mangled method signature approach to distinguish among overloaded methods. JavaScript calls into Java methods are of
+the following form:</p>
+
+<pre>
+[instance-expr.]@class-name::method-name(param-signature)(arguments)
+</pre>
+
+<ul>
+<li><strong>instance-expr.</strong> : must be present when calling an instance method and must be absent when calling a static method</li>
+
+<li><strong>class-name</strong> : is the fully-qualified name of the class in which the method is declared (or a subclass thereof)</li>
+
+<li><strong>param-signature</strong> : is the internal Java method signature as specified <a href="http://java.sun.com/j2se/1.4.2/docs/guide/jni/spec/types.html#wp16432" rel="nofollow">here</a> but without the trailing signature of the method return type since it is not needed to choose the overload</li>
+
+<li><strong>arguments</strong> : is the actual argument list to pass to the called method</li>
+</ul>
+
+<h3>Invoking Java constructors from JavaScript</h3>
+
+<p>Calling Java constructors from JavaScript is identical to the above use case, except that the method name is alway <strong>new</strong>.</p>
+
+<p>Given the following Java classes:</p>
+
+<pre class="prettyprint">
+package pkg;
+class TopLevel {
+  public TopLevel() { ... }
+  public TopLevel(int i) { ... }
+
+  static class StaticInner {
+    public StaticInner() { ... }
+  }
+
+  class InstanceInner {
+    public InstanceInner(int i) { ... }
+  }
+}
+</pre>
+
+<p>We compare the Java expression versus the JSNI expression:</p>
+
+<ul>
+<li><tt>new TopLevel()</tt> becomes <tt>@pkg.TopLevel::new()()</tt></li>
+
+<li><tt>new StaticInner()</tt> becomes <tt>@pkg.TopLevel.StaticInner::new()()</tt></li>
+
+<li><tt>someTopLevelInstance.new InstanceInner(123)</tt> becomes <tt>@pkg.TopLevel.InstanceInner::new(Lpkg/TopLevel;I)(someTopLevelInstance, 123)</tt></li>
+
+<li style="list-style: none">
+<ul>
+<li>The enclosing instance of a non-static class is implicitly defined as the first parameter for constructors of a non-static class. Regardless of how deeply-nested a non-static
+class is, it only needs a reference to an instance of its immediately-enclosing type.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h3>Accessing Java fields from JavaScript</h3>
+
+<p>Static and instance fields can be accessed from handwritten JavaScript. Field references are of the form</p>
+
+<pre>
+[instance-expr.]@class-name::field-name
+</pre>
+
+<h2>Example</h2>
+
+<pre class="prettyprint">
+public class JSNIExample {
+
+  String myInstanceField;
+  static int myStaticField;
+
+  void instanceFoo(String s) {
+    // use s
+  }
+
+  static void staticFoo(String s) {
+    // use s
+  }
+
+  public native void bar(JSNIExample x, String s) /*-{
+    // Call instance method instanceFoo() on this
+    this.@com.google.gwt.examples.JSNIExample::instanceFoo(Ljava/lang/String;)(s);
+
+    // Call instance method instanceFoo() on x
+    x.@com.google.gwt.examples.JSNIExample::instanceFoo(Ljava/lang/String;)(s);
+
+    // Call static method staticFoo()
+    @com.google.gwt.examples.JSNIExample::staticFoo(Ljava/lang/String;)(s);
+
+    // Read instance field on this
+    var val = this.@com.google.gwt.examples.JSNIExample::myInstanceField;
+
+    // Write instance field on x
+    x.@com.google.gwt.examples.JSNIExample::myInstanceField = val + &quot; and stuff&quot;;
+
+    // Read static field (no qualifier)
+    @com.google.gwt.examples.JSNIExample::myStaticField = val + &quot; and stuff&quot;;
+  }-*/;
+
+}
+</pre>
+
+<blockquote><i>Tip: As of the GWT 1.5 release, the Java varargs construct is supported. The GWT compiler will translate varargs calls between two pieces of Java code, however,
+calling a varargs Java method from JSNI will require the JavaScript caller to pass an array of the appropriate type.</i></blockquote>
+
+<h2>Calling a Java Method from Handwritten JavaScript</h2>
+
+<p>Sometimes you need to access a method or constructor defined in GWT from outside JavaScript code. This code might be hand-written and included in another java script file, or
+it could be a part of a third party library. In this case, the GWT compiler will not get a chance to build an interface between your JavaScript code and the GWT generated
+JavaScript directly.</p>
+
+<p>A way to make this kind of relationship work is to assign the method via JSNI to an external, globally visible JavaScript name that can be referenced by your hand-crafted
+JavaScript code.</p>
+
+<pre class="prettyprint">
+package mypackage;
+
+public MyUtilityClass
+{
+    public static int computeLoanInterest(int amt, float interestRate, 
+                                          int term) { ... }
+    public static native void exportStaticMethod() /*-{
+       $wnd.computeLoanInterest =
+          @mypackage.MyUtilityClass::computeLoanInterest(IFI);
+    }-*/;
+}
+</pre>
+
+<p>On application initialization, call <tt>MyUtilityClass.exportStaticMethod()</tt> (e.g. from your GWT Entry Point). This will assign the function to a variable in the window
+object called <tt>computeLoanInterest</tt>.</p>
+
+
+<h2 id="DevGuideMarshaling">Sharing objects between Java source and JavaScript</h2>
+
+<p>Parameters and return types in JSNI methods are declared as Java types. There are very specific rules for how values passing in and out of JavaScript code must be treated.
+These rules must be followed whether the values enter and leave through normal Java method call semantics or through the special syntax by which Java methods are invoked from JSNI code.</p>
+
+<h2>Passing Java values into JavaScript</h2>
+
+<table>
+<tr>
+<th width="30%">Incoming Java type</th>
+<th>How it appears to JavaScript code</th>
+</tr>
+
+<tr>
+<td><code>String</code> </td>
+<td>JavaScript string, as in <code>var s = &quot;my string&quot;;</code> </td>
+</tr>
+
+<tr>
+<td><code>boolean</code> </td>
+<td>JavaScript boolean value, as in <code>var b = true;</code> </td>
+</tr>
+
+<tr>
+<td><code>long</code> </td>
+<td>disallowed (see notes)</td>
+</tr>
+
+<tr>
+<td>other numeric primitives</td>
+<td>JavaScript numeric value, as in <code>var x = 42;</code> </td>
+</tr>
+
+<tr>
+<td><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JavaScriptObject.html">JavaScriptObject</a> </td>
+<td><code>JavaScriptObject</code> that must have originated from JavaScript code, typically as the return value of some other JSNI method
+(see notes)</td>
+</tr>
+
+<tr>
+<td>Java array</td>
+<td>opaque value that can only be passed back into Java code</td>
+</tr>
+
+<tr>
+<td>any other Java <code>Object</code> </td>
+<td>opaque value accessible through special syntax</td>
+</tr>
+</table>
+
+
+
+<h2>Passing JavaScript values into Java code</h2>
+
+<table>
+<tr>
+<th width="30%">Outgoing Java type</th>
+<th>What must be passed</th>
+</tr>
+
+<tr>
+<td><code>String</code> </td>
+<td>JavaScript string, as in <code>return &quot;boo&quot;;</code> </td>
+</tr>
+
+<tr>
+<td><code>boolean</code> </td>
+<td>JavaScript boolean value, as in <code>return false;</code> </td>
+</tr>
+
+<tr>
+<td><code>long</code> </td>
+<td>disallowed (see notes)</td>
+</tr>
+
+<tr>
+<td>Java numeric primitive</td>
+<td>JavaScript numeric value, as in <code>return 19;</code> </td>
+</tr>
+
+<tr>
+<td><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JavaScriptObject.html">JavaScriptObject</a> </td>
+<td>native JavaScript object, as in <code>return document.createElement(&quot;div&quot;)</code> (see notes)</td>
+</tr>
+
+<tr>
+<td>any other Java <code>Object</code> (including arrays)</td>
+<td>Java <code>Object</code> of the correct type that must have originated in Java code; Java objects cannot be constructed from &quot;thin
+air&quot; in JavaScript</td>
+</tr>
+</table>
+
+
+
+<h2>Important Notes</h2>
+
+<ul>
+<li>The Java <tt>long</tt> type cannot be represented in JavaScript as a numeric type, so GWT emulates it using an opaque data structure. This means that JSNI methods cannot
+process a <tt>long</tt> as a numeric type. The compiler therefore disallows, by default, directly accessing a <tt>long</tt> from JSNI: JSNI methods cannot have <tt>long</tt> as a
+parameter type or a return type, and they cannot access a <tt>long</tt> using a <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI reference</a>. If you find
+yourself wanting to pass a <tt>long</tt> into or out of a JSNI method, here are some options:</li>
+
+<li style="list-style: none">
+<ol>
+<li>For numbers that fit into type <tt>double</tt>, use type <tt>double</tt> instead of type <tt>long</tt>.</li>
+
+<li>For computations that require the full <tt>long</tt> semantics, rearrange the code so that the computations happen in Java instead of in JavaScript. That way they will use the
+<tt>long</tt> emulation.</li>
+
+<li>For values meant to be passed through unchanged to Java code, wrap the value in a <tt>Long</tt>. There are no restrictions on type <tt>Long</tt> with JSNI methods.</li>
+
+<li>If you are sure you know what you are doing, you can add the annotation <tt>com.google.gwt.core.client.UnsafeNativeLong</tt> to the method. The compiler will then allow you to
+pass a <tt>long</tt> into and out of JavaScript. It will still be an opaque data type, however, so the only thing you will be able to do with it will be to pass it back to
+Java.</li>
+</ol>
+</li>
+</ul>
+
+<ul>
+<li>Violating any of these marshaling rules in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideHostedMode">hosted mode</a> will generate a
+<tt>com.google.gwt.dev.shell.DevGuideHostedModeException</tt> detailing the problem. This exception is not <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideClientSide">translatable</a>
+and never thrown in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideWebMode">web mode</a>.</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JavaScriptObject.html">JavaScriptObject</a> gets special treatment
+from the GWT compiler and hosted browser. Its purpose is to provide an opaque representation of native JavaScript objects to Java code.</li>
+</ul>
+
+<p/>
+
+<ul>
+<li>Although Java arrays are not directly usable in JavaScript, there are some helper classes that efficiently achieve a similar effect: <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JsArray.html">JsArray</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JsArrayBoolean.html">JsArrayBoolean</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JsArrayInteger.html">JsArrayInteger</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JsArrayNumber.html">JsArrayNumber</a>, and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JsArrayString.html">JsArrayString</a>. These classes are wrappers around a native JavaScript array.</li>
+</ul>
+
+
+
+<ul>
+<li>Java <tt>null</tt> and JavaScript <tt>null</tt> are identical and always legal values for any non-primitive Java type. JavaScript <tt>undefined</tt> is also considered equal
+to <tt>null</tt> when passed into Java code (the rules of JavaScript dictate that in JavaScript code, <tt>null == undefined</tt> is <tt>true</tt> but <tt>null === undefined</tt>
+is <tt>false</tt>). In previous versions of GWT, <tt>undefined</tt> was not a legal value to pass into Java.</li>
+</ul>
+
+<h2>Exceptions and JSNI</h2>
+
+<p>An exception can be thrown during the execution of either normal Java code or the JavaScript code within a JSNI method. When an exception generated within a JSNI method
+propagates up the call stack and is caught by a Java catch block, the thrown JavaScript exception is wrapped as a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/JavaScriptException.html">JavaScriptException</a> object at the time it is
+caught. This wrapper object contains only the class name and description of the JavaScript exception that occurred. The recommended practice is to handle JavaScript exceptions in
+JavaScript code and Java exceptions in Java code.</p>
+
+<p>A Java exception can safely retain identity while propagating through a JSNI method.</p>
+
+<p>For example,</p>
+
+<ol>
+<li>Java method <tt>doFoo()</tt> calls JSNI method <tt>nativeFoo()</tt></li>
+
+<li><tt>nativeFoo()</tt> internally calls Java method <tt>fooImpl()</tt></li>
+
+<li><tt>fooImpl()</tt> throws an exception</li>
+</ol>
+
+<p>The exception thrown from <tt>fooImpl()</tt> will propagate through <tt>nativeFoo()</tt> and can be caught in <tt>doFoo()</tt>. The exception will retain its type and
+identity.</p>
+
+<h1 id="DevGuideOverlayTypes">JavaScript Overlay Types</h1>
+
+<p>Suppose you're happily using JSNI to call bits of handwritten JavaScript from within your GWT module. It works well, but JSNI only works at the level of individual methods.
+Some integration scenarios require you to more deeply intertwine JavaScript and Java objects -- DOM and JSON programming are two good examples -- and so what we really want is a
+way to interact directly with JavaScript objects from our Java source code. In other words, we want JavaScript objects that <i>look like</i> Java objects when we're coding.</p>
+
+<p>GWT 1.5 introduces <strong>JavaScript overlay types</strong> to make it easy to integrate entire families of JavaScript objects into your GWT project. There are many benefits
+of this technique, including the ability to use your Java IDE's code completion and refactoring capabilities even as you're working with untyped JavaScript objects.</p>
+
+<h2>Example: Easy, efficient JSON</h2>
+
+<p>Overlay types are easiest to understand with examples. Suppose we want to access an array of JSON objects representing a set of &quot;customer&quot; entities. The JavaScript structure
+might look like this:</p>
+
+<pre class="prettyprint">
+var jsonData = [
+  { &quot;FirstName&quot; : &quot;Jimmy&quot;, &quot;LastName&quot; : &quot;Webber&quot; },
+  { &quot;FirstName&quot; : &quot;Alan&quot;,  &quot;LastName&quot; : &quot;Dayal&quot; },
+  { &quot;FirstName&quot; : &quot;Keanu&quot;, &quot;LastName&quot; : &quot;Spoon&quot; },
+  { &quot;FirstName&quot; : &quot;Emily&quot;, &quot;LastName&quot; : &quot;Rudnick&quot; }
+];
+</pre>
+
+<p>To superimpose a Java type onto the above structure, you start by subclassing <tt>JavaScriptObject</tt>, a marker type that GWT uses to denote JavaScript objects. Let's go
+ahead and add some getters, too.</p>
+
+<pre class="prettyprint">
+// An overlay type
+class Customer extends JavaScriptObject {
+
+  // Overlay types always have protected, zero-arg ctors
+  protected Customer() { } 
+    
+  // Typically, methods on overlay types are JSNI
+  public final native String getFirstName() /*-{ return this.FirstName; }-*/;
+  public final native String getLastName()  /*-{ return this.LastName;  }-*/;
+   
+  // Note, though, that methods aren't required to be JSNI
+  public final String getFullName() {
+    return getFirstName() + &quot; &quot; + getLastName(); 
+  }
+}
+</pre>
+
+<p>GWT will now understand that any instance of <tt>Customer</tt> is actually a true JavaScript object that comes from outside your GWT module. This has useful implications. For
+example, notice the <tt>this</tt> reference inside <tt>getFirstName()</tt> and <tt>getLastName()</tt>. That <tt>this</tt> is truly the identity of the JavaScript object, so you
+interact with it exactly as it exists in JavaScript. In this example, we can directly access the JSON fields we know exist, <tt>this.FirstName</tt> and <tt>this.LastName</tt>.</p>
+
+<p>So, how do you actually get a JavaScript object on which to overlay a Java type? You can't construct it by writing <tt>new Customer()</tt> because the whole point is to
+<i>overlay</i> a Java type onto an <i>already existing</i> JavaScript object. Thus, we have to get such an object from the wild using JSNI:</p>
+
+<pre class="prettyprint">
+class MyModuleEntryPoint implements EntryPoint {
+  public void onModuleLoad() {
+    Customer c = getFirstCustomer();
+    // Yay! Now I have a JS object that appears to be a Customer
+    Window.alert(&quot;Hello, &quot; + c.getFirstName());
+  }
+
+  // Use JSNI to grab the JSON object we care about
+  // The JSON object gets its Java type implicitly 
+  // based on the method's return type
+  private native Customer getFirstCustomer() /*-{
+    // Get a reference to the first customer in the JSON array from earlier
+    return $wnd.jsonData[0]; 
+  }-*/;
+}
+</pre>
+
+<p>Let's clarify what we've done here. We've taken a plain-old-JSON-object (POJSONO, anyone? no?) and created a normal-looking Java type that can be used to interact with it
+within your GWT code. You get code completion, refactoring, and compile-time checking as you would with any Java code. Yet, you have the flexibility of interacting with arbitrary
+JavaScript objects, which makes things like accessing JSON services via <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/http/client/package-summary.html">RequestBuilder</a> a breeze.</p>
+
+<p>A quick digression for compiler geeks. Another neat thing about overlay types is that you can augment the Java type without disturbing the underlying JavaScript object. In the
+example above, notice that we added the <tt>getFullName()</tt> method. It's purely Java code -- it doesn't exist on the underlying JavaScript object -- and yet the method is
+written in terms of the underlying JavaScript object. In other words, the Java view of the JavaScript object can be richer in functionality than the JavaScript view of the same
+object but without having to modify the underlying JS object, neither the instance nor its <tt>prototype</tt>.</p>
+
+<p>(This is still part of the digression.) This cool wackiness of adding new methods to overlay types is possible because the rules for overlay types by design disallow
+polymorphic calls; all methods must be <tt>final</tt> and/or <tt>private</tt>. Consequently, every method on an overlay type is statically resolvable by the compiler, so there is
+never a need for dynamic dispatch at runtime. That's why we don't have to muck about with an object's function pointers; the compiler can generate a direct call to the method as
+if it were a global function, external to the object itself. It's easy to see that a direct function call is faster than an indirect one. Better still, since calls to methods on
+overlay types can be statically resolved, they are all candidates for automatic inlining, which is a Very Good Thing when you're fighting for performance in a scripting language.
+Below we'll revisit this to show you just how much this regimen pays off.</p>
+
+<h2>Example: Lightweight collections</h2>
+
+<p>We glossed over something in the example above. The method <tt>getFirstCustomer()</tt> is pretty unrealistic. You're certainly going to want to be able to access the entire
+array of customers. Thus, we need an overlay type representing the JavaScript array itself. Fortunately, that's easy:</p>
+
+<pre class="prettyprint">
+// w00t! Generics work just fine with overlay types
+class JsArray&lt;E extends JavaScriptObject&gt; extends JavaScriptObject {
+  protected JsArray() { }
+  public final native int length() /*-{ return this.length; }-*/;
+  public final native E get(int i) /*-{ return this[i];     }-*/;
+}
+</pre>
+
+<p>Now we can write more interesting code:</p>
+
+<pre class="prettyprint">
+class MyModuleEntryPoint implements EntryPoint {
+  public void onModuleLoad() {
+    JsArray&lt;Customer&gt; cs = getCustomers();
+    for (int i = 0, n = cs.length(); i &lt; n; ++i) {
+      Window.alert(&quot;Hello, &quot; + cs.get(i).getFullName());
+    }
+  }
+
+  // Return the whole JSON array, as is
+  private final native JsArray&lt;Customer&gt; getCustomers() /*-{
+    return $wnd.jsonData;
+  }-*/;
+}
+</pre>
+
+<p>This is nice clean code, especially considering the flexibility of the plumbing it's built upon. As hinted at earlier, the compiler can do pretty fancy stuff to make this quite
+efficient. Take a look at the unobfuscated compiled output for the <tt>onModuleLoad()</tt> method:</p>
+
+<pre class="prettyprint">
+function $onModuleLoad(){
+  var cs, i, n;
+  cs = $wnd.jsonData;
+  for (i = 0, n = cs.length; i &lt; n; ++i) {
+    $wnd.alert('Hello, ' + (cs[i].FirstName + ' ' + cs[i].LastName));
+  }
+}
+</pre>
+
+<p>This is pretty darn optimized. Even the overhead of the <tt>getFullName()</tt> method went away. In fact, <i>all</i> of the Java method calls went away. When we say that &quot;GWT
+gives you affordable abstractions,&quot; this is the kind of thing we're talking about. Not only does inlined code run significantly faster, we no longer had to include the function
+definitions themselves, thus shrinking the script a litte, too. (To be fair, though, inlining can also easily increase script size, so we're careful to strike a balance between
+size and speed.) It's pretty fun to look back at the original Java source above and try to reason about the sequence of optimizations the compiler had to perform to end up
+here.</p>
+
+<p>Of course, we can't resist showing you the corresponding obfuscated code:</p>
+
+<pre class="prettyprint">
+function B(){var a,b,c;a=$wnd.jsonData;for(b=0,c=a.length;b&lt;c;++b){
+  $wnd.alert(l+(a[b].FirstName+m+a[b].LastName))}}
+</pre>
+
+<p>Notice in this version that the only bits that <i>aren't</i> obfuscated are the identifiers that originated in JavaScript, such as <tt>FirstName</tt>, <tt>LastName</tt>,
+<tt>jsonData</tt>, etc. That's why, although GWT strives to make it easy to do lots of JavaScript interop, we try hard to persuade people to write as much of their code as
+possible as pure Java source instead of mixing with JavaScript. Hopefully now when you hear us say that, you'll understand that we aren't bashing JavaScript -- it's just that we
+can't optimize it as much, which makes us sad.</p>
+
+<h2>Putting it all together</h2>
+
+<p>Overlay types are a key new feature in GWT 1.6. At its simplest, the technique makes direct interop with JavaScript libraries much easier. Hopefully after this post you could
+imagine how to almost directly port any JavaScript library into GWT as a set of Java types, thus allowing the use of a Java IDE for productive development and debugging without
+impacting size or speed due to any sort of GWT overhead. At the same time, overlay types serve as a powerful abstraction tool for delivering more elegant low-level APIs such as
+the the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/dom/client/package-tree.html">new GWT DOM package</a>.</p>
+
+<p>For more information...</p>
+
+<ul>
+<li><a href="http://sites.google.com/site/io/surprisingly-rockin-javascript-and-dom-programming-in-gwt">Surprisingly Rockin' JavaScript and DOM Programming</a> -
+This video (or the associated slides) from Google I/O is the best place to get an end-to-end explanation of overlay types in context. The presentation demonstrates the new GWT DOM
+classes and explains how we used overlay types to implement everything. It also specifies more detail about constructing your own overlay types.</li>
+
+<li><a href="http://sites.google.com/site/io/gwt-and-client-server-communication">GWT and Client-Server Communication</a> - Also from Google I/O, Miguel Mendez
+explains various ways in which you can access data from the browser, including how to combine <tt>RequestBuilder</tt> and overlay types for really convenient JSON access.</li>
+
+<li><a href="http://code.google.com/p/google-web-toolkit/wiki/OverlayTypes">Design: Overlay Types</a> - Read at your own risk :-) These are the excruciating
+technical details. It's fairly interesting but not necessarily instructive.</li>
+</ul>
+
+
+<h1 id="DevGuideDeferredBinding">Deferred Binding</h1>
+
+<p>Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client
+during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to
+internationalize your application using <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideInternationalization">GWT's Internationalization module</a>, the GWT compiler would generate
+various versions of your application per browser environment, such as &quot;Firefox in English&quot;, &quot;Firefox in French&quot;, &quot;Internet Explorer in English&quot;, etc... As a result, the deployed
+JavaScript code is compact and quicker to download than hand coded JavaScript, containing only the code and resources it needs for a particular browser environment.</p>
+
+
+<h1 id="Deferred_Binding_Benefits">Deferred Binding Benefits</h1>
+
+<p>Deferred Binding is a technique used by the GWT compiler to create and select a specific implementation of a class based on a set of parameters. In essence, deferred binding is
+the Google Web Toolkit answer to Java reflection. It allows the GWT developer to produce several variations of their applications custom to each browser environment and have only
+one of them actually downloaded and executed in the browser.</p>
+
+<p>Deferred binding has several benefits:</p>
+
+<ul>
+<li>Reduces the size of the generated JavaScript code that a client will need to download by only including the code needed to run a particular browser/locale instance (used by
+the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideInternationalization">Internationalization module</a>)</li>
+
+<li>Saves development time by automatically generating code to implement an interface or create a proxy class (used by the <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideRemoteProcedureCalls">GWT RPC module</a>)</li>
+
+<li>Since the implementations are pre-bound at compile time, there is no run-time penalty to look up an implementation in a data structure as with dynamic binding or using virtual
+functions.</li>
+</ul>
+
+<p>Some parts of the toolkit make implicit use of deferred binding, that is, they use the technique as a part of their implementation, but it is not visible to the user of the
+API. For example, many <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideWidgetsAndPanels">widgets and panels</a> as well as the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/DOM.html">DOM</a> class use this technique to implement browser specific
+logic. Other GWT features require the API user to explicity invoke deferred binding by designing classes that follow specific rules and instantiating instances of the classes with <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create(Class)</a>, including <a href="/web-toolkit/doc/1.6/DevGuideServerCommunication#DevGuideRemoteProcedureCalls">GWT RPC</a> and <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideInternationalization">I18N</a>.</p>
+
+<p>As a user of the Google Web Toolkit, you may never need to create a new interface that uses deferred binding. If you follow the instructions in the guide for creating
+internationalized applications or GWT RPC calls you will be using deferred binding, but you will not have to actually write any browser dependent or locale dependent code.</p>
+
+<p>The rest of the deferred binding section describes how to create new rules and classes using deferred binding. If you are new to the toolkit or only intend to use pre-packaged
+widgets, you will probably want to skip on to the next topic. If you are interested in programming entirely new widgets from the ground up or other functionality that requires
+cross-browser dependent code, the next sections should be of interest.</p>
+
+<h2>Defining Deferred Binding Rules</h2>
+
+<p>There are two ways in which types can be replaced via deferred binding:</p>
+
+<ul>
+<li>Replacement: A type is replaced with another depending on a set of configurable rules.</li>
+<li>Code generation: A type is substituted by the result of invoking a code genreator at compile time.</li>
+</ul>
+
+<h2>Directives in Module XML files</h2>
+
+<p>The deferred binding mechanism is completely configurable and does not require editing the GWT distributed source code. Deferred binding is configured through the
+<tt>&lt;replace-with&gt;</tt> and <tt>&lt;generate-with&gt;</tt> elements in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML files</a>. The deferred binding
+rules are pulled into the module build through <tt>&lt;inherits&gt;</tt> elements.</p>
+
+<p>For example, the following configuration invokes deferred binding for the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> widget:</p>
+
+<ul>
+<li>Top level <i>&lt;module&gt;</i>.gwt.xml <i><strong>inherits</strong></i> <a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/User.gwt.xml" rel="nofollow">com.google.gwt.user.User</a></li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/User.gwt.xml" rel="nofollow">com/google/gwt/user/User.gwt.xml</a>
+<i><strong>inherits</strong></i> <a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/Popup.gwt.xml" rel="nofollow">com.google.gwt.user.Popup</a></li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/Popup.gwt.xml" rel="nofollow">com/google/gwt/user/Popup.gwt.xml</a>
+<i><strong>contains</strong></i> <tt>&lt;replace-with&gt;</tt> elements to define deferred binding rules for the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> class.</li>
+</ul>
+
+<p>Inside the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> module XML file, there
+happens to be some rules defined for deferred binding. In this case, we're using a replacement rule.</p>
+
+
+<h2>Deferred Binding Using Replacement</h2>
+
+<p>
+The first type of deferred binding uses <i>replacement</i>. 
+Replacement means overriding the implementation of one java class with another that is determined at compile time.
+For example, this technique is used to conditionalize the implementation of some widgets, such as the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a>. 
+The use of <tt>&lt;inherits&gt;</tt> for the <tt>PopupPanel</tt> class is shown in the previous section describing the deferred binding rules. 
+The actual replacement rules are specified in <tt>Popup.gwt.xml</tt>, as shown below:
+</p>
+
+<pre class="prettyprint">
+&lt;module&gt;
+
+  &lt;!--  ... other configuration omitted ... --&gt;
+
+  &lt;!-- Fall through to this rule is the browser isn't IE or Mozilla --&gt;
+  &lt;replace-with class=&quot;com.google.gwt.user.client.ui.impl.PopupImpl&quot;&gt;
+    &lt;when-type-is class=&quot;com.google.gwt.user.client.ui.impl.PopupImpl&quot;/&gt;
+  &lt;/replace-with&gt;
+
+  &lt;!-- Mozilla needs a different implementation due to issue #410 --&gt;
+  &lt;replace-with class=&quot;com.google.gwt.user.client.ui.impl.PopupImplMozilla&quot;&gt;
+    &lt;when-type-is class=&quot;com.google.gwt.user.client.ui.impl.PopupImpl&quot; /&gt;
+    &lt;any&gt;
+      &lt;when-property-is name=&quot;user.agent&quot; value=&quot;gecko&quot;/&gt;
+      &lt;when-property-is name=&quot;user.agent&quot; value=&quot;gecko1_8&quot; /&gt;
+    &lt;/any&gt;
+  &lt;/replace-with&gt;
+  
+  &lt;!-- IE has a completely different popup implementation --&gt;
+  &lt;replace-with class=&quot;com.google.gwt.user.client.ui.impl.PopupImplIE6&quot;&gt;
+    &lt;when-type-is class=&quot;com.google.gwt.user.client.ui.impl.PopupImpl&quot;/&gt;
+    &lt;when-property-is name=&quot;user.agent&quot; value=&quot;ie6&quot; /&gt;
+  &lt;/replace-with&gt;
+&lt;/module&gt;
+</pre>
+
+<p>These directives tell the GWT compiler to swap out the <tt>PoupImpl</tt> class code with different class implementations according to the the <tt>user.agent</tt> property. The
+<tt>Popup.gwt.xml</tt> file specifies a default implementation for the <tt>PopupImpl</tt> class, an overide for the Mozilla browser (<tt>PopupImplMozilla</tt> is substituted for
+<tt>PopupImpl</tt>), and an override for Internet Explorer version 6 (<tt>PopupImplIE6</tt> is substituted for <tt>PopupImpl</tt>). Note that <tt>PopupImpl</tt> class or its
+derived classes cannot be instantiated directly. Instead, the <tt>PopupPanel</tt> class is used and the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create(Class)</a> technique is used
+under the hood to instruct the compiler to use deferred binding.</p>
+
+<h1 id="Example_Class_Hierarchy_using_Replacement">Example Class Hierarchy using Replacement</h1>
+
+<p>To see how this is used when designing a widget, we will examine the case of the <tt>PopupPanel</tt> widget further. The <tt>PopupPanel</tt> class implements the user visible
+API and contains logic that is common to all browsers. It also instantiates the proper implementation specific logic using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create(Class)</a> as follows:</p>
+
+<pre class="prettyprint">
+  private static final PopupImpl impl = GWT.create(PopupImpl.class);
+</pre>
+
+<p>The two classes PopupImplMozilla and PopupImplIE6 extend the PopupImpl class and override some <tt>PopupImpl</tt>'s methods to implement browser specific behavior.</p>
+
+<p>Then, when the <tt>PopupPanel</tt> class needs to switch to some browser dependent code, it accesses a member function inside the <tt>PopupImpl</tt> class:</p>
+
+<pre class="prettyprint">
+  public void setVisible(boolean visible) {
+    // ... common code for all implementations of PopupPanel ...
+
+    // If the PopupImpl creates an iframe shim, it's also necessary to hide it
+    // as well.
+    impl.setVisible(getElement(), visible);
+  }
+</pre>
+
+<p>The default implementation of <tt>PopupImpl.setVisible()</tt> is empty, but <tt>PopupImplIE6</tt> has some special logic implemented as a <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI</a> method:</p>
+
+<pre class="prettyprint">
+  public native void setVisible(Element popup, boolean visible) /*-{
+    if (popup.__frame) {
+      popup.__frame.style.visibility = visible ? 'visible' : 'hidden';
+    }
+  }-*/;{
+</pre>
+
+<p>After the GWT compiler runs, it prunes out any unused code. If your application references the <tt>PopupPanel</tt> class, the compiler will create a separate JavaScript output
+file for each browser, each containing only one of the implementations: <tt>PopupImpl</tt>, <tt>PopupImplIE6</tt> or <tt>PopupImplMozilla</tt>. This means that each browser only
+downloads the implementation it needs, thus reducing the size of the output JavaScript code and minimizing the time needed to download your application from the server.</p>
+
+<h2>Deferred Binding using Generators</h2>
+
+<p>The second technique for deferred binding consists of using <i>generators</i>. Generators are classes that are invoked by the GWT compiler to generate a Java implementation of
+a class during compilation. When compiling to web mode, this generated implementation is directly translated to one of the versions of your application in JavaScript code that a
+client will download based on its browser environment.</p>
+
+<p>The following is an example of how a deferred binding generator is specified to the compiler in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a>
+hierarchy for the <tt>RemoteService</tt> class - used for GWT-RPC:</p>
+
+<ul>
+<li>Top level <i>&lt;module&gt;</i>.gwt.xml <i><strong>inherits</strong></i> <a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/User.gwt.xml" rel="nofollow">com.google.gwt.user.User</a></li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/User.gwt.xml" rel="nofollow">com/google/gwt/user/User.gwt.xml</a>
+<i><strong>inherits</strong></i> <a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/RemoteService.gwt.xml" rel="nofollow">com.googl.gwt.user.RemoteService</a></li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/releases/1.6/user/src/com/google/gwt/user/RemoteService.gwt.xml" rel="nofollow">com/google/gwt/user/RemoteService.gwt.xml</a>
+<i><strong>contains</strong></i> <tt>&lt;generates-with&gt;</tt> elements to define deferred binding rules for the <tt>RemoteService</tt> class.</li>
+</ul>
+
+<h2>Generator Configuration in Module XML</h2>
+
+<p>The XML element <tt>&lt;generate-with&gt;</tt> tells the compiler to use a <tt>Generator</tt> class. Here are the contents of the <tt>RemoteService.gwt.xml</tt> file relevant
+to deferred binding:</p>
+
+<pre class="prettyprint">
+&lt;module&gt;
+
+ &lt;!--  ... other configuration omitted ... --&gt;
+    
+ &lt;!-- Default warning for non-static, final fields enabled --&gt;
+ &lt;set-property name=&quot;gwt.suppressNonStaticFinalFieldWarnings&quot; value=&quot;false&quot; /&gt;
+
+ &lt;generate-with class=&quot;com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator&quot;&gt;
+   &lt;when-type-assignable class=&quot;com.google.gwt.user.client.rpc.RemoteService&quot; /&gt;
+ &lt;/generate-with&gt;
+&lt;/module&gt;
+</pre>
+
+<p>These directives instruct the GWT compiler to invoke methods in a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/ext/Generator.html">Generator</a> subclass (<tt>ServiceInterfaceProxyGenerator</tt>) in order to generate special code when the deferred binding mechanism <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create()</a> is encountered while
+compiling. In this case, if the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create()</a> call references an instance of <tt>RemoteService</tt> or one of its subclasses, the <tt>ServiceInterfaceProxyGenerator</tt>'s generate()` method
+will be invoked.</p>
+
+<h2>Generator Implementation</h2>
+
+<p>Defining a subclass of the <tt>Generator</tt> class is much like defining a plug-in to the GWT compiler. The <tt>Generator</tt> gets called to generate a Java class definition
+before the Java to JavaScript conversion occurs. The implementation consists of one method that must output Java code to a file and return the name of the generated class as a
+string.</p>
+
+<p>The following code shows the <tt>Generator</tt> that is responsible for deferred binding of a <tt>RemoteService</tt> interface:</p>
+
+<pre class="prettyprint">
+/**
+ * Generator for producing the asynchronous version of a
+ * {@link com.google.gwt.user.client.rpc.RemoteService RemoteService} interface.
+ */
+public class ServiceInterfaceProxyGenerator extends Generator {
+
+  /**
+   * Generate a default constructible subclass of the requested type. The
+   * generator throws &lt;code&gt;UnableToCompleteException&lt;/code&gt; if for any reason
+   * it cannot provide a substitute class
+   * 
+   * @return the name of a subclass to substitute for the requested class, or
+   *         return &lt;code&gt;null&lt;/code&gt; to cause the requested type itself to be
+   *         used
+   * 
+   */
+  public String generate(TreeLogger logger, GeneratorContext ctx,
+      String requestedClass) throws UnableToCompleteException {
+
+    TypeOracle typeOracle = ctx.getTypeOracle();
+    assert (typeOracle != null);
+
+    JClassType remoteService = typeOracle.findType(requestedClass);
+    if (remoteService == null) {
+      logger.log(TreeLogger.ERROR, &quot;Unable to find metadata for type '&quot;
+          + requestedClass + &quot;'&quot;, null);
+      throw new UnableToCompleteException();
+    }
+
+    if (remoteService.isInterface() == null) {
+      logger.log(TreeLogger.ERROR, remoteService.getQualifiedSourceName()
+          + &quot; is not an interface&quot;, null);
+      throw new UnableToCompleteException();
+    }
+
+    ProxyCreator proxyCreator = new ProxyCreator(remoteService);
+
+    TreeLogger proxyLogger = logger.branch(TreeLogger.DEBUG,
+        &quot;Generating client proxy for remote service interface '&quot;
+            + remoteService.getQualifiedSourceName() + &quot;'&quot;, null);
+
+    return proxyCreator.create(proxyLogger, ctx);
+  }
+}
+</pre>
+
+<p>The <tt>typeOracle</tt> is an object that contains information about the Java code that has already been parsed that the generator may need to consult. In this case, the
+<tt>generate()</tt> method checks it arguments and the passes off the bulk of the work to another class (<tt>ProxyCreator</tt>).</p>
+
+  <div id="notice" style="text-align: center; border: 1em 0em 1em 0em">
+  Except as otherwise <a
+  href="http://code.google.com/policies.html#restrictions">noted</a>,
+  the content of this page is licensed under the <a rel="license"
+  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+  Attribution 3.0 License</a>.
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" 
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+    <license rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </License>
+</rdf:RDF> -->
+</div>
+
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div id="gc-content-last-updated">Last updated March 23, 2012.</div>
+
+</div>
+
+      </div>
+
+      </div>
+      
+
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="prod45d.360930183423672260" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b69593dd37b855df5c5d9951f1bf206e' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($);
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+// Add the handlers once the document has loaded.
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  </body>
+</html>

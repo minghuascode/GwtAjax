@@ -1,0 +1,1370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+  
+  <title>Internationalization &amp; Accessibility - Google Web Toolkit &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    <div id="sandbar">
+      
+      <a href="/sandbar?q=&page_url=/web-toolkit/doc/1.6/DevGuideI18nAndA11y"></a>
+      <div id="gc-googlebar"></div>
+      <img src="/images/google-logo.png" style="display:none;"/>
+      
+    </div>
+    
+    
+
+    <div id="gc-wrapper">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Events</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      <div id="gc-appbar">
+        
+        <h1>
+          
+
+  <a href="/web-toolkit/">Google Web Toolkit</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/web-toolkit/"
+      data-size="medium"
+      data-count="count"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+
+        </h1>
+        
+      </div>
+      
+
+      
+      <div id="gc-main">
+        
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><span class="tlw-title" data-title="Docs:">Docs:</span></li><li class=""><a href="/web-toolkit/doc/latest" data-title="Latest Version"><span>Latest Version</span></a></li><li class=""><span class="tlw-title" data-title="Older Versions">Older Versions</span><ul><li class=""><a href="/web-toolkit/doc/2.4" data-title="2.4"><span>2.4</span></a></li><li class=""><a href="/web-toolkit/doc/2.3" data-title="2.3"><span>2.3</span></a></li><li class=""><a href="/web-toolkit/doc/2.2" data-title="2.2"><span>2.2</span></a></li><li class=""><a href="/web-toolkit/doc/2.1" data-title="2.1"><span>2.1</span></a></li><li class=""><a href="/web-toolkit/doc/2.0" data-title="2.0"><span>2.0</span></a></li></ul></li></ul><hr/><ul><li class=""><a href="/web-toolkit/download" data-title="Downloads"><span>Downloads</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/" data-title="GWT Designer"><span>GWT Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/download-gwtdesigner" data-title="Download"><span>Download</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/quick_start" data-title="Quick Start"><span>Quick Start</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/whatsnew" data-title="What&#39;s New"><span>What&#39;s New</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation" data-title="Installation"><span>Installation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/system" data-title="System Requirements"><span>System Requirements</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.7" data-title="Using update site for Eclipse 3.7"><span>Using update site for Eclipse 3.7</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.6" data-title="Using update site for Eclipse 3.6"><span>Using update site for Eclipse 3.6</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.5" data-title="Using update site for Eclipse 3.5"><span>Using update site for Eclipse 3.5</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.4" data-title="Using update site for Eclipse 3.4"><span>Using update site for Eclipse 3.4</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/uninstall" data-title="Uninstall"><span>Uninstall</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface" data-title="User Interface"><span>User Interface</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/design_view" data-title="Design View"><span>Design View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/source_view" data-title="Source View"><span>Source View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/structure_view" data-title="Structure View"><span>Structure View</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/component_tree" data-title="Component Tree"><span>Component Tree</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane" data-title="Property Pane"><span>Property Pane</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane_context_menu" data-title="Property Pane Context Menu"><span>Property Pane Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string" data-title="String Editor"><span>String Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string_array" data-title="String Array Editor"><span>String Array Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_color" data-title="Color Editor"><span>Color Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_font" data-title="Font Editor"><span>Font Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_image" data-title="Icon / Image Editor"><span>Icon / Image Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_point" data-title="Point Editor"><span>Point Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_rectangle" data-title="Rectangle Editor"><span>Rectangle Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_inset" data-title="Inset Editor"><span>Inset Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_taborder" data-title="Tab Order Editor"><span>Tab Order Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/properties/property_editor_style_name" data-title="Style Name Editor"><span>Style Name Editor</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette" data-title="Palette"><span>Palette</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_context_menu" data-title="Palette Context Menu"><span>Palette Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_manager" data-title="Palette Manager"><span>Palette Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/palettes/gwt_palette" data-title="GWT Designer Palette"><span>GWT Designer Palette</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/NewComponentsTutorial.pdf" data-title="New Components Tutorial (PDF)"><span>New Components Tutorial (PDF)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/DesignerCustomizationAPI.pdf" data-title="Designer Customization API (PDF)"><span>Designer Customization API (PDF)</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/toolbar" data-title="Toolbar"><span>Toolbar</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/context_menu" data-title="Context Menu"><span>Context Menu</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features" data-title="Features"><span>Features</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/bidirectional" data-title="Bi-directional Code Generation"><span>Bi-directional Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt_code_generation" data-title="GWT Code Generation"><span>GWT Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/custom_composites" data-title="Custom Panels"><span>Custom Panels</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/factories" data-title="Factories"><span>Factories</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/visual_inheritance" data-title="Visual Inheritance"><span>Visual Inheritance</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/event_handling" data-title="Event Handling"><span>Event Handling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/menu_editing" data-title="Menu Editing"><span>Menu Editing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/morphing" data-title="Morphing"><span>Morphing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/editing_existing_window" data-title="Editing Existing Windows"><span>Editing Existing Windows</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_compiling" data-title="Application Compiling"><span>Application Compiling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_launching" data-title="Application Launching"><span>Application Launching</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/module_deployment" data-title="Build &amp; Deployment"><span>Build &amp; Deployment</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/css_support" data-title="CSS Support"><span>CSS Support</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/enhanced_compilation" data-title="Enhanced Compilation"><span>Enhanced Compilation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/image_bundles" data-title="Image Bundles"><span>Image Bundles</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/internationalization" data-title="Internationalization (i18n)"><span>Internationalization (i18n)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/junit_testcase" data-title="JUnit Test Creation"><span>JUnit Test Creation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/project" data-title="Projects"><span>Projects</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/refactoring" data-title="Refactoring"><span>Refactoring</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/remoteservice" data-title="Remote Services"><span>Remote Services</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gwt-ext" data-title="Using GWT-Ext"><span>Using GWT-Ext</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gxt" data-title="Using Ext GWT (GXT)"><span>Using Ext GWT (GXT)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/smartgwt" data-title="Using SmartGWT"><span>Using SmartGWT</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt" data-title="Panels"><span>Panels</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/absolutepanel" data-title="AbsolutePanel"><span>AbsolutePanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/dockpanel" data-title="Dock[Layout]Panel"><span>Dock[Layout]Panel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flextable" data-title="FlexTable"><span>FlexTable</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flowpanel" data-title="FlowPanel"><span>FlowPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/gridpanel" data-title="Grid"><span>Grid</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/layoutpanel" data-title="LayoutPanel"><span>LayoutPanel</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt" data-title="Wizards"><span>Wizards</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/entrypoint" data-title="Java EntryPoint"><span>Java EntryPoint</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/composite" data-title="Java Composite"><span>Java Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/dialogbox" data-title="Java DialogBox"><span>Java DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/popuppanel" data-title="Java PopupPanel"><span>Java PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_composite" data-title="UiBinder Composite"><span>UiBinder Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_dialogbox" data-title="UiBinder DialogBox"><span>UiBinder DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_popuppanel" data-title="UiBinder PopupPanel"><span>UiBinder PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/module" data-title="GWT Module"><span>GWT Module</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/library" data-title="GWT Library"><span>GWT Library</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences" data-title="Preferences"><span>Preferences</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_code_parsing" data-title="Code Parsing"><span>Code Parsing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt" data-title="GWT"><span>GWT</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_builder" data-title="Builder"><span>Builder</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_code_generation" data-title="Code Generation"><span>Code Generation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_nls" data-title="NLS"><span>NLS</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_variables" data-title="Variables"><span>Variables</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts" data-title="Layouts"><span>Layouts</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts_absolute" data-title="Absolute"><span>Absolute</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer" data-title="Google-Web Toolkit-Designer"><span>Google-Web Toolkit-Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_absolute_layout" data-title="Absolute Layout"><span>Absolute Layout</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_code_style" data-title="Code Style"><span>Code Style</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_uitoolkits" data-title="UI Toolkits"><span>UI Toolkits</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_export" data-title="Export/Import"><span>Export/Import</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials" data-title="Tutorials"><span>Tutorials</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/loginmanager" data-title="GWT Login Manager"><span>GWT Login Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/stockwatcher" data-title="GWT Stock Watcher"><span>GWT Stock Watcher</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/product_support" data-title="Product Support"><span>Product Support</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/error_reporting" data-title="Error Reporting"><span>Error Reporting</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/test_cases" data-title="Reproducible Test Cases"><span>Reproducible Test Cases</span></a></li><li class=""><a href="http://groups.google.com/group/google-web-toolkit" data-title="Forum"><span>Forum</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/accessibility" data-title="Accessibility"><span>Accessibility</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tipsandtricks" data-title="Tips &amp; Tricks"><span>Tips &amp; Tricks</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tos" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></li></ul><hr/><ul><li class=""><span class="tlw-title" data-title="Resources:">Resources:</span></li><li class=""><a href="/web-toolkit/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="/web-toolkit/books" data-title="Books"><span>Books</span></a></li><li class=""><a href="/web-toolkit/casestudies" data-title="Case Studies"><span>Case Studies</span></a></li><li class=""><a href="/web-toolkit/community" data-title="Community"><span>Community</span></a><ul><li class=""><a href="http://gwtgallery.appspot.com" data-title="App Gallery"><span>App Gallery</span></a></li><li class=""><a href="/web-toolkit/developer_spotlight" data-title="Developer Spotlight"><span>Developer Spotlight</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools" data-title="Tools &amp; Libraries"><span>Tools &amp; Libraries</span></a></li><li class=""><a href="/web-toolkit/media_gallery" data-title="Presentations"><span>Presentations</span></a></li><li class=""><a href="/web-toolkit/makinggwtbetter" data-title="Making GWT Better"><span>Making GWT Better</span></a></li><li class=""><a href="/web-toolkit/lifeofanissue" data-title="Issue Tracking"><span>Issue Tracking</span></a></li><li class=""><a href="http://googlewebtoolkit.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="/web-toolkit/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 class="page-title" >Internationalization &amp; Accessibility</h1>
+  
+  
+
+
+
+<ol class="toc" id="pageToc">
+  <li><a href="#DevGuideInternationalization">Internationalization</a></li>
+  <li><a href="#DevGuideStaticStringInternationalization">Static String Internationalization</a></li>
+  <li><a href="#DevGuideDynamicStringInternationalization">Dynamic String Internationalization</a></li>
+  <li><a href="#DevGuideSpecifyingLocale">Specifying a Locale</a></li>
+  <li><a href="#DevGuidePropertiesFiles">Localized Properties Files</a></li>
+  <li><a href="#DevGuideAccessibility">Accessibility Support</a></li>
+  <li><a href="#DevGuideAccessibilityHowTo">Making Widgets Accessible</a></li>
+</ol>
+
+
+<h1 id="DevGuideInternationalization">Internationalization</h1>
+
+<p>GWT includes a flexible set of tools to help you internationalize your applications and libraries. GWT internationalization support provides a variety of techniques to
+internationalize strings, typed values, and classes.</p>
+
+<h2>Quick Start with Internationalization</h2>
+
+<p>GWT supports a variety of ways of internationalizing your code. Start by researching which approach best matches your development requirements.</p>
+
+<ul>
+<li><strong>Are you writing code from scratch?</strong><br/>
+If so, you will probably want to read up on GWT's <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideStaticStringInternationalization">static string internationalization</a>
+techniques.</li>
+</ul>
+
+<ul>
+<li><strong>Do you want to internationalize mostly settings or end-user messages?</strong><br/>
+If you have mostly settings and interface labels with fixed text, consider <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a>, which uses the least runtime resources. If
+you have a lot a of end-user messages where you want to add arguments to each message, then <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a> is probably what you want.</li>
+</ul>
+
+<ul>
+<li><strong>Do you have existing localized properties files you'd like to reuse?</strong><br/>
+The i18nCreator tool can automatically generate interfaces that extend either <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html">ConstantsWithLookup</a> or <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a>.</li>
+</ul>
+
+<ul>
+<li><strong>Are you adding GWT functionality to an existing web application that already has a localization process defined?</strong><br/>
+<a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html">Dictionary</a> will help you interoperate with
+existing pages without requiring you to use <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideSpecifyingLocale">GWT's concept of locale</a>.</li>
+</ul>
+
+<ul>
+<li><strong>Do you really just want a simple way to get properties files down to the client regardless of localization?</strong><br/>
+You can do that, too. Try using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a> without
+<a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideSpecifyingLocale">specifying a locale</a>.</li>
+</ul>
+
+<h2>Internationalization Techniques</h2>
+
+<p>GWT offers multiple internationalization techniques to afford maximum flexibility to GWT developers and to make it possible to design for efficiency, maintainability,
+flexibility, and interoperability in whichever combinations are most useful.</p>
+
+<ul>
+<li><strong><a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideStaticStringInternationalization">Static string internationalization</a></strong><br/>
+A family of efficient and type-safe techniques that rely on strongly-typed Java interfaces, <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuidePropertiesFiles">properties files</a>, and
+code generation to provide locale-aware messages and configuration settings. These techniques depend on the interfaces <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html">ConstantsWithLookup</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a>.</li>
+</ul>
+
+<ul>
+<li><strong><a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideDynamicStringInternationalization">Dynamic string internationalization</a></strong><br/>
+A simple and flexible technique for looking up localized values defined in a module's <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host page</a> without needing to recompile
+your application. This technique is supported by the class <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html">Dictionary</a>.</li>
+</ul>
+
+<ul>
+<li><strong><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html">Extending or implementing
+Localizable</a></strong><br/>
+Provides a method for internationalizing sets of algorithms using locale-sensitive type substitution. This is an advanced technique that you probably will not need to use
+directly, although it is useful for implementing complex internationalized libraries. For details on this technique, see the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html">Localizable</a> class documentation.</li>
+</ul>
+
+<h2>The I18N Module</h2>
+
+<p>Core types related to internationalization:</p>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a> Useful for localizing typed constant
+values</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a> Useful for localizing messages
+requiring arguments</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html">ConstantsWithLookup</a> Like <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a> but with extra lookup flexibility for highly
+data-driven applications</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html">Dictionary</a> Useful when adding a GWT module to
+existing localized web pages</li>
+</ul>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html">Localizable</a> Useful for localizing algorithms
+encapsulated in a class</li>
+</ul>
+
+<p/>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html">DateTimeFormat</a> Formatting dates as
+strings. See the section on <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDateAndNumberFormat">date and number formatting</a>.</li>
+</ul>
+
+
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html">NumberFormat</a> Formatting numbers as strings.
+See the section on <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDateAndNumberFormat">date and number formatting</a>.</li>
+</ul>
+
+<p>The GWT internationalization types reside in the com.google.gwt.i18n package. To use any of these types, your module must inherit from the I18N module
+(com.google.gwt.i18n.I18N).</p>
+
+<pre class="prettyprint">
+&lt;module&gt;
+  &lt;inherits name=&quot;com.google.gwt.i18n.I18N&quot;/&gt;
+&lt;/module&gt;
+</pre>
+
+<p>As of GWT 1.5, the User module (com.google.gwt.user.User) inherits the I18N module. So if your project's module XML file inherits the User module (which generally it does), it
+does not need to specify explicitly an inherit for the I18N module.</p>
+
+<h1 id="DevGuideStaticStringInternationalization">Static String Internationalization</h1>
+
+<p>Static String Internationalization is the most efficient way to localize your application for different locales in terms of runtime performance. This approach is called
+&quot;static&quot; because it refers to creating tags that are matched up with human readable strings at compile time. At compile time, mappings between tags and strings are created for all
+languages defined in the module. The module startup sequence maps the appropriate implementation based on the locale setting using <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">deferred binding</a>.</p>
+
+<p>Static string localization relies on code generation from standard Java <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuidePropertiesFiles">properties files</a>. GWT supports static
+string localization through two tag interfaces (that is, interfaces having no methods that represent a functionality contract) and a code generation library to generate
+implementations of those interfaces.</p>
+
+<h2>Extending the Constants Interface</h2>
+
+<p>This example will walk through the process of creating a class of internationalized constant strings &quot;hello, world&quot; and &quot;goodbye, world&quot; in your GWT application. The example
+will create a Java interface named <tt>MyConstants</tt> that abstracts those strings. You can reference the <tt>MyConstants</tt> methods in your GWT code when you want to display
+one of those strings to the user and they will be translated appropriately for all locales that have matching <tt>.properties</tt> files.</p>
+
+<p>Begin by creating a default properties file called <tt>MyConstants.properties</tt> in your GWT project. You can place the file anywhere in your module's source path, but the
+<tt>.properties</tt> file and corresponding interface must be in the same package. It's fine to place the file in the same package as your module's entry point class:</p>
+
+<pre>
+helloWorld = hello, world
+goodbyeWorld = goodbye, world
+</pre>
+
+<p>You can also create a localized translation for each supported locale in separate properties files. The properties file must be named the same as our interface name, in our
+case <tt>MyConstants</tt>, with the appropriate suffix that indicates the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideSpecifyingLocale">locale setting</a>. In this case, we localize
+for spanish using the filename <tt>MyConstants_es.properties</tt>:</p>
+
+<pre>
+helloWorld = hola, mundo
+goodbyeWorld = adiÃ³s, mundo
+</pre>
+
+<p>Now define an interface that abstracts those strings by extending the built-in <tt>Constants</tt> interface. Create a new Java interface in the same package where the
+<tt>.properties</tt> files were created. The method names must match the tag names uses in the <tt>.properties</tt> files:</p>
+
+<pre class="prettyprint">
+public interface MyConstants extends Constants {
+  String helloWorld();
+  String goodbyeWorld();
+}
+</pre>
+
+<p class="note"><strong>Tip:</strong> The i18nCreator tool automates the generation of Constants interface subinterfaces like the one above. The tool generates Java code so that you only need to
+maintain the <tt>.properties</tt> files. It also works for <tt>ConstantsWithLookup</tt> and <tt>Messages</tt> classes.</p>
+
+<p>Note that <tt>MyConstants</tt> is declared as an interface, so you can not instantiate it directly with <tt>new</tt>. To use the internationalized constants, you create a Java
+instance of <tt>MyConstants</tt> using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create(Class)</a> facility:</p>
+
+<pre class="prettyprint">
+public void useMyConstants() {
+  MyConstants myConstants = (MyConstants) GWT.create(MyConstants.class);
+  Window.alert(myConstants.helloWorld());
+}
+</pre>
+
+<p class="note"><strong>Tip:</strong> As of the GWT 1.5 release, <tt>GWT.create()</tt> returns a parameterized object so that the cast of the return value is no longer needed.</p>
+
+<p>You don't need to worry about the Java implementation of your static string classes. Static string initialization uses a <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">deferred binding generator</a> which allows the GWT
+compiler to take care of automatically generating the Java code necessary to implement your <tt>Constants</tt> subinterface depending on the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideSpecifyingLocale">locale</a>.</p>
+
+<h2>Using the Messages Interface</h2>
+
+<p>The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a> interface allows you to subsitute
+parameters into messages and to even re-order those parameters for different locales as needed. The format of the messages in the properties files follows the specification in
+Java <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html" rel="nofollow">MessageFormat</a>. The interface you create will contain a java method with
+parameters matching those specified in the format string.</p>
+
+<p>Here is an example Messages property value:</p>
+
+<pre>
+permissionDenied = Error {0}: User {1} Permission denied.
+</pre>
+
+<p>The following code implements an alert dialog by substituting values into the message:</p>
+
+<pre class="prettyprint">
+ public interface ErrorMessages extends Messages {
+   String permissionDenied(int errorCode, String username);
+ }
+ ErrorMessages msgs = GWT.create(ErrorMessages.class)
+  
+ void permissionDenied(int errorVal, String loginId) {
+   Window.alert(msgs.permissionDenied(errorVal, loginId));
+ }
+</pre>
+
+<p class="caution"><strong>Caution:</strong> Be advised that the rules for using quotes may be a bit confusing. Refer to the <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html" rel="nofollow">MessageFormat</a> javadoc for more details.</p>
+
+<h2>The Benefits of Static String Internationalization</h2>
+
+<p>As you can see from the example above, static internationalization relies on a very tight binding between internationalized code and its localized resources. Using explicit
+method calls in this way has a number of advantages. The GWT compiler can optimize deeply, removing uncalled methods and inlining localized strings -- making generated code as
+efficient as if the strings had been hard-coded. The value of compile-time checking becomes even more apparent when applied to messages that take multiple arguments. Creating a
+Java method for each message allows the compiler to check both the number and types of arguments supplied by the calling code against the message template defined in a properties
+file. For example, attempting to use the following interface and .properties files results in a compile-time error:</p>
+
+<pre class="prettyprint">
+public interface ErrorMessages extends Messages {
+  String permissionDenied(int errorCode, String username);
+}
+</pre>
+
+<pre>
+permissionDenied = Error {0}: User {1} does not have permission to access {2}
+</pre>
+
+<p>An error is returned because the message template in the properties file expects three arguments, while the <tt>permissionDenied</tt> method can only supply two.</p>
+
+<h2>Which Interface to Use?</h2>
+
+<p>Here are some guidelines to help choose the right interface for your application's needs:</p>
+
+<ul>
+<li>Extend <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a> to create a collection of
+constant values of a variety of types that can be accessed by calling methods (called <i>constant accessors</i>) on an interface. Constant accessors may return a variety of types,
+including strings, numbers, booleans, and even maps. A compile-time check is done to ensure that the value in a properties file matches the return type declared by its
+corresponding constant accessor. In other words, if a constant accessor is declared to return an <tt>int</tt>, its associated property is guaranteed to be a valid <tt>int</tt>
+value -- avoiding a potential source of runtime errors.</li>
+</ul>
+
+<ul>
+<li>The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html">ConstantsWithLookup</a> interface is
+identical to <tt>Constants</tt> except that the interface also includes a method to look up strings by property name, which facilitates dynamic binding to constants by name at
+runtime. <tt>ConstantsWithLookup</tt> can sometimes be useful in highly data-driven applications. One caveat: <tt>ConstantsWithLookup</tt> is less efficient than
+<tt>Constants</tt> because the compiler cannot discard unused constant methods, resulting in larger applications.</li>
+</ul>
+
+<ul>
+<li>Extend <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a> to create a collection of
+formatted messages that can accept parameters. You might think of the <tt>Messages</tt> interface as a statically verifiable equivalent of the traditional Java combination of
+<tt>Properties</tt>, <tt>ResourceBundle</tt>, and <tt>MessageFormat</tt> rolled into a single mechanism.</li>
+</ul>
+
+<h2>Properties Files</h2>
+
+<p>All of the types above use properties files based on the traditional <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html#load(java.io.InputStream)" rel="nofollow">Java properties file format</a>, although GWT uses <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuidePropertiesFiles">an enhanced properties file format</a> that allows for
+UTF-8 and therefore allows properties files to contain Unicode characters directly.</p>
+
+<h1 id="DevGuideDynamicStringInternationalization">Dynamic String Internationalization</h1>
+
+<p>For existing applications that may not support the GWT <tt>locale</tt> client property, GWT offers Dynamic String Internationalization to easily integrate GWT
+internationalization.</p>
+
+<p>The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html">Dictionary</a> class lets your GWT application
+consume strings supplied by the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML page</a>. This approach is convenient if your existing web server has a localization
+system that you do not wish to integrate with the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideStaticStringInternationalization">static string internationalization</a> methods.
+Instead, simply print your strings within the body of your HTML page as a JavaScript structure, and your GWT application can reference and display them to end users. Since it
+binds directly to the key/value pairs in the host HTML, whatever they may be, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html">Dictionary</a> class is not sensitive to the <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideSpecifyingLocale">GWT locale setting</a>. Thus, the burden of generating localized strings is on your web server.</p>
+
+<p>Dynamic string localization allows you to look up localized strings defined in a <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML</a> page at runtime using
+string-based keys. This approach is typically slower and larger than the static string approach, but does not require application code to be recompiled when messages are altered
+or the set of locales changes.</p>
+
+<p class="note"><strong>Tip:</strong> The <tt>Dictionary</tt> class is completely dynamic, so it provides no static type checking, and invalid keys cannot be checked by the compiler. This is
+another reason we recommend using <a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideStaticStringInternationalization">static string internationalization</a> where
+possible.</p>
+
+
+<h1 id="DevGuideSpecifyingLocale">Specifying a Locale</h1>
+
+<p>GWT represents <tt>locale</tt> as a client property whose value can be set either using a meta tag embedded in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host
+page</a> or in the query string of the host page's URL. Rather than being supplied by GWT, the set of possible values for the <tt>locale</tt> client property is entirely a
+function of your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModules">module configuration</a>.</p>
+
+<h2>Client Properties and the GWT Compilation Process</h2>
+
+<p><i>Client properties</i> are key/value pairs that can be used to configure GWT modules. User agent, for example, is represented by a client property. Each client property can
+have any number of values, but all of the values must be enumerable when the GWT compiler runs. GWT modules can define and extend the set of available client properties along with
+the potential values each property might assume when loaded in an end user's browser using the <tt>&lt;extend-property&gt;</tt> directive. At compile time, the GWT compiler
+determines all the possible permutations of a module's client properties, from which it produces multiple <i>compilations</i>. Each compilation is optimized for a different set of
+client properties and is recorded into a file ending with the suffix <tt>.cache.html</tt>.</p>
+
+<p>In deployment, the end-user's browser only needs one particular compilation, which is determined by mapping the end user's client properties onto the available compiled
+permutations. Thus, only the exact code required by the end user is downloaded, no more. By making locale a client property, the standard startup process in
+<tt>&lt;module&gt;.nocache.js</tt> chooses the appropriate localized version of an application, providing ease of use, optimized performance, and minimum script size. See the
+Knowledge Base for more information about the logic of the <tt>&lt;modulename&gt;.nocache.js</tt> file.</p>
+
+<h2>The Default Locale</h2>
+
+<p>The <tt>com.google.gwt.i18n.I18N</tt> module defines only one locale by default, called <tt>default</tt>. This default locale is used when the <tt>locale</tt> client property
+goes unspecified in deployment. The default locale is used internally as a last-resort match between a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html">Localizable</a> interface and a localized resource or
+class.</p>
+
+<h2>Adding Locale Choices to a Module</h2>
+
+<p>In any real-world application, you will define at least one locale in addition to the default locale. &quot;Adding a locale&quot; means extending the set of values of the <tt>locale</tt>
+client property using the <tt>&lt;extend-property&gt;</tt> element in your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML</a>. For example, the following module
+adds multiple locale values:</p>
+
+<pre class="prettyprint">
+&lt;module&gt;
+  &lt;inherits name=&quot;com.google.gwt.user.User&quot;/&gt;
+  &lt;inherits name=&quot;com.google.gwt.i18n.I18N&quot;/&gt;
+  
+  &lt;!-- French language, independent of country --&gt;
+  &lt;extend-property name=&quot;locale&quot; values=&quot;fr&quot;/&gt;
+
+  &lt;!-- French in France --&gt;
+  &lt;extend-property name=&quot;locale&quot; values=&quot;fr_FR&quot;/&gt;
+
+  &lt;!-- French in Canada --&gt;
+  &lt;extend-property name=&quot;locale&quot; values=&quot;fr_CA&quot;/&gt;
+  
+  &lt;!-- English language, independent of country --&gt;
+  &lt;extend-property name=&quot;locale&quot; values=&quot;en&quot;/&gt;
+&lt;/module&gt;
+</pre>
+
+<h2>Choosing a Locale at Runtime</h2>
+
+<p>The locale client property can be specified using either a meta tag or as part of the query string in the host page's URL. If both are specified, the query string takes
+precedence. To specify the <tt>locale</tt> client property using a meta tag in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host page</a>, embed a meta tag for
+<tt>gwt:property</tt> as follows:</p>
+
+<pre class="prettyprint">
+&lt;meta name=&quot;gwt:property&quot; content=&quot;locale=x_Y&quot;&gt;
+</pre>
+
+<p>For example, the following host HTML page sets the locale to &quot;ja_JP&quot;:</p>
+
+<pre class="prettyprint">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&quot;gwt:property&quot; content=&quot;locale=ja_JP&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Load the GWT compiled module code                           --&gt;
+    &lt;script src=&quot;com.google.gwt.examples.i18n.ColorNameLookupExample.nocache.js &quot; /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>To specify the <tt>locale</tt> client property using a query string, specify a value for the name <tt>locale</tt>. For example,</p>
+
+<pre>
+http://www.example.org/myapp.html?locale=fr_CA
+</pre>
+
+<p class="note"><strong>Tip:</strong> The preferred time to explicitly set <tt>locale</tt> is to do so before your GWT module is invoked. You can change the <tt>locale</tt> from within your GWT
+module by adding or changing the <tt>locale</tt> query string in the current URL and reloading the page. Keep in mind that after reloading the page, your module will
+restart.</p>
+
+<p/>
+
+<h2>Creating a New Property Provider</h2>
+
+<p>If you are embedding your module into an existing application, there may be another way of determining locale that does not lend itself to using the <tt>&lt;meta&gt;</tt> tag
+or specifying <tt>locale=</tt> as a query string. In this case, you could write your own property provider.</p>
+
+<p>A property provider is specified in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a> as a JavaScript fragment that will return the value for the
+named property at runtime. In this case, you would want to define the locale property using a property provider. To see examples of <tt>&lt;property-provider&gt;</tt> definitions
+in action, see the files <tt>I18N.gwt.xml</tt> and <tt>UserAgent.gwt.xml</tt> in the GWT source code.</p>
+
+<h1 id="DevGuidePropertiesFiles">Localized Properties Files</h1>
+
+<p><a href="/web-toolkit/doc/1.6/DevGuideI18nAndA11y#DevGuideStaticStringInternationalization">Static string internationalization</a> uses traditional Java <tt>.properties</tt> files to manage
+translating tags into localized values. These files may be placed into the same package as your main module class. They must be placed in the same package as their corresponding
+<tt>Constants</tt>/<tt>Messages</tt> subinterface definition file.</p>
+
+<p class="note"><strong>Tip:</strong> Use the i18nCreator script to get started.</p>
+
+<pre class="prettyprint">
+<i>
+ $ i18nCreator -eclipse Foo com.example.foo.client.FooConstants
+ Created file src/com/example/foo/client/FooConstants.properties
+ Created file FooConstants-i18n.launch
+ Created file FooConstants-i18n</i>
+</pre>
+
+<p/>
+
+<p>Both <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html">Constants</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html">Messages</a> use traditional Java properties files, with
+one notable difference: properties files used with GWT should be encoded as UTF-8 and may contain Unicode characters directly, avoiding the need for <tt>native2ascii</tt>. See the
+API documentation for the above interfaces for examples and formatting details. Many thanks to the <a href="http://tapestry.apache.org/" rel="nofollow">Tapestry</a> project for
+solving the problem of reading UTF-8 properties files in Tapestry's <tt>LocalizedProperties</tt> class.</p>
+
+<p>In order to use internationalized characters, make sure that your host HTML file contains the <tt>charset=utf8</tt> content type in the meta tag in the header:</p>
+
+<pre class="prettyprint">
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+</pre>
+
+<p>You must also insure that all relevant source and <tt>.properties</tt> files are set to be the UTF-8 charset in your IDE.</p>
+
+<h1 id="DevGuideAccessibility">Accessibility Support</h1>
+
+<h2>Screen Readers</h2>
+
+<p>A screen reader is an assistive application that interprets what is displayed on the screen for a blind or visually impaired user. Screen readers can interact with the user in
+a variety of ways, including speaking out loud or even producing a braille output.</p>
+
+<h3>Who uses screen readers?</h3>
+
+<p>Many people find it helpful to be able to interact with their computers in multiple ways. Though Google does not keep statistics on how many of our users are using screen
+readers, as the population ages, more people will require assistive technology. It is important to make that our applications are accessible for everybody.</p>
+
+<h3>How do screen readers work?</h3>
+
+<p>Screen readers listen for a standard set of events that are raised by platform-specific APIs. For example, when an alert window pops up on your screen, Microsoft Windows would
+expose this event using the Microsoft Active Accessibility API, while a Linux machine would use the Linux Access Toolkit. A screen reader will then communicate this change to the
+user.</p>
+
+<h2>GWT and Screen Readers</h2>
+
+<p>Ajax applications are often written in ways that screen readers have difficulty interpreting correctly. A GWT developer writing a tree widget, for example, might use a list
+element that has been altered to behave like a tree control. But a screen reader would present the control as a list - an incorrect description that renders the tree unusable.
+Screen readers will also treat HTML span or div elements as regular static text elements, regardless of the presence of JavaScript event handlers for user interaction; you can
+easily imagine how this causes problems.</p>
+
+<h2>ARIA</h2>
+
+<p>ARIA is a specification for making rich Internet applications accessible via a standard set of DOM properties. It is currently <a href="http://www.w3.org/WAI/intro/aria" rel="nofollow">a work in progress at the W3C</a>. More information can be found at this <a href="http://wiki.codetalks.org/wiki/index.php/Main_Page" rel="nofollow">ARIA page referenced by
+the Mozilla Developer Center</a>.</p>
+
+<p>Adding accessibility support to GWT widgets involves adding the relevant properties to DOM elements that can be used by browsers to raise events during user interaction. Screen
+readers can react to these events to represent the function of GWT widgets. The DOM properties specified by ARIA are classified into Roles and States.</p>
+
+<p>The ARIA property <tt>role</tt> is an indication of the widget type, and therefore describes the way the widget should behave. A role is static and does not change over the
+lifetime of widget. Some examples of ARIA roles: <tt>tree</tt>, <tt>menubar</tt>, <tt>menuitem</tt>, <tt>tab</tt>. The ARIA role of a widget is expressed as a DOM attribute named
+<tt>role</tt> with its value set to one of the ARIA role strings.</p>
+
+<p>There are also ARIA properties that describe the state of a widget. For example, a checkbox widget could be in the states &quot;checked&quot; or &quot;unchecked&quot;. A state is dynamic and
+should be updated during user interaction. Some examples of ARIA states: <tt>aria-disabled</tt>, <tt>aria-pressed</tt>, <tt>aria-expanded</tt>, <tt>aria-haspopup</tt>. Note that
+an ARIA state itself a DOM attribute -- for example, a toggle button widget that wants to express that it has been pressed will have an attribute <tt>aria-pressed</tt> set to
+true.</p>
+
+<p>The role of a widget determines the set of states that it supports. A widget with the role of <tt>list</tt>, for example, would not expose the <tt>aria-pressed</tt> state.</p>
+
+<p>Also, accessible widgets require keyboard support. Screenreaders will speak the element that has keyboard focus, so keyboard accessibility can be accomplished by moving focus
+to different elements in response to keyboard commands.</p>
+
+<h2>GWT and ARIA</h2>
+
+<p>Once ARIA roles and states are added to the DOM of a GWT widget, browsers will raise the appropriate events to the screen reader. As ARIA is still a work in progress, browsers
+may not raise an event for every ARIA property, and screenreaders may not recognize all of the events being raised.</p>
+
+<p>Many GWT widgets now have keyboard accessibility and ARIA properties. These include CustomButton, Tree, TreeItem, MenuBar, MenuItem, TabBar, and TabPanel. Also, all widgets
+that inherit from FocusWidget now have a tabindex by default, allowing for better keyboard navigation.</p>
+
+
+<h1 id="DevGuideAccessibilityHowTo">Making Widgets Accessible</h1>
+
+<p>This section describes how to add accessibility support to your GWT application and widgets. A variety of different techniques are discussed; there is not yet a standard and
+generally-applicable approach for making AJAX applications accessible, but we provide some suggestions.</p>
+
+<h2>Class com.google.gwt.user.client.ui.Accessibility</h2>
+
+<p>The Accessibility class implements the needed accessor and modifier methods for manipulating DOM attributes defined by the ARIA specifications. It also defines constants for
+the ARIA role and state names which are used by GWT widgets.</p>
+
+<h2>Adding ARIA Roles</h2>
+
+<p>The ARIA attribute <tt>role</tt> is an indication of the widget type; it describes the way the widget should behave. Roles are static and should not change during the lifetime
+of a widget. Widget authors should:</p>
+
+<ul>
+<li>Pick the right role for the widget from the list of supported ARIA roles.</li>
+
+<li>Set this attribute at construction time.</li>
+</ul>
+
+<p>The following is an example taken from the CustomButton widget. Adding the <tt>button</tt> role indicates to an assistive technology that the widget will behave like a
+button.</p>
+
+<pre class="prettyprint">
+  protected CustomButton() {
+    ...
+    // Add a11y role &quot;button&quot;. Accessibility.ROLE_BUTTON is the String constant
+    // &quot;button&quot;
+    Accessibility.setRole(getElement(), &quot;role&quot;, Accessibility.ROLE_BUTTON);
+    ...
+  }
+</pre>
+
+<p>Note that some of the role names have already been defined as constants in the Accessibility class.</p>
+
+<h2>Adding ARIA States</h2>
+
+<p>An ARIA state is an additional attribute that reflects the current state of a widget, for example, whether a checkbox is checked or unchecked. A state should be initialized at
+the time a widget is constructed and updated during user interaction.</p>
+
+<p>Note that:</p>
+
+<ul>
+<li>A widget can have numerous state attributes, whereas a widget can only ever have one role attribute.</li>
+
+<li>State attributes are dynamic and change during the widget's lifetime. A role once set does not change.</li>
+</ul>
+
+
+
+<p>Also, some of the relevant state names are defined as constants in the Accessibility class.</p>
+
+<h3>Initializing States</h3>
+
+<p>Once a specific ARIA role has been associated with a widget, it is important to check which states are associated with that role. For example, the <tt>button</tt> role has two
+state attributes:</p>
+
+<dl>
+<dt><code>aria-disabled</code></dt>
+<dd>Indicates that the widget is present, but is not allowed for user actions.</dd>
+
+<dt><code>aria-pressed</code></dt> 
+<dd>Used for buttons that are toggleable to indicate their current pressed state.</dd>
+</dl>
+
+
+<p>The <tt>aria-pressed</tt> state is not used in the CustomButton widget, as it is not supported by most screen readers yet. However, the code in the example below is the code
+that we would write when the <tt>aria-pressed</tt> state is better supported.</p>
+
+<p>In the CustomButton widget, the <tt>aria-pressed</tt> ARIA state is initialized as follows:</p>
+
+<pre class="prettyprint">
+  protected CustomButton() {
+    ...
+    // Add a11y state &quot;aria-pressed&quot;
+    Accessibility.setState(getElement(), &quot;aria-pressed&quot;, &quot;false&quot;);
+  }
+</pre>
+
+<h3>Updating States During User Interaction</h3>
+
+<p>The CustomButton widget has support for multiple button faces, giving developers more stylistic control. Also, unlike the Button widget, a CustomButton can be toggleable, as is
+the case with the CustomButton subclass ToggleButton. Event handlers attached to the underlying DOM element update the button faces when the button is pressed. At the same time,
+the Accessibility.setState(Element, String, String) method should be used to manipulate the DOM and update the value of the ARIA state aria-pressed:</p>
+
+<pre class="prettyprint">
+  void toggleDown() {
+    ...
+    // Update a11y state &quot;aria-pressed&quot;
+    Accessibility.setState(getElement(), &quot;aria-pressed&quot;, isDown() ? &quot;true&quot; : &quot;false&quot;);
+  }
+</pre>
+
+<p>It is important to make sure that all event handlers that change the state of the widget also change the ARIA state.</p>
+
+<h2>Adding Keyboard Accessibility</h2>
+
+<p>Keyboard accessibility is a key requirement when access-enabling GWT widgets. When developing a new widget, ensure that it is keyboard accessible from the outset; adding
+keyboard accessibility later can be difficult. Screenreaders will speak the element that has keyboard focus, so keyboard accessibility can be accomplished by moving focus to
+different elements in response to keyboard commands.</p>
+
+<p>Proper keyboard accessibility affords the following end-user behavior:</p>
+
+<ul>
+<li>Users can tab to move focus to the widget.</li>
+
+<li>When the widget receives focus, the screenreader will interpret the ARIA roles and states that are set on the widget.</li>
+
+<li>The screenreader will speak a description of the widget, and its textual content.</li>
+</ul>
+
+
+
+<p>By default, the only elements in the HTML DOM that can receive keyboard focus are anchor and form fields. However, setting the DOM property <tt>tabIndex</tt> (note that this
+corresponds to HTML attribute <tt>tabindex</tt>) to 0 will place such elements in the default tab sequence and thereby enable them to receive keyboard focus. Setting <tt>tabIndex
+= -1</tt>, while removing the element from the tab sequence, still allows the element to receive keyboard focus programmatically.</p>
+
+<p>In GWT, any widget that extends the FocusWidget abstract class will be keyboard focusable by default. The FocusWidget abstract class includes a setFocus(boolean) method that
+can be used to programmatically set the focus or remove focus on the widget. FocusWidget also includes a setTabIndex(int) method that allows the user to set the DOM property
+<tt>tabIndex</tt> for the widget.</p>
+
+<p>Keep in mind that extending FocusWidget does not guarantee focusability for your widget. The base element of the the FocusWidget (passed to the superclass constructor) must be
+a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component, a focusable element can be created via the
+FocusPanel.impl.createFocusable() static method. Look at CustomButton's implementation for an example of this.</p>
+
+<p>For widgets that don't extend the FocusWidget abstract class, ensuring keyboard accessibility can be more difficult. Different browsers set focus in different ways, and focus
+on arbitrary elements is not supported everywhere. You can use FocusPanel to enclose elements that need to receive keyboard focus; just be sure to test your widget on different
+browsers.</p>
+
+<p>For an example of using the <tt>tabIndex</tt> property, see the MenuBar widget. The root menu is the only one that should be in the tab sequence; its sub-menus are not. To
+achieve this, the tab index is set to 0 in the MenuBar's constructor, and as new MenuBars are added as sub-menus, their tab indexes are reset to -1.</p>
+
+<h2>Indicating Selection Changes
+to Screen Readers for Items That Are Not Naturally Focusable</h2>
+
+<p>Some widgets, such as GWT's Tree and MenuBar widgets, consist of a container with a set of items. The container has a naturally focusable DOM element, but the items themselves
+do not. The focusable element receives all keyboard input, and causes visual changes in the contained items to indicate a change in item selection. For example, GWT's Tree widget
+contains TreeItems; both of these elements are made up of divs. However, the Tree also has a naturally focusable hidden element which receives keyboard events. Whenever the user
+hits the arrow keys, this element handles the event and causes the appropriate TreeItem to be highlighted.</p>
+
+<p>While this technique holds up for sighted users, it plays havoc with screen readers. Since the TreeItems themselves never get natural focus when selected, there is no way for
+the screen reader to know that the item selection has changed. One possible way to remedy this would be to have each TreeItem be naturally focusable. Unfortunately, TreeItems can
+contain more than just text -- they can contain other widgets, which themselves can be focusable. Here, delegating focus properly would be fairly complex -- each TreeItem would
+have to handle all of the key events for its child widget, and decide whether or not to delegate key events to its child (for user interaction with the child widget), or to handle
+the key events itself (for Tree navigation). Keep in mind that hooking up keyboard event handlers for each item would become unwieldy, as Trees may become very large. One can
+avoid doing this by relying on the natural event bubbling of key events, and having an element at the root of the Tree widget be responsible for receiving events.</p>
+
+<p>Another way to remedy the situation is to use the ARIA <tt>aria-activedescendant</tt> state. This state is set on an element that is naturally focusable, and its value is the
+HTML id of the currently-selected item. Whenever the item changes, the <tt>aria-activedescendant</tt> value should be updated to the id of the newly-selected item. The screen
+reader will notice the change in the value and read the element corresponding to the id. Below is an example of how this technique is used on the GWT Tree and TreeItem
+widgets.</p>
+
+<p>First, we set roles on the Tree's root element and its focusable element:</p>
+
+<pre class="prettyprint">
+  // Called from Tree(...) constructor
+  private void init(TreeImages images, boolean useLeafImages) {
+    
+    ...
+    
+    // Root element of Tree is a div
+    setElement(DOM.createDiv());
+
+    ...
+    
+    // Create naturally-focusable element
+    focusable = FocusPanel.impl.createFocusable();
+
+    ...
+    
+    // Hide element and append it to root div
+    DOM.setIntStyleAttribute(focusable, &quot;zIndex&quot;, -1);
+    DOM.appendChild(getElement(), focusable);
+
+    // Listen for key events on the root element
+    sinkEvents(Event.MOUSEEVENTS | Event.ONCLICK | Event.KEYEVENTS);
+    
+    ...
+    
+    // Add a11y role &quot;tree&quot; to root element
+    Accessibility.setRole(getElement(), Accessibility.ROLE_TREE);
+    
+    // Add a11y role &quot;treeitem&quot; to focusable element. This is necessary for some screen 
+    // readers to interpret the aria-activedescendant state of this element.     
+    Accessibility.setRole(focusable, Accessibility.ROLE_TREEITEM);       
+ }
+</pre>
+
+<p>Whenever an item selection changes, the value of the aria-activedescendant state is set on the focusable element, and the ARIA states of the currently-selected item are
+set:</p>
+
+<pre class="prettyprint">
+  // Called after a new item has been selected
+  private void updateAriaAttributes() {
+
+    // Get the element which contains the text (or widget) content within
+    // the currently-selected TreeItem
+    Element curSelectionContentElem = curSelection.getContentElem();
+
+    ...
+    
+    // Set the 'aria-level' state. To do this, we need to compute the level of
+    // the currently selected item.    
+    Accessibility.setState(curSelectionContentElem, Accessibility.STATE_LEVEL,
+        String.valueOf(curSelectionLevel + 1));
+
+    // Set other ARIA states
+    ...
+    
+    // Update the 'aria-activedescendant' state for the focusable element to
+    // match the id of the currently selected item.
+    
+    Accessibility.setState(focusable, Accessibility.STATE_ACTIVEDESCENDANT,
+        DOM.getElementAttribute(curSelectionContentElem, &quot;id&quot;));
+  }
+</pre>
+
+<p>Though it is not shown in this code snippet, when TreeItems are created, they are constructed out of several divs, only one of which contains the content that we wish to be
+interpreted by the screen reader. This div is assigned a unique DOM id (which is generated using the DOM.createUniqueId() method), and a role of <tt>treeitem</tt>. These
+attributes are not set on the root TreeItem div because it contains a child image, which we do not want to be read.</p>
+
+<h3>Caveats with this Approach</h3>
+
+<p>The obvious problem with this approach is that unique DOM ids need to be assigned to all of the possible items that could be selected. While this is easy enough to implement,
+it seems unwieldy to assign a DOM id to each item.</p>
+
+<p>Also, there is a subtle problem with using the <tt>aria-activedescendant</tt> state. Originally, the intended use-case for this state was the implementation of a listbox with
+divs. Whenever the <tt>aria-activedescendant</tt> value of the parent div (which was the one with natural focus) would change, the screen reader would read out the text of the
+list item with the corresponding id, ignoring any roles or states set on the selected item. This is fine for widgets as simple as a listbox; the selected item has enough text for
+the user to understand what is selected. However, in the case of a Tree, the selected item's text may not be enough. For example, which level of the tree is the selected item
+on?</p>
+
+<p>Some screen readers have started to do more than just read the text of items selected with <tt>aria-activedescendant</tt>, interpreting the item just as they would any other
+element that received keyboard focus. However, not all screen readers do this yet.</p>
+
+<h2>Associating Meaningful Labels</h2>
+
+<p>A web page will often include human-readable descriptive elements (such as Label or HTML widgets) that explain the purpose of a particular widget. However, the association
+between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the <tt>aria-labelledby</tt> state which can be used to explicitly associate
+a widget with one or more descriptive elements.</p>
+
+<p>In order to associate a label with a widget, ensure that descriptive elements all have a unique id. The assigned id can later be used with to set the <tt>aria-labelledby</tt>
+state of a widget to refer to the id values of any descriptive elements, thereby associating those descriptive elements with the widget.</p>
+
+<h2>Automatically Speaking Highlighted Content</h2>
+
+<p>AJAX components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when using components such as
+autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item
+that has keyboard focus, they will not read highlighted items. ARIA live regions help make widgets such as autocomplete boxes usable for visually impaired users.</p>
+
+<h3>How It Works</h3>
+
+<p>The ARIA role <tt>region</tt> is used to declare areas that hold such live content, i.e., content that updates dynamically without having keyboard focus. The ARIA state
+<tt>aria-live</tt> on such regions specifies the priority of such updates; think of this as a politeness setting. Here is a code example that should provide the general idea of
+how to implement this technique for an auto-complete widget:</p>
+
+<h3>Initialize Live Region</h3>
+
+<p>The ARIA role <tt>region</tt> is added when instantiating the relevant DOM nodes in the AutoCompleteWidget constructor:</p>
+
+<pre class="prettyprint">
+  public AutoCompleteWidget() {
+    ...
+    // Create a hidden div where we store the current item text for a
+    // screen reader to speak
+    ariaElement = DOM.createDiv();
+    DOM.setStyleAttribute(ariaElement, &quot;display&quot;, &quot;none&quot;);
+    Accessibility.setRole(ariaElement, &quot;role&quot;, &quot;region&quot;);
+    Accessibility.setState(ariaElement, &quot;aria-live&quot;, &quot;rude&quot;);
+    DOM.appendChild(getElement(), ariaElement);
+  }
+</pre>
+
+<p>Here, we have created a hidden div element that holds the content to be spoken. We've declared it to have <tt>role = 'region'</tt> and <tt>live = 'rude'</tt>; the latter
+setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into
+the AutoCompleteWidget's text box are put in hidden div:</p>
+
+<pre class="prettyprint">
+    // This method is called via a keyboard event handler
+    private void showSuggestions(Collection suggestions) {
+      if (suggestions.size() &gt; 0) {
+    
+        // Popupulate the visible suggestion pop-up widget with the new selections
+        // and show them
+        ....
+    
+        // Generate the hidden div content based on the suggestions
+    
+        String hiddenDivText = &quot;Suggestions &quot;;
+
+        for (Suggestion curSuggestion : suggestions) {
+          hiddenDivText += &quot; &quot; + curSuggestion.getDisplayString();
+        }
+    
+        DOM.setInnerText(ariaElement, hiddenDivText);
+      }
+    }
+</pre>
+
+<h3>Problems with this Approach</h3>
+
+<p>With this technique, the developer has complete control over the text that is spoken by the screen reader. While this seems like a good thing for the developer, it's not great
+for users of screen readers. Taking this approach, developers of AutoComplete widgets may decide on different text that the screen reader should read. For example, another screen
+reader might prefix each suggestion with the &quot;Suggestion x&quot;, where x is the index of the suggestion in the list. This leads to an inconsistent experience across applications. If
+both developers were able to make use of ARIA roles and states, then a more consistent experience would result, in accordance with the ARIA specification.</p>
+
+<p>A more direct problem with this approach is internationalization. Most developers would realize that the list of suggestions needs to be translated into different languages;
+this list is directly displayed on the screen. However, the word 'Suggestions', which is the first word on the live region, could easily be missed, since it is never visually
+displayed to the user. These sorts of descriptive terms must also be translated. If ARIA roles and states could be used, then translation of the spoken terms associated with the
+roles and states would be the screenreader's job; developers would only need to be responsible for translating their content.</p>
+
+<h2>General Advice For Widget Developers</h2>
+
+<p>First and foremost, use native HTML controls whenever possible. Native HTML controls are well understood by screen readers. They do not require ARIA roles and states, which has
+two main benefits:</p>
+
+<ul>
+<li>ARIA is not yet supported by all major browsers. Screen reader and browser developers have already done the work to make HTML controls accessible.</li>
+
+<li>Reimplementing native HTML controls using divs (for example) can cause poor performance. For example, suppose a developer were to re-implement a listbox using divs. One of the
+ARIA states that applies to the <tt>listitem</tt> role is <tt>aria-posinset</tt>. This value indicates the position of the item within its parent container, which corresponds to
+the item's index in the listbox. The problem is that every time an item is added or removed from the listbox, one has to iterate through all of the items in the list, adjusting
+their <tt>aria-posinset</tt> values. Though there are some optimizations that can be done, this is still much slower than native HTML select elements.</li>
+</ul>
+
+<p>If native HTML controls cannot be used and a custom widget has to be built, keep in mind that it is much easier to develop an accessible widget from the beginning than to go
+back and add accessibility support to an existing widget. While adding ARIA roles and states is relatively easy, ensuring that the appropriate elements receive keyboard focus
+during user interaction can be more complicated.</p>
+
+<p>Also, widgets that subclass other widgets should end up with the appropriate ARIA roles and states. Your superclass widget might already specify a certain ARIA role, and while
+the Accessibility.setRole(Element, String) method will overwrite a previous ARIA role in the same element, a complicated DOM configuration may result in different ARIA roles being
+placed in different elements.</p>
+
+<p>Make sure to test that a new widget is accessible! There are three basic steps in the translation between the DOM and the screen reader:</p>
+
+<ul>
+<li>DOM: since ARIA attributes are being added directly to the DOM, an easy way to check that the attributes are in the right location is to use a DOM inspector like Firebug</li>
+
+<li>Events: it is important to make sure that Firefox raises the appropriate events in response to ARIA attributes, changes in focus, and changes in the widget itself. A Microsoft
+tool called the Accessible Event Watcher, or AccEvent, can allow you to check which events are being raised.</li>
+
+<li>The screen reader: in the end, you can be most sure that your GWT widgets are accessible by using a screen reader. Some screen readers may not be listening for all of the
+events raised by Firefox, or they might expect the ARIA attributes to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are
+JAWS and Window-Eyes. FireVox, a free text-to-speech add-on for Firefox, also includes support for ARIA.</li>
+</ul>
+
+  <div id="notice" style="text-align: center; border: 1em 0em 1em 0em">
+  Except as otherwise <a
+  href="http://code.google.com/policies.html#restrictions">noted</a>,
+  the content of this page is licensed under the <a rel="license"
+  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+  Attribution 3.0 License</a>.
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" 
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+    <license rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </License>
+</rdf:RDF> -->
+</div>
+
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div id="gc-content-last-updated">Last updated March 23, 2012.</div>
+
+</div>
+
+      </div>
+
+      </div>
+      
+
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="prod45d.360930183423672260" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b69593dd37b855df5c5d9951f1bf206e' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($);
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+// Add the handlers once the document has loaded.
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1715 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+  
+  <title>Building User Interfaces - Google Web Toolkit &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    <div id="sandbar">
+      
+      <a href="/sandbar?q=&page_url=/web-toolkit/doc/1.6/DevGuideUserInterface"></a>
+      <div id="gc-googlebar"></div>
+      <img src="/images/google-logo.png" style="display:none;"/>
+      
+    </div>
+    
+    
+
+    <div id="gc-wrapper">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Events</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      <div id="gc-appbar">
+        
+        <h1>
+          
+
+  <a href="/web-toolkit/">Google Web Toolkit</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/web-toolkit/"
+      data-size="medium"
+      data-count="count"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+
+        </h1>
+        
+      </div>
+      
+
+      
+      <div id="gc-main">
+        
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><span class="tlw-title" data-title="Docs:">Docs:</span></li><li class=""><a href="/web-toolkit/doc/latest" data-title="Latest Version"><span>Latest Version</span></a></li><li class=""><span class="tlw-title" data-title="Older Versions">Older Versions</span><ul><li class=""><a href="/web-toolkit/doc/2.4" data-title="2.4"><span>2.4</span></a></li><li class=""><a href="/web-toolkit/doc/2.3" data-title="2.3"><span>2.3</span></a></li><li class=""><a href="/web-toolkit/doc/2.2" data-title="2.2"><span>2.2</span></a></li><li class=""><a href="/web-toolkit/doc/2.1" data-title="2.1"><span>2.1</span></a></li><li class=""><a href="/web-toolkit/doc/2.0" data-title="2.0"><span>2.0</span></a></li></ul></li></ul><hr/><ul><li class=""><a href="/web-toolkit/download" data-title="Downloads"><span>Downloads</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/" data-title="GWT Designer"><span>GWT Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/download-gwtdesigner" data-title="Download"><span>Download</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/quick_start" data-title="Quick Start"><span>Quick Start</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/whatsnew" data-title="What&#39;s New"><span>What&#39;s New</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation" data-title="Installation"><span>Installation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/system" data-title="System Requirements"><span>System Requirements</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.7" data-title="Using update site for Eclipse 3.7"><span>Using update site for Eclipse 3.7</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.6" data-title="Using update site for Eclipse 3.6"><span>Using update site for Eclipse 3.6</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.5" data-title="Using update site for Eclipse 3.5"><span>Using update site for Eclipse 3.5</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.4" data-title="Using update site for Eclipse 3.4"><span>Using update site for Eclipse 3.4</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/uninstall" data-title="Uninstall"><span>Uninstall</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface" data-title="User Interface"><span>User Interface</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/design_view" data-title="Design View"><span>Design View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/source_view" data-title="Source View"><span>Source View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/structure_view" data-title="Structure View"><span>Structure View</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/component_tree" data-title="Component Tree"><span>Component Tree</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane" data-title="Property Pane"><span>Property Pane</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane_context_menu" data-title="Property Pane Context Menu"><span>Property Pane Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string" data-title="String Editor"><span>String Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string_array" data-title="String Array Editor"><span>String Array Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_color" data-title="Color Editor"><span>Color Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_font" data-title="Font Editor"><span>Font Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_image" data-title="Icon / Image Editor"><span>Icon / Image Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_point" data-title="Point Editor"><span>Point Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_rectangle" data-title="Rectangle Editor"><span>Rectangle Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_inset" data-title="Inset Editor"><span>Inset Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_taborder" data-title="Tab Order Editor"><span>Tab Order Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/properties/property_editor_style_name" data-title="Style Name Editor"><span>Style Name Editor</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette" data-title="Palette"><span>Palette</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_context_menu" data-title="Palette Context Menu"><span>Palette Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_manager" data-title="Palette Manager"><span>Palette Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/palettes/gwt_palette" data-title="GWT Designer Palette"><span>GWT Designer Palette</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/NewComponentsTutorial.pdf" data-title="New Components Tutorial (PDF)"><span>New Components Tutorial (PDF)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/DesignerCustomizationAPI.pdf" data-title="Designer Customization API (PDF)"><span>Designer Customization API (PDF)</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/toolbar" data-title="Toolbar"><span>Toolbar</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/context_menu" data-title="Context Menu"><span>Context Menu</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features" data-title="Features"><span>Features</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/bidirectional" data-title="Bi-directional Code Generation"><span>Bi-directional Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt_code_generation" data-title="GWT Code Generation"><span>GWT Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/custom_composites" data-title="Custom Panels"><span>Custom Panels</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/factories" data-title="Factories"><span>Factories</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/visual_inheritance" data-title="Visual Inheritance"><span>Visual Inheritance</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/event_handling" data-title="Event Handling"><span>Event Handling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/menu_editing" data-title="Menu Editing"><span>Menu Editing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/morphing" data-title="Morphing"><span>Morphing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/editing_existing_window" data-title="Editing Existing Windows"><span>Editing Existing Windows</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_compiling" data-title="Application Compiling"><span>Application Compiling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_launching" data-title="Application Launching"><span>Application Launching</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/module_deployment" data-title="Build &amp; Deployment"><span>Build &amp; Deployment</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/css_support" data-title="CSS Support"><span>CSS Support</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/enhanced_compilation" data-title="Enhanced Compilation"><span>Enhanced Compilation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/image_bundles" data-title="Image Bundles"><span>Image Bundles</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/internationalization" data-title="Internationalization (i18n)"><span>Internationalization (i18n)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/junit_testcase" data-title="JUnit Test Creation"><span>JUnit Test Creation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/project" data-title="Projects"><span>Projects</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/refactoring" data-title="Refactoring"><span>Refactoring</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/remoteservice" data-title="Remote Services"><span>Remote Services</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gwt-ext" data-title="Using GWT-Ext"><span>Using GWT-Ext</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gxt" data-title="Using Ext GWT (GXT)"><span>Using Ext GWT (GXT)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/smartgwt" data-title="Using SmartGWT"><span>Using SmartGWT</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt" data-title="Panels"><span>Panels</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/absolutepanel" data-title="AbsolutePanel"><span>AbsolutePanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/dockpanel" data-title="Dock[Layout]Panel"><span>Dock[Layout]Panel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flextable" data-title="FlexTable"><span>FlexTable</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flowpanel" data-title="FlowPanel"><span>FlowPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/gridpanel" data-title="Grid"><span>Grid</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/layoutpanel" data-title="LayoutPanel"><span>LayoutPanel</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt" data-title="Wizards"><span>Wizards</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/entrypoint" data-title="Java EntryPoint"><span>Java EntryPoint</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/composite" data-title="Java Composite"><span>Java Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/dialogbox" data-title="Java DialogBox"><span>Java DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/popuppanel" data-title="Java PopupPanel"><span>Java PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_composite" data-title="UiBinder Composite"><span>UiBinder Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_dialogbox" data-title="UiBinder DialogBox"><span>UiBinder DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_popuppanel" data-title="UiBinder PopupPanel"><span>UiBinder PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/module" data-title="GWT Module"><span>GWT Module</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/library" data-title="GWT Library"><span>GWT Library</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences" data-title="Preferences"><span>Preferences</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_code_parsing" data-title="Code Parsing"><span>Code Parsing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt" data-title="GWT"><span>GWT</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_builder" data-title="Builder"><span>Builder</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_code_generation" data-title="Code Generation"><span>Code Generation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_nls" data-title="NLS"><span>NLS</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_variables" data-title="Variables"><span>Variables</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts" data-title="Layouts"><span>Layouts</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts_absolute" data-title="Absolute"><span>Absolute</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer" data-title="Google-Web Toolkit-Designer"><span>Google-Web Toolkit-Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_absolute_layout" data-title="Absolute Layout"><span>Absolute Layout</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_code_style" data-title="Code Style"><span>Code Style</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_uitoolkits" data-title="UI Toolkits"><span>UI Toolkits</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_export" data-title="Export/Import"><span>Export/Import</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials" data-title="Tutorials"><span>Tutorials</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/loginmanager" data-title="GWT Login Manager"><span>GWT Login Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/stockwatcher" data-title="GWT Stock Watcher"><span>GWT Stock Watcher</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/product_support" data-title="Product Support"><span>Product Support</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/error_reporting" data-title="Error Reporting"><span>Error Reporting</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/test_cases" data-title="Reproducible Test Cases"><span>Reproducible Test Cases</span></a></li><li class=""><a href="http://groups.google.com/group/google-web-toolkit" data-title="Forum"><span>Forum</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/accessibility" data-title="Accessibility"><span>Accessibility</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tipsandtricks" data-title="Tips &amp; Tricks"><span>Tips &amp; Tricks</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tos" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></li></ul><hr/><ul><li class=""><span class="tlw-title" data-title="Resources:">Resources:</span></li><li class=""><a href="/web-toolkit/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="/web-toolkit/books" data-title="Books"><span>Books</span></a></li><li class=""><a href="/web-toolkit/casestudies" data-title="Case Studies"><span>Case Studies</span></a></li><li class=""><a href="/web-toolkit/community" data-title="Community"><span>Community</span></a><ul><li class=""><a href="http://gwtgallery.appspot.com" data-title="App Gallery"><span>App Gallery</span></a></li><li class=""><a href="/web-toolkit/developer_spotlight" data-title="Developer Spotlight"><span>Developer Spotlight</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools" data-title="Tools &amp; Libraries"><span>Tools &amp; Libraries</span></a></li><li class=""><a href="/web-toolkit/media_gallery" data-title="Presentations"><span>Presentations</span></a></li><li class=""><a href="/web-toolkit/makinggwtbetter" data-title="Making GWT Better"><span>Making GWT Better</span></a></li><li class=""><a href="/web-toolkit/lifeofanissue" data-title="Issue Tracking"><span>Issue Tracking</span></a></li><li class=""><a href="http://googlewebtoolkit.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="/web-toolkit/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 class="page-title" >Building User Interfaces</h1>
+  
+  
+
+
+
+
+<p>GWT user interface classes are similar to those in existing UI frameworks such as <a href="http://java.sun.com/j2se/1.5.0/docs/api/javax/swing/package-summary.html" rel="nofollow">Swing</a> and <a href="http://www.eclipse.org/swt/" rel="nofollow">SWT</a> except that the widgets are rendered using dynamically-created HTML rather than
+pixel-oriented graphics.</p>
+
+<p>In traditional JavaScript programming, dynamic user interface creation is done by manipulating the browser's DOM. While GWT provides <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideAccessingDOM">access to the browser's DOM directly</a> using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/DOM.html">DOM class</a>, it is far easier to use classes from the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Widget.html">Widget</a> hierarchy. The Widget classes make it easier to
+quickly build interfaces that will work correctly on all browsers.</p>
+
+<ol class="toc" id="pageToc">
+  <li><a href="#DevGuideCrossBrowserSupport">Cross-browser Support</a></li>
+  <li><a href="#DevGuideUnderstandingLayout">Understanding Layout</a></li>
+  <li><a href="#DevGuideWidgetsAndPanels">Widgets and Panels</a></li>
+  <li><a href="#DevGuideCreatingCustomWidgets">Creating Custom Widgets</a></li>
+  <li><a href="#DevGuideAccessingDOM">Accessing the Browser's DOM</a></li>
+  <li><a href="#DevGuideEventsAndHandlers">Events and Handlers</a></li>
+  <li><a href="#DevGuideStyleSheets">Applying Style</a></li>
+  <li><a href="#DevGuideImageBundles">Image Bundles</a></li>
+</ol>
+
+<h1 id="DevGuideCrossBrowserSupport">Cross-browser Support</h1>
+
+<p>GWT shields you from worrying too much about cross-browser incompatibilities. If you stick to built-in <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideWidgetsAndPanels">widgets</a>
+and <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideCreatingCustomWidgets">composites</a>, your applications will work similarly on the most recent versions of Internet Explorer,
+Firefox, and Safari. (Opera, too, most of the time.) DHTML user interfaces are remarkably quirky, though, so make sure to test your applications thoroughly on every browser.</p>
+
+<p>Whenever possible, GWT defers to browsers' native user interface elements. For example, GWT's <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button</a> widget is a true HTML <tt>&lt;button&gt;</tt>
+rather than a synthetic button-like widget built, say, from a <tt>&lt;div&gt;</tt>. That means that GWT buttons render appropriately in different browsers and on different client
+operating systems. We like the native browser controls because they're fast, accessible, and most familiar to users.</p>
+
+<p>When it comes to styling web applications, <a href="http://www.w3.org/Style/CSS/" rel="nofollow">CSS</a> is ideal. So, instead of attempting to encapsulate UI styling behind a
+wall of least-common-denominator APIs, GWT provides very few methods directly related to style. Rather, developers are encouraged to define styles in stylesheets that are linked
+to application code using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String)">style names</a>. In addition to cleanly separating style from application logic, this division of labor helps applications load and render more quickly, consume
+less memory, and even makes them easier to tweak during edit/debug cycles since there's no need to recompile for style tweaks.</p>
+
+<p class="note"><strong>Tip:</strong> If you find a need to implement a browser specific dependency, you can use a <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI</a>
+method to retrieve the browser' UserAgent string.</p>
+
+<pre class="prettyprint">
+  public static native String getUserAgent() /*-{
+     return navigator.userAgent.toLowerCase();
+  }-*/
+</pre>
+
+
+<h1 id="DevGuideUnderstandingLayout">Understanding Layout</h1>
+
+<p>Panels in GWT are much like their layout counterparts in other user interface libraries. The main difference lies in the fact that GWT panels use HTML elements such as DIV and
+TABLE to layout their child widgets.</p>
+
+<h2>RootPanel</h2>
+
+<p>The first panel you're likely to encounter is the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a>. This panel is always at the top of the containment hierarchy. The default RootPanel wraps the HTML document's body, and is obtained by calling <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RootPanel.html#get()">RootPanel.get()</a>. If you need to get a root
+panel wrapping another element in the HTML document, you can do so using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RootPanel.html#get(java.lang.String)">RootPanel.get(String)</a>.</p>
+
+<h2>CellPanel</h2>
+
+<p><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CellPanel.html">CellPanel</a> is the abstract base class for <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/DockPanel.html">DockPanel</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/HorizontalPanel.html">HorizontalPanel</a>, and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/VerticalPanel.html">VerticalPanel</a>. What these panels all have in
+common is that they position their child widgets within logical &quot;cells&quot;. Thus, a child widget can be aligned within the cell that contains it, using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CellPanel.html#setCellHorizontalAlignment(com.google.gwt.user.client.ui.Widget,%20com.google.gwt.user.client.ui.HasHorizontalAlignment.HorizontalAlignmentConstant)">setCellHorizontalAlignment()</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CellPanel.html#setCellVerticalAlignment(com.google.gwt.user.client.ui.Widget,%20com.google.gwt.user.client.ui.HasVerticalAlignment.VerticalAlignmentConstant)">setCellVerticalAlignment()</a>. CellPanels also allow you to set the size of the cells themselves (relative to the panel as a whole) using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CellPanel.html#setCellWidth(com.google.gwt.user.client.ui.Widget,%20java.lang.String)">setCellWidth()</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CellPanel.html#setCellHeight(com.google.gwt.user.client.ui.Widget,%20java.lang.String)">setCellHeight()</a>.</p>
+
+<p>Below is an example of using a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/HorizontalPanel.html">HorizontalPanel</a> from the Showcase sample application:</p>
+
+<pre class="prettyprint">
+    // Create a Horizontal Panel
+    HorizontalPanel hPanel = new HorizontalPanel();
+
+    // Leave some room between the widgets
+    hPanel.setSpacing(5); 
+
+    // Add some content to the panel
+    for (int i = 1; i &lt; 5; i++) {
+      hPanel.add(new Button(&quot;Button &quot; + i));
+    }
+</pre>
+
+<p><img src="/web-toolkit/doc/1.6/images/HorizontalPanel_Showcase.png"/></p>
+
+<p>Each new Button widget is added to the right hand side of the panel, creating a horizontal row of widgets. The <tt>VerticalPanel</tt> works the same way, but adds new widgets
+to the bottom of the panel and lays them out vertically.</p>
+
+<p>A more powerful layout mechanism is provided by the <tt>DockPanel</tt>. A <tt>DockPanel</tt> aligns its components using compass directions, where <i>north</i> points up on the
+screen. Below is an example of using a <tt>DockPanel</tt> from the Showcase sample application:</p>
+
+<pre class="prettyprint">
+    DockPanel dock = new DockPanel();
+
+    // Allow 4 pixels of spacing between each cell
+    dock.setSpacing(4);
+
+    /* Center each component horizontally within each cell
+     * for each component added after this call.
+     * A shortcut to calling dock.setCellHorizontalAlignment()
+     * for each cell.
+     */
+    dock.setHorizontalAlignment(DockPanel.ALIGN_CENTER);
+
+    // Add text widgets all around
+    dock.add(new HTML(&quot;This is the &lt;i&gt;first&lt;/i&gt; north component&quot;),
+        DockPanel.NORTH);
+    dock.add(new HTML(&quot;This is the &lt;i&gt;first&lt;/i&gt; south component&quot;),
+        DockPanel.SOUTH);
+    dock.add(new HTML(&quot;This is the east component&quot;), DockPanel.EAST);
+    dock.add(new HTML(&quot;This is the west component&quot;), DockPanel.WEST);
+    dock.add(new HTML(&quot;This is the &lt;i&gt;second&lt;/i&gt; north component&quot;),
+        DockPanel.NORTH);
+    dock.add(new HTML(&quot;This is the &lt;i&gt;second&lt;/i&gt; south component&quot;),
+        DockPanel.SOUTH);
+
+    // Add scrollable text in the center
+    HTML contents = new HTML(&quot;This is a &lt;code&gt;ScrollPanel&lt;/code&gt; contained at &quot;
+        + &quot;the center of a &lt;code&gt;DockPanel&lt;/code&gt;.  &quot;
+        + &quot;By putting some fairly large contents &quot;
+        + &quot;in the middle and setting its size explicitly, it becomes a &quot;
+        + &quot;scrollable area within the page, but without requiring the use of &quot;
+        + &quot;an IFRAME.&lt;br&gt;&lt;br&gt;&quot;
+        + &quot;Here's quite a bit more meaningless text that will serve primarily &quot;
+        + &quot;to make this thing scroll off the bottom of its visible area.  &quot;
+        + &quot;Otherwise, you might have to make it really, really small in order &quot;
+        + &quot;to see the nifty scroll bars!&quot;);
+    ScrollPanel scroller = new ScrollPanel(contents);
+    scroller.setSize(&quot;400px&quot;, &quot;100px&quot;);
+    dock.add(scroller, DockPanel.CENTER);
+</pre>
+
+<p>As you can see in the screenshot below, the order of adding components to the <tt>DocPanel</tt> is important if you add more than one component to the same direction. The first
+component added will be closest to the edge. The next component added will nest toward the inside of the panel.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/DockPanel_Showcase.png"/></p>
+
+<h2>Tab Panel</h2>
+
+<p>The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a> displays a row of clickable tabs.
+Each tab is associated with a panel which can contain a sub panel or arbitrary HTML which is exposed in a main viewing area when the tab is selected. The main viewing area is
+implemented with a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/DeckPanel.html">DeckPanel</a>. An example of
+using a Tab Panel follows:</p>
+
+<pre class="prettyprint">
+    // Create a tab panel
+    TabPanel tabPanel = new TabPanel();
+
+    // Set the width to 400 pixels
+    tabPanel.setWidth(&quot;400px&quot;);
+
+    // Add a home tab
+    HTML homeText = new HTML(&quot;Click one the tabs to see more content.&quot;);
+    tabPanel.add(homeText, &quot;Home&quot;);
+
+    // Add a tab with an image
+    VerticalPanel vPanel = new VerticalPanel();
+    vPanel.add(Showcase.images.gwtLogo().createImage());
+    tabPanel.add(vPanel, &quot;GWT Logo&quot;);
+
+    // Add a third tab
+    HTML moreInfo = new HTML(&quot;Tabs are highly customizable using CSS&quot;);
+    tabPanel.add(moreInfo, &quot;More Info&quot;);
+
+    // Make the first tab selected and the tab's content visible
+    tabPanel.selectTab(0);
+</pre>
+
+<p>The screenshot below shows the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a>
+focused on the first tab. As you can see from the code example, you can add HTML or other panels to be displayed as the content of the tab. You might also notice that the widget
+looks different than the default Tab Panel. The Showcase demo uses <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideStyleSheets">CSS Stylesheets</a> to change the appearance of the
+panel.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/TabPanel_Showcase.png"/></p>
+
+<h2>Horizontal and Vertical Split panels</h2>
+
+<p>The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/HorizontalSplitPanel.html">HorizontalSplitPanel</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/VerticalSplitPanel.html">VerticalSplitPanel</a> arrange two widgets in
+a single row or column and allow the user to interactively change the proportion of the width dedicated to each of the two widgets. Widgets contained within the split panels will
+be automatically decorated with scrollbars when necessary.</p>
+
+<pre class="prettyprint">
+    // Create a Vertical Split Panel
+    VerticalSplitPanel vSplit = new VerticalSplitPanel();
+
+    // Set the bounding box in pixels
+    vSplit.setSize(&quot;500px&quot;, &quot;350px&quot;);
+
+    /* Set the position of the handle 30% from the top of the
+     * panel.
+     */
+    vSplit.setSplitPosition(&quot;30%&quot;);
+
+    // Add some content
+    String randomText = &quot;This is some text to show how the contents on either &quot;
+        + &quot;side of the splitter flow.   &quot;
+        + &quot;This is some text to show how the contents on either &quot;
+        + &quot;side of the splitter flow.   &quot;
+        + &quot;This is some text to show how the contents on either &quot;
+        + &quot;side of the splitter flow.   &quot;;
+    vSplit.setTopWidget(new HTML(randomText));
+    vSplit.setBottomWidget(new HTML(randomText));
+</pre>
+
+<p>By manipulating the handle in the middle of the panel, the user can expose more of the upper or lower portion of the panel, as shown in the screenshot below.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/VerticalSplitPanel_Showcase.png"/></p>
+
+<p>The <tt>HorizontalSplitPanel</tt> works in the same way, only aligns its children horizontally.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/HorizontalSplitPanel_Showcase.png"/></p>
+
+<h2>Other Panels</h2>
+
+<p>Other panels include</p>
+
+<table>
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">A panel that formats its child widgets using the default HTML layout behavior.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/HTMLPanel.html">HTMLPanel</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">A panel that contains HTML, and which can attach child widgets to identified elements within that HTML.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">A panel that can &quot;pop up&quot; over other widgets. It overlays the browser's client area (and any previously-created popups).</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Grid.html">Grid</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">A rectangular grid that can contain text, html, or a child widget within its cells. It must be resized explicitly to the desired
+number of rows and columns.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/FlexTable.html">FlexTable</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">A flexible table that creates cells on demand. It can be jagged (that is, each row can contain a different number of cells) and
+individual cells can be set to span multiple rows or columns.</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #aaa; padding: 5px;"><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbsolutePanel.html">AbsolutePanel</a> </td>
+<td style="border: 1px solid #aaa; padding: 5px;">An absolute panel positions all of its children absolutely, allowing them to overlap.</td>
+</tr>
+</table>
+
+
+
+<p>See the Widget Gallery for screenshots or diagrams for these panels.</p>
+
+<h2>Sizes and Measures</h2>
+
+<p>It is possible to set the size of a widget explicitly using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setWidth(java.lang.String)">setWidth()</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setHeight(java.lang.String)">setHeight()</a>, and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setSize(java.lang.String,%20java.lang.String)">setSize()</a>. The arguments to these methods are strings, rather than integers, because they accept any valid CSS measurements, such as pixels (128px), centimeters
+(3cm), and percentage (100%).</p>
+
+<h1 id="DevGuideWidgetsAndPanels">Widgets and Panels</h1>
+
+<p>You construct user interfaces in GWT applications using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Widget.html">widgets</a> that are contained within <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Panel.html">panels</a>. Widgets allow you to interact with the user. Panels control the placement of user interface elements on the page. Widgets and panels work the same way
+on all browsers; by using them, you eliminate the need to write specialized code for each browser.</p>
+
+<h2>Widgets</h2>
+
+<p>Widgets define your applications input and output with the user. Examples of widgets include the following:</p>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button</a> A user clicks the mouse button to
+activate the button.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/Button.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TextBox.html">TextBox</a> The application can display text and
+the user can type in the text box.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/TextBox.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Tree.html">Tree</a> A collapsible hierarchy of widgets.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/Tree.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RichTextArea.html">RichTextArea</a> A text editor that allows
+R</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/RichTextArea.png"/></blockquote>
+</li>
+</ul>
+
+<p>You are not limited to the set of widgets provided by GWT. There are a number of ways to <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideCreatingCustomWidgets">create custom
+widgets</a>:</p>
+
+<ul>
+<li>You can bundle together existing widgets and create a <i>composite</i> widget.</li>
+
+<li>You can write GWT bindings to an existing JavaScript widget.</li>
+
+<li>You can create your own widget from scratch using either Java or JavaScript.</li>
+</ul>
+
+<p>You can also use one or more of the many third party widget libraries written for GWT.</p>
+
+<h2>Panels</h2>
+
+<p>Panels contain widgets and other panels. They are used to define the <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideUnderstandingLayout">layout</a> of the user interface in the
+browser. Examples of panels include the following:</p>
+
+<ul>
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/DockPanel.html">DockPanel</a> Arranges widgets and subpanels
+using directional alignment.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/DockPanel.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/HorizontalPanel.html">HorizontalPanel</a> Arranges widgets and
+subpanels horizontally.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/HorizontalPanel.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a> Arranges subpanels and widgets under
+tabs.</li>
+
+<li style="list-style: none">
+<blockquote><img src="/web-toolkit/doc/1.6/images/TabPanel.png"/></blockquote>
+</li>
+
+<li><a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a> This panel encapsulates your
+entire GWT user interface.</li>
+</ul>
+
+<h2>Styles</h2>
+
+<p>Visual styles are applied to widgets using <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideStyleSheets">Cascading Style Sheets (CSS)</a>. Besides the default browser supplied
+definitions, each GWT widget and panel has pre-defined style sheet class definitions documented in the class reference documentation.</p>
+
+<h3>See Also</h3>
+
+<ul>
+<li>Widget Gallery Diagrams and screen captures of the different GWT UI elements.</li>
+</ul>
+
+<ul>
+<li><a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideCreatingCustomWidgets">Creating Custom Widgets</a> Discussion of how to create your own widgets in GWT.</li>
+</ul>
+
+<ul>
+<li><a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideUnderstandingLayout">Understanding Layout</a> Examples of how to use panels.</li>
+</ul>
+
+
+<h1 id="DevGuideCreatingCustomWidgets">Creating Custom Widgets</h1>
+
+<p>GWT makes it easy to create custom user interface elements. There are three general strategies to follow:</p>
+
+<ul>
+<li>Create a widget that is a composite of existing widgets.</li>
+
+<li>Create an entirely new widget written in the Java language.</li>
+
+<li>Create a widget that wraps JavaScript using <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI</a> methods.</li>
+</ul>
+
+<p>There are numerous third party libraries that provide widgets you can integrate into your GWT module that were created using the strategies listed above.</p>
+
+<h2>Building Composites</h2>
+
+<p>The most effective way to create new widgets is to extend the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Composite.html">Composite</a> class. A composite is a specialized widget that can contain another component (typically, a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Panel.html">panel</a>) but behaves as if it were its contained widget.
+You can easily combine groups of existing widgets into a composite that is itself a reusable widget. Some of the UI components provided in GWT are composites: for example, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a> (a composite of a TabBar and a DeckPanel)
+and the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/SuggestBox.html">SuggestBox</a>.</p>
+
+<p>Rather than create complex widgets by subclassing <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Panel.html">Panel</a> or another <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Widget.html">Widget</a> type,
+it's better to create a composite because a composite usually wants to control which methods are publicly accessible without exposing those methods that it would inherit from its
+Panel superclass.</p>
+
+<h3>Example Composite Widget</h3>
+
+<p>The following code snippet shows how to create a composite widget composed of a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TextBox.html" >TextBox</a> widget and a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/CheckBox.html">CheckBox</a> widget laid out in a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/VerticalPanel.html">VerticalPanel</a>.</p>
+
+<pre class="prettyprint">
+package com.google.gwt.examples;
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+public class CompositeExample implements EntryPoint {
+
+  /**
+   * A composite of a TextBox and a CheckBox that optionally enables it.
+   */
+  private static class OptionalTextBox extends Composite implements
+      ClickHandler {
+
+    private TextBox textBox = new TextBox();
+    private CheckBox checkBox = new CheckBox();
+
+    /**
+     * Constructs an OptionalTextBox with the given caption on the check.
+     * 
+     * @param caption the caption to be displayed with the check box
+     */
+    public OptionalTextBox(String caption) {
+      // Place the check above the text box using a vertical panel.
+      VerticalPanel panel = new VerticalPanel();
+      panel.add(checkBox);
+      panel.add(textBox);
+
+      // Set the check box's caption, and check it by default.
+      checkBox.setText(caption);
+      checkBox.setChecked(true);
+      checkBox.addClickHandler(this);
+
+      // All composites must call initWidget() in their constructors.
+      initWidget(panel);
+
+      // Give the overall composite a style name.
+      setStyleName(&quot;example-OptionalCheckBox&quot;);
+    }
+
+    public void onClick(ClickEvent event) {
+      Object sender = event.getSource();
+      if (sender == checkBox) {
+        // When the check box is clicked, update the text box's enabled state.
+        textBox.setEnabled(checkBox.isChecked());
+      }
+    }
+
+    /**
+     * Sets the caption associated with the check box.
+     * 
+     * @param caption the check box's caption
+     */
+    public void setCaption(String caption) {
+      // Note how we use the use composition of the contained widgets to provide
+      // only the methods that we want to.
+      checkBox.setText(caption);
+    }
+
+    /**
+     * Gets the caption associated with the check box.
+     * 
+     * @return the check box's caption
+     */
+    public String getCaption() {
+      return checkBox.getText();
+    }
+  }
+
+  public void onModuleLoad() {
+    // Create an optional text box and add it to the root panel.
+    OptionalTextBox otb = new OptionalTextBox(&quot;Check this to enable me&quot;);
+    RootPanel.get().add(otb);
+  }
+}
+</pre>
+
+<h2>From Scratch in Java Code</h2>
+
+<p>It is also possible to create a widget from scratch, although it is trickier since you have to write code at a lower level. Many of the basic widgets are written this way, such
+as <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TextBox.html">TextBox</a>. Please refer to the implementations of these
+widgets to understand how to create your own.</p>
+
+<p>To understand how to create your own, refer to the implementations of these widgets in the com.google.gwt.user.client.ui package. The source code is in gwt-user.jar.</p>
+
+<h2>Using JavaScript</h2>
+
+<p>When implementing a custom widget that derives directly from the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Widget.html">Widget</a> base class, you may also write some of the widget's methods using JavaScript. This should generally only be done as a last resort, as it becomes
+necessary to consider the cross-browser implications of the native methods that you write, and also becomes more difficult to debug. For an example of this pattern in practice,
+see the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/TextBox.html">TextBox</a> widget and the underlying
+JavaScript implementation of some of its methods in the TextBoxImpl class. You should use <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">deferred binding</a> to isolate
+browser specific code.</p>
+
+<h1 id="DevGuideAccessingDOM">Accessing the Browser's DOM</h1>
+
+<p>Browsers provide an interface to examine and manipulate the on-screen elements using the <a href="http://w3c.org/DOM/" rel="nofollow">DOM</a> (Document Object Model).
+Traditionally, JavaScript programmers use the DOM to program the user interface portion of their logic, and traditionally, they have had to account for the many differences in the
+implementation of the DOM on different browsers.</p>
+
+<p>So that you don't have to worry (generally) about cross-browser support when implementing user interfaces, GWT provides a set of <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideWidgetsAndPanels">widget and panel</a> classes that wrap up this functionality. But sometimes you need to access the DOM. For example, if you
+want to:</p>
+
+<ul>
+<li>provide a feature in your user interface that GWT does not support</li>
+
+<li>write a new Widget class</li>
+
+<li>access an HTML element defined directly in the host page</li>
+
+<li>handle browser Events at a low level</li>
+
+<li>perform some filtering or other processing on an HTML document loaded into the browser</li>
+</ul>
+
+
+
+<p>You could use <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI</a> methods to access the browser's DOM, but GWT provides a convenience <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/DOM.html">DOM</a> class. The DOM class is not meant to be instantiated.
+Instead it is used as a collection of static methods that provides a way to walk and query the tree, plus a number of convenience routines. The DOM class also provides a layer of
+cross-browser support.</p>
+
+<h2>Using the DOM to manipulate a widget</h2>
+
+<p>Each widget and panel has an underlying DOM element that you can access with the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#getElement()">getElement()</a> method. You can use the
+getElement() method to get the underlying element from the DOM and manipulate or apply attributes to it with the DOM class.</p>
+
+<p>The following example shows how to set a style attribute to change a widget's background color.</p>
+
+<pre class="prettyprint">
+private HTML htmlWidget;
+
+// Other code to instantiate the widget...
+
+// Change the description background color.
+DOM.setStyleAttribute(htmlWidget.getElement(), &quot;backgroundColor&quot;, &quot;#fffe80&quot;);
+</pre>
+
+<p>Here, the getElement() method derived from the <tt>Widget</tt> superclass returns a DOM <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/Element.html">Element</a> object representing a node in the DOM tree
+structure and adds a style attribute to it.</p>
+
+<p>This is an example where using the DOM isn't absolutely necessary. An alternative approach is to use <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideStyleSheets">style sheets</a> and
+associate different style classes to the widget using the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String)">setStylePrimaryName()</a> or <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String)">setStyleName()</a> method
+instead.</p>
+
+<h2>Finding an element in the DOM</h2>
+
+<p>The following example shows how to combine a JSNI method with Java code to manipulate the DOM. First, we have a JSNI routine that will retrieve all the child elements that are
+Anchor tags. The element objects are assigned a unique ID for easy access from Java:</p>
+
+<pre class="prettyprint">
+/**
+ * Find all child elements that are anchor tags,
+ * assign a unique id to them, and return a list of
+ * the unique ids to the caller.
+ */
+ private native void putElementLinkIDsInList(Element elt,
+                                                ArrayList list) /*-{
+      var links = elt.getElementsByTagName(&quot;a&quot;);
+
+      for (var i = 0; i &lt; links.length; i++ ) {
+        var link = links.item(i);
+        link.id = (&quot;uid-a-&quot; + i);
+        list.@java.util.ArrayList::add(Ljava/lang/Object;) (link.id);
+      }
+    }-*/;
+</pre>
+
+<p>And what could you possibly do with a DOM element once you have found it? This code iterates through all the anchor tags returned from the above method and then rewrites where
+it points to:</p>
+
+<pre class="prettyprint">
+/**
+ * Find all anchor tags and if any point outside the site, 
+ * redirect them to a &quot;blocked&quot; page.
+ */
+ private void rewriteLinksIterative() {
+   ArrayList links = new ArrayList();
+   putElementLinkIDsInList(this.getElement(), links);
+   for (int i = 0; i &lt; links.size(); i++) {
+     Element elt = DOM.getElementById((String) links.get(i));
+     rewriteLink(elt, &quot;www.example.com&quot;);
+   }
+ }
+
+/**
+ * Block all accesses out of the website that don't match 'sitename'
+ * @param element An anchor link element
+ * @param sitename name of the website to check.  e.g. &quot;www.example.com&quot;
+ */
+ private void rewriteLink(Element element, sitename) {
+   String href = DOM.getElementProperty(element, &quot;href&quot;);
+
+   if (null == href) {
+       return;
+   }
+
+   // We want to re-write absolute URLs that go outside of this site
+   if (href.startsWith(&quot;http://&quot;) &amp;&amp;
+        !href.startsWith(&quot;http://&quot;+sitename+&quot;/&quot;) {
+       DOM.setElementProperty(element, &quot;href&quot;, 
+           &quot;http://&quot;+sitename+&quot;/Blocked.html&quot; );
+   }
+ }
+</pre>
+
+<p>The JSNI method set an ID on each element which we then used as an argument to <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/DOM.html#getElementById(java.lang.String)">DOM.getElementById(id)</a> to
+fetch the opaque <tt>Element</tt> handle in Java. Then the DOM static methods can be used to query and modify the properties of that element.</p>
+
+<h2>Using the DOM to capture a browser event</h2>
+
+<p>GWT contains an <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/Event.html">Event</a> class as an opaque handle to a
+native DOM Event. This object can be passed back and forth to JavaScript through <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaScriptNativeInterface">JSNI</a> methods. It can also
+be manipulated by the GWT DOM class.</p>
+
+<p>This example shows how to use the DOM methods to catch a keyboard event for particular elements and handle them before the <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideEventsAndHandlers">event</a> gets dispatched:</p>
+
+<pre class="prettyprint">
+  private ArrayList keyboardEventReceivers = new ArrayList();
+
+  /**
+   * Widgets can register their DOM element object if
+   * they would like to be a trigger to intercept keyboard events
+   */
+  public void registerForKeyboardEvents (Element  e) {
+    this.keyboardEventReceivers.add(e);
+  }
+
+  /**
+   * Returns true if this is one of the keys we are interested in
+   */  
+  public boolean isInterestingKeycode (int keycode) {
+     //...
+  }
+
+  /**
+   * Setup the event preview class when the module is loaded.
+   */
+  private void setupKeyboardShortcuts() {
+
+    // Define an inner class to handle the event
+    DOM.addEventPreview(new EventPreview() {
+      public boolean onEventPreview(Event event) {
+        
+          Element elt = DOM.eventGetTarget(event);
+          int keycode = DOM.eventGetKeyCode(event);
+          boolean ctrl = DOM.eventGetCtrlKey(event);
+          boolean shift = DOM.eventGetShiftKey(event);
+          boolean alt = DOM.eventGetAltKey(event);
+          boolean meta = DOM.eventGetMetaKey(event);
+          
+          if (DOM.eventGetType(event) != Event.ONKEYPRESS
+              || ctrl || shift || alt || meta
+              || keyboardEventReceivers.contains(elt)
+              || !isInterestingKeycode(keycode)) {
+            // Tell the event handler to continue processing this event.
+            return true;
+          }
+         
+          GWT.log(&quot;Processing Keycode&quot; + keycode, null );
+          handleKeycode(keycode);
+          // Tell the event handler that this event has been consumed
+          return false;
+      }});
+  }
+
+  /**
+   * Perform the keycode specific processing
+   */
+  private void handleKeycode (int keycode) {
+    switch (keycode) {
+        //...
+    }
+  }
+</pre>
+
+
+<h1 id="DevGuideEventsAndHandlers">Events and Handlers</h1>
+
+<p>Events in GWT use the <i>handler</i> model similar to other user interface frameworks. A handler interface defines one or more methods that the widget calls to announce an
+event. A class wishing to receive events of a particular type implements the associated handler interface and then passes a reference to itself to the widget to <i>subscribe</i>
+to a set of events. The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button</a> class, for example,
+publishes click events. The associated handler interface is <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/event/dom/client/ClickHandler.html">ClickHandler</a>.</p>
+
+<p>The following example demonstrates how to add a custom ClickHandler subclass to an instance of a Button:</p>
+
+<pre class="prettyprint">
+public void anonClickHandlerExample() {
+  Button b = new Button(&quot;Click Me&quot;);
+  b.addClickHandler(new ClickHandler() {
+    public void onClick(ClickEvent event) {
+      // handle the click event
+    }
+  });
+}
+</pre>
+
+<p>Using anonymous inner classes as in the above example can use excessive memory for a large number of widgets, since it results in the creation of many handler objects. Instead
+of creating separate instances of the ClickHandler object for each widget that needs to be listened to, a single handler can be shared between many widgets. Widgets declare
+themselves as the source of an event when they invoke a handler method, allowing a single handler to distinguish between multiple event publishers with an event object's
+getSource() method. This makes better use of memory but requires slightly more code, as shown in the following example:</p>
+
+<pre class="prettyprint">
+public class HandlerExample extends Composite implements ClickHandler {
+  private FlowPanel fp = new FlowPanel();
+  private Button b1 = new Button(&quot;Button 1&quot;);
+  private Button b2 = new Button(&quot;Button 2&quot;);
+
+  public HandlerExample() {
+    initWidget(fp);
+    fp.add(b1);
+    fp.add(b2);
+    b1.addClickHandler(this);
+    b2.addClickHandler(this);
+  }
+
+  public void onClick(ClickEvent event) {
+    // note that in general, events can have sources that are not Widgets.
+    Widget sender = (Widget) event.getSource();
+
+    if (sender == b1) {
+      // handle b1 being clicked
+    } else if (sender == b2) {
+      // handle b2 being clicked
+    }
+  }
+}
+</pre>
+
+
+<h1 id="DevGuideStyleSheets">Applying Style</h1>
+
+<p>GWT widgets rely on cascading style sheets (CSS) for visual styling.</p>
+
+<p>In GWT, each class of widget has an associated style name that binds it to a CSS rule. Furthermore, you can assign an id to a particular component to create a CSS rule that
+applies just to that one component. By default, the class name for each component is <tt>gwt-&lt;classname&gt;</tt>. For example, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button widget</a> has a default style of
+<tt>gwt-Button</tt>.</p>
+
+<p>In order to give all buttons a larger font, you could put the following rule in your application's CSS file:</p>
+
+<pre>
+  .gwt-Button { font-size: 150%; }
+</pre>
+
+<p>All of the widgets created with the GWT toolkit will have a default class name, but a widget's style name can be set using <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String)">setStyleName()</a>.
+Static elements can have their class set in the HTML source code for your application.</p>
+
+<p>Another way to use style sheets is to refer to a single widget. For that, you would need to know the value of the <tt>id</tt> attribute for the widget or DOM element.</p>
+
+<p>By default, neither the browser nor GWT creates default <tt>id</tt> attributes for widgets. You must explicitly create an <tt>id</tt> for the elements you want to refer to in
+this manner, and you must insure that each &quot;id&quot; value is unique. A common way to do this is to set them on static elements in your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">HTML host page</a></p>
+
+<pre class="prettyprint">
+  &lt;div id=&quot;my-button-id&quot;/&gt;
+</pre>
+
+<p>To set the id for a GWT widget, retrieve its DOM Element and then set the <tt>id</tt> attribute as follows:</p>
+
+<pre class="prettyprint">
+  Button b = new Button();
+  DOM.setElementAttribute(b.getElement(), &quot;id&quot;, &quot;my-button-id&quot;)
+</pre>
+
+<p>This would allow you to reference a specific widget in a style sheet as follows:</p>
+
+<pre>
+  #my-button-id { font-size: 100%; }
+</pre>
+
+<h2>Complex Styles</h2>
+
+<p>Some widgets have multiple styles associated with them. <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/MenuBar.html">MenuBar</a>, for example, has the following styles:</p>
+
+<pre>
+   .gwt-MenuBar { 
+       /* properties applying to the menu bar itself */ 
+   }
+   .gwt-MenuBar .gwt-MenuItem { 
+       /* properties applying to the menu bar's menu items */ 
+   }
+   .gwt-MenuBar .gwt-MenuItem-selected { 
+       /* properties applying to the menu bar's selected menu items */
+   }
+ </pre>
+
+<p>In the above style sheet code, there are two style rules that apply to menu items. The first applies to all menu items (both selected and unselected), while the second (with
+the -selected suffix) applies only to selected menu items. A selected menu item's style name will be set to <tt>&quot;gwt-MenuItem gwt-MenuItem-selected&quot;</tt>, specifying that both
+style rules will be applied. The most common way of doing this is to use <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String)">setStyleName</a> to set
+the base style name, then <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String)">addStyleName()</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/UIObject.html#removeStyleName(java.lang.String)">removeStyleName()</a>
+to add and remove the second style name.</p>
+
+<h2>Associating CSS Files</h2>
+
+<p>There are two approaches for associating CSS files with your module:</p>
+
+<ul>
+<li>Using a <tt>&lt;link&gt;</tt> tag in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML page</a>.</li>
+
+<li>Using the <tt>&lt;sytlesheet&gt;</tt> element in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a>.</li>
+</ul>
+
+<p>You should use one approach or the other, but not both.</p>
+
+<h3>Including Style sheets in the HTML Host Page</h3>
+
+<p>Typically, style sheets are placed in a package that is part of your module's <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModules">public path</a>. All you need to do to reference
+them is simply include a <tt>&lt;link&gt;</tt> to the style sheet in your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host page</a>, such as:</p>
+
+<pre class="prettyprint">
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;mystyles.css&quot; type=&quot;text/css&quot;/&gt;
+</pre>
+
+<h3>Including Style sheets in the Module XML file</h3>
+
+<p>Another way to include your style sheet within your module is to use the <tt>&lt;stylesheet&gt;</tt> element in your <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module
+XML file</a>. This uses <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideAutomaticResourceInclusion">automatic resource inclusion</a> to bundle the <tt>.css</tt> file with your
+module.</p>
+
+<p>The difference between using a <tt>&lt;link&gt;</tt> tag in HTML and the <tt>&lt;stylesheet&gt;</tt> element in your module XML file is that with the mdoule XML file approach,
+the style sheet will always follow your module, no matter which host HTML page you deploy it from.</p>
+
+<p>Why does this matter? Because if you create and share a module, it does not include a host page and therefore, you cannot guarantee the style sheet's availability. Automatic
+Resource Inclusion solves this problem. If you do not care about sharing or re-using your module then you can just use the standard HTML link rel stuff in the host page.</p>
+
+<p class="note"><strong>Tip:</strong> Use a unique name for the .css file with included resources to avoid collisions. If you automatically include &quot;styles.css&quot; and share your module and someone
+puts it on a page that already has &quot;styles.css&quot; there will be problems.</p>
+
+<h2>GWT Visual Themes</h2>
+
+<p>GWT comes with three default visual themes that you can choose from: standard, chrome, and dark. The standard theme uses subtle shades of blue to create an lively user
+interface. The chrome theme uses gray scale backgrounds for a refined, professional look. The dark theme uses dark shades of gray and black with bright indigo highlights for a
+bold, eye catching experience. When you inherit a visual theme, almost all widgets will have some default styles associated with them. The visual themes allow you to focus more
+time on application development and less time on styling your application.</p>
+
+<p>By default, new GWT applications use the standard theme, but you can select any one of the themes mentioned above. Open your module XML file (gwt.xml) and uncomment the line
+that inherits the theme of your choice.</p>
+
+<pre class="prettyprint">
+&lt;!-- Inherit the default GWT style sheet. You can change       --&gt;
+&lt;!-- the theme of your GWT application by uncommenting          --&gt;
+&lt;!-- any one of the following lines.                           --&gt;
+&lt;!-- &lt;inherits name='com.google.gwt.user.theme.standard.Standard'/&gt; --&gt;
+&lt;!-- &lt;inherits name=&quot;com.google.gwt.user.theme.chrome.Chrome&quot;/&gt; --&gt;
+&lt;inherits name=&quot;com.google.gwt.user.theme.dark.Dark&quot;/&gt;
+</pre>
+
+<p>GWT visual themes also come in RTL (right-to-left) versions if you are designing a website for a language that is written right-to-left, such as Arabic. You can include the RTL
+version by adding RTL to the end of the module name:</p>
+
+<pre class="prettyprint">
+&lt;inherits name=&quot;com.google.gwt.user.theme.dark.DarkRTL&quot;/&gt;
+</pre>
+
+<h3>Bandwidth Sensitive Applications</h3>
+
+<p>If you are program a bandwidth sensitive application, such as a phone application, you may not want to require that users download the entire style sheet associated with your
+favorite theme (about 27k). Alternatively, you can create your own stripped down version of the style sheet that only defines the styles applicable to your application. To do
+this, first include the public resources associated with one of the themes by adding the following line to your <tt>gwt.xml</tt> file:</p>
+
+<pre class="prettyprint">
+&lt;inherits name='com.google.gwt.user.theme.standard.StandardResources'/&gt;
+</pre>
+
+<p>Each theme has a &quot;Resources&quot; version that only includes the public resources associated with the theme, but does not inject a style sheet into the page. You will need to create
+a new style sheet and inject it into the page as described in the sections above.</p>
+
+<p>Finally, copy the contents of the file <tt>public/gwt/standard/standard.css</tt> style sheet located in the package <tt>com.google.gwt.user.theme.standard</tt> into your new
+style sheet. Strip out any styles you do not want to include, reducing the size of the file. When you run your application, GWT will inject your stripped down version of the style
+sheet, but you can still reference the files associate with the standard visual theme.</p>
+
+<h2>Documentation</h2>
+
+<p>It is standard practice to document the relevant CSS style names for each widget class as part of its documentation comment. For a simple example, see <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Button.html">Button</a>. For a more complex example, see <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/MenuBar.html">MenuBar</a>.</p>
+
+<h1 id="DevGuideImageBundles">Image Bundles</h1>
+
+<p>An <i>image bundle</i> is a construct used to improve application performance by reducing the number of round trip HTTP requests to the server to fetch images. GWT can package
+many image files into a single large file to be downloaded from the server and managed as a Java object.</p>
+
+<h2>ImageBundles Make Using Images More Efficient</h2>
+
+<p>Typically, an application uses many small images for icons. In HTML, each image is stored in a separate file and the browser is asked to download each file from the web server
+as a separate HTTP transaction. This standard way of dealing with images can be wasteful in several ways:</p>
+
+<ul>
+<li><strong>Large overhead:</strong> In a standard web application, an HTTP request has to be sent to the server for each image. In many cases, those images are icons and the
+actual image size is very small. In that case, the size of the image is often smaller than the HTTP response header that is sent back with the image data. That means that most of
+the traffic is overhead and very little of it actual content.</li>
+</ul>
+
+<ul>
+<li><strong>Useless freshness checks:</strong> Traditional image handling is wasteful in other ways too. Even when the images have been cached by the client, a 304 (&quot;Not
+Modified&quot;) request is still sent to check and see if the image has changed. Since images change infrequently, these freshness checks are also wasteful.</li>
+</ul>
+
+<ul>
+<li><strong>Blocking HTTP connections:</strong> Furthermore, HTTP 1.1 requires browsers to limit the number of outgoing HTTP connections to two per domain/port. A multitude of
+image requests will tie up the browser's available connections, which blocks the application's RPC requests. In most applications, RPC requests are the real work that the
+application needs to do.</li>
+</ul>
+
+<p>The end result of sending out many separate requests and freshness checks is slow application startup.</p>
+
+<p>The GWT <i>image bundle</i> solves these problems. An image bundle is a composition of many images into a single image, along with an interface for accessing the individual
+images from within the composite. Users can define an image bundle that contains the images used by their application, and GWT will automatically create the composite image and
+provide an implementation of the interface for accessing each individual image. Instead of a round trip to the server for each image, only one round trip to the server for the
+composite image is needed.</p>
+
+<p>Because the filename of the composite image is based on a hash of the file's contents, the filename will change only if the composite image is changed. This means that it is
+safe for clients to cache the composite image permanently, which avoids the unnecessary freshness checks for unchanged images. To make this work, the server configuration needs to
+specify that composite images never expire. In addition to speeding up startup, image bundles prevent the &quot;bouncy&quot; effect of image loading in browsers. While images are loading,
+browsers put a standard placeholder for each image in the UI. The placeholder is a standard size because the browser does not know what the size of an image is until it has been
+fully downloaded from the server. The result is a 'bouncy' effect, where images 'pop' into the UI once they are downloaded. With image bundles, the size of each individual image
+within the bundle is discovered when the bundle is created, so the size of the image can be explicitly set whenever images from a bundle are used in an application.</p>
+
+<p>See the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/ImageBundle.html">ImageBundle
+API documentation</a> for important information regarding:</p>
+
+<ul>
+<li>A potential security issue with the generation of the composite image on certain versions of the JVM</li>
+
+<li>Caching recommendations for image bundle files</li>
+
+<li>Protecting image bundle files with web application security constraints</li>
+
+<li>Using image bundles with the HTTPS protocol</li>
+</ul>
+
+
+
+<h2>Creating and Using an Image Bundle</h2>
+
+<p>To define an image bundle, the user needs to extend the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/ImageBundle.html">ImageBundle</a> interface. The ImageBundle interface is a tag interface that can be extended to define new image bundles. The derived interface can have zero or
+more methods, where each method must have the following characteristics:</p>
+
+<ul>
+<li>The method takes no parameters</li>
+
+<li>The method has a a return type of <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbstractImagePrototype.html">AbstractImagePrototype</a></li>
+
+<li>The method may have an optional <tt>gwt.resource</tt> metadata tag which specifies the name of the image file in the module's classpath</li>
+</ul>
+
+<p>Valid image file types are <tt>png</tt>, <tt>gif</tt>, and <tt>jpg</tt>. If the image name contains '<tt>/</tt>' characters, it is assumed to be the name of a resource on the
+classpath, formatted as would be expected by <tt>ClassLoader.getResource(String)</tt>. Otherwise, the image must be located in the same package as the user-defined image
+bundle.</p>
+
+<p>If the <tt>gwt.resource</tt> metadata tag is not specified, then the following assumptions are made:</p>
+
+<ul>
+<li>The image filename is assumed to match the method name</li>
+
+<li>The extension is assumed to be either <tt>.png</tt>, <tt>.gif</tt>, or <tt>.jpg</tt></li>
+
+<li>The file is assumed to be in the same package as the derived interface</li>
+</ul>
+
+<p>In general, you should not create create the same image filename with different types. In the event that there are multiple image files with the same names but different
+extensions, the order of extension precedence is (1) <tt>png</tt>, (2) <tt>gif</tt>, then (3) <tt>jpg</tt>. This means that if you add <tt>foo</tt> to the ImageBundle and have
+files <tt>foo.png</tt> and <tt>foo.jpg</tt>, only <tt>foo.png</tt> will be picked up - <tt>foo.jpg</tt> will be ignored.</p>
+
+<p>An image bundle for icons in a word processor application could be defined as follows:</p>
+
+<pre class="prettyprint">
+public interface WordProcessorImageBundle extends ImageBundle {
+
+  /**
+   * Would match the file 'new_file_icon.png', 'new_file_icon.gif', or
+   * 'new_file_icon.png' located in the same package as this type.
+   */
+  public AbstractImagePrototype new_file_icon();
+
+  /**
+   * Would match the file 'open_file_icon.gif' located in the same
+   * package as this type.
+   * 
+   * @gwt.resource open_file_icon.gif
+   */
+  public AbstractImagePrototype openFileIcon();
+
+  /**
+   * Would match the file 'savefile.gif' located in the package
+   * 'com.mycompany.mygwtapp.icons', provided that this package is part
+   * of the module's classpath.
+   * 
+   * @gwt.resource com/mycompany/mygwtapp/icons/savefile.gif
+   */
+  public AbstractImagePrototype saveFileIcon();
+}
+</pre>
+
+<p>Methods in an image bundle return <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbstractImagePrototype.html">AbstractImagePrototype</a> objects rather than <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/Image.html">Image</a> objects, as you might have expected. This is because <tt>AbstractImagePrototype</tt> objects provide additional lightweight representations of an image.
+For example, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbstractImagePrototype.html#getHTML()">AbstractImagePrototype.getHTML()</a> method provides an HTML fragment representing an image without having to create an actual instance of the <tt>Image</tt>
+widget. In some cases, it can be more efficient to manage images using these HTML fragments.</p>
+
+<p>Another use of <tt>AbstractImagePrototype</tt> is to use <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbstractImagePrototype.html#applyTo(com.google.gwt.user.client.ui.Image)">AbstractImagePrototype.applyTo(Image)</a> to transform an existing <tt>Image</tt> into one that matches the prototype without having to instantiate another
+<tt>Image</tt> object. This can be useful if your application has an image that needs to be swapped depending on some user-initiated action.</p>
+
+<p>Not all situations can be satisfied with a lightweight HTML fragment or by copying into an existing <tt>Image</tt>. For example, you may need to access a member of your Image
+bundle and pass an <tt>Image</tt> object into a <tt>setWidget()</tt> method to display your image in a <tt>TreeItem</tt>. In those cases, the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/AbstractImagePrototype.html#createImage()">AbstractImagePrototype.createImage()</a> method can be used to generate new <tt>Image</tt> instances.</p>
+
+<p>The following example shows how to use the image bundle that we just defined in your application. An <tt>Image</tt> object is needed in this case because the
+<tt>HorizontalPanel</tt> performs layout only on subclasses of <tt>Widget</tt>.</p>
+
+<pre class="prettyprint">
+public void useImageBundle() {
+  WordProcessorImageBundle wpImageBundle = (WordProcessorImageBundle) GWT.create(WordProcessorImageBundle.class);
+  HorizontalPanel tbPanel = new HorizontalPanel();
+  tbPanel.add(wpImageBundle.new_file_icon().createImage());
+  tbPanel.add(wpImageBundle.openFileIcon().createImage());
+  tbPanel.add(wpImageBundle.saveFileIcon().createImage());
+}
+</pre>
+
+<p class="note"><strong>Tip:</strong> Image bundles are immutable, so you can keep a reference to a singleton instance of an image bundle instead of creating a new instance every time the image
+bundle is needed.</p>
+
+<h2>Image Bundles and Localization</h2>
+
+<p>Sometimes applications need different images depending on the locale that the user is in. When using image bundles, this means that we need different image bundles for
+different locales.</p>
+
+<p>Although image bundles and localization are orthogonal concepts, they can work together by having locale-specific factories create instances of image bundles. The best way to
+explain this technique is with an example. Suppose that we define the following <tt>ImageBundle</tt> for use by a mail application:</p>
+
+<pre class="prettyprint">
+public interface MailImageBundle extends ImageBundle {
+
+  /**
+   * The default 'Compose New Message' icon if no locale-specific
+   * image is specified.
+   *
+   * @gwt.resource compose_new_message_icon.gif
+   */
+  public AbstractImagePrototype composeNewMessageIcon();
+
+  /**
+   * The default 'Help' icon if no locale-specific image is specified.
+   * Will match 'help_icon.png', 'help_icon.gif', or 'help_icon.jpg' in
+   * the same package as this type.
+   */
+  public AbstractImagePrototype help_icon();
+}
+</pre>
+
+<p>Suppose the application has to handle both English and French users. In that case, we will have to define these locale values in the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModuleXml">module XML file</a>:</p>
+
+<pre class="prettyprint">
+&lt;module&gt;
+
+    &lt;!-- Inherit the core Web Toolkit stuff.      --&gt;
+    &lt;inherits name='com.google.gwt.user.User' /&gt;
+    &lt;inherits name='com.google.gwt.i18n.I18N' /&gt;
+
+    &lt;!-- For Localizable                          --&gt;
+        &lt;extend-property name='locale' values='fr' /&gt;
+        &lt;extend-property name='locale' values='en' /&gt;
+
+    &lt;!-- Other settings ...                       --&gt;
+
+  
+&lt;/module&gt;
+</pre>
+
+<p>We define English and French variations of each image in <tt>MailImageBundle</tt> by creating locale-specific image bundles that extend <tt>MailImageBundle</tt>:</p>
+
+<pre class="prettyprint">
+public interface MailImageBundle_en extends MailImageBundle {
+
+  /**
+   * The English version of the 'Compose New Message' icon.
+   * Since we are not overriding the help_icon() method, this bundle
+   * uses the inherited method from MailImageBundle.
+   *
+   * @gwt.resource compose_new_message_icon_en.gif
+   */
+  public AbstractImagePrototype composeNewMessageIcon();
+
+
+  /* Note: No override for the help icon */
+
+}
+</pre>
+
+<pre class="prettyprint">
+public interface MailImageBundle_fr extends MailImageBundle {
+
+  /**
+   * The French version of the 'Compose New Message' icon.
+   *
+   * @gwt.resource compose_new_message_icon_fr.gif
+   */
+  public AbstractImagePrototype composeNewMessageIcon();
+
+  /**
+   * The French version of the 'Help' icon.
+   *
+   * @gwt.resource help_icon_fr.gif
+   */
+  public AbstractImagePrototype help_icon();
+}
+</pre>
+
+<p>The next step is to create a mechanism for choosing the correct image bundle based on the user's locale. By extending <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html">Localizable</a>, we can create a locale-sensitive
+factory that will instantiate <tt>MailImageBundle</tt> with deferred binding.</p>
+
+<pre class="prettyprint">
+public interface MailImageBundleFactory extends Localizable {
+
+  public MailImageBundle createImageBundle();
+}
+</pre>
+
+<p>The factory methods are instantiating the <tt>ImageBundle</tt> superclass using deferred binding. Invoking the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class">GWT.create()</a> method will cause a
+generator to create Java code to implement the details for the image bundle class for each factory:</p>
+
+<pre class="prettyprint">
+public class MailImageBundleFactory_en implements MailImageBundleFactory {
+
+  public MailImageBundle createImageBundle() {
+    return (MailImageBundle) GWT.create(MailImageBundle_en.class);
+  }
+}
+</pre>
+
+<pre class="prettyprint">
+public class MailImageBundleFactory_fr implements MailImageBundleFactory {
+
+  public MailImageBundle createImageBundle() {
+    return (MailImageBundle) GWT.create(MailImageBundle_fr.class);
+  }
+}
+</pre>
+
+<p>Finally, we need to create a Factory to return the default implementation of our ImageBundle. Do this by naming the class with the same prefix as the interface, but ending with
+an underscore character:</p>
+
+<pre class="prettyprint">
+public class MailImageBundleFactory_ implements MailImageBundleFactory {
+
+  public MailImageBundle createImageBundle() {
+    return (MailImageBundle) GWT.create(MailImageBundle.class);
+  }
+}
+</pre>
+
+<p>Application code that utilizes a locale-sensitive image bundle might look something like this:</p>
+
+<pre class="prettyprint">
+public void useLocalizedImageBundle() {
+  // Create a locale-sensitive MailImageBundleFactory
+  MailImageBundleFactory mailImageBundleFactory = (MailImageBundleFactory) GWT
+      .create(MailImageBundleFactory.class);
+
+  // This will return a locale-sensitive MailImageBundle, since we are using
+  // a locale-sensitive factory to create it.
+  MailImageBundle mailImageBundle = mailImageBundleFactory.createImageBundle();
+
+  // Get the image prototype for the icon that we are interested in.
+  AbstractImagePrototype helpIconProto = mailImageBundle.help_icon();
+
+  // Create an Image object from the prototype and add it to a panel.
+  HorizontalPanel panel = new HorizontalPanel();
+  panel.add(helpIconProto.createImage());
+}
+</pre>
+
+<p>Creating the factory class also takes advantage of GWT's <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">deferred binding</a> feature, this time based on the
+<tt>Localizable</tt> base class. The <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#create(java.lang.Class)">GWT.create(Class)</a> method instructs the compiler to choose one of the several <tt>locale</tt> specific subclasses of <tt>MailImageBundleFactory</tt>
+available.</p>
+
+<h2>Why did this Example use Deferred Binding Twice?</h2>
+
+<p>If you are familiar with deferred binding, you might be thinking, <i>Why didn't we just make <tt>MailImageBundle</tt> extend the <tt>Localizable</tt> class directly?</i></p>
+
+<p>The answer is rooted in the fact that you cannot extend more than one class in Java. Both <tt>ImageBundle</tt> and the <tt>Localizable</tt> class are needed to implement this
+feature and they both use deferred binding. Hence the use of the <i>Factory method pattern</i>.</p>
+
+  <div id="notice" style="text-align: center; border: 1em 0em 1em 0em">
+  Except as otherwise <a
+  href="http://code.google.com/policies.html#restrictions">noted</a>,
+  the content of this page is licensed under the <a rel="license"
+  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+  Attribution 3.0 License</a>.
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" 
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+    <license rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </License>
+</rdf:RDF> -->
+</div>
+
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div id="gc-content-last-updated">Last updated March 23, 2012.</div>
+
+</div>
+
+      </div>
+
+      </div>
+      
+
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="prod45d.360930183423672260" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b69593dd37b855df5c5d9951f1bf206e' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($);
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+// Add the handlers once the document has loaded.
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  </body>
+</html>

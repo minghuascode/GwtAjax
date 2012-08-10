@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+  
+  <title>Compiling &amp; Debugging - Google Web Toolkit &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    <div id="sandbar">
+      
+      <a href="/sandbar?q=&page_url=/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging"></a>
+      <div id="gc-googlebar"></div>
+      <img src="/images/google-logo.png" style="display:none;"/>
+      
+    </div>
+    
+    
+
+    <div id="gc-wrapper">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Events</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      <div id="gc-appbar">
+        
+        <h1>
+          
+
+  <a href="/web-toolkit/">Google Web Toolkit</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/web-toolkit/"
+      data-size="medium"
+      data-count="count"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+
+        </h1>
+        
+      </div>
+      
+
+      
+      <div id="gc-main">
+        
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><span class="tlw-title" data-title="Docs:">Docs:</span></li><li class=""><a href="/web-toolkit/doc/latest" data-title="Latest Version"><span>Latest Version</span></a></li><li class=""><span class="tlw-title" data-title="Older Versions">Older Versions</span><ul><li class=""><a href="/web-toolkit/doc/2.4" data-title="2.4"><span>2.4</span></a></li><li class=""><a href="/web-toolkit/doc/2.3" data-title="2.3"><span>2.3</span></a></li><li class=""><a href="/web-toolkit/doc/2.2" data-title="2.2"><span>2.2</span></a></li><li class=""><a href="/web-toolkit/doc/2.1" data-title="2.1"><span>2.1</span></a></li><li class=""><a href="/web-toolkit/doc/2.0" data-title="2.0"><span>2.0</span></a></li></ul></li></ul><hr/><ul><li class=""><a href="/web-toolkit/download" data-title="Downloads"><span>Downloads</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/" data-title="GWT Designer"><span>GWT Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/download-gwtdesigner" data-title="Download"><span>Download</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/quick_start" data-title="Quick Start"><span>Quick Start</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/whatsnew" data-title="What&#39;s New"><span>What&#39;s New</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation" data-title="Installation"><span>Installation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/system" data-title="System Requirements"><span>System Requirements</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.7" data-title="Using update site for Eclipse 3.7"><span>Using update site for Eclipse 3.7</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.6" data-title="Using update site for Eclipse 3.6"><span>Using update site for Eclipse 3.6</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.5" data-title="Using update site for Eclipse 3.5"><span>Using update site for Eclipse 3.5</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.4" data-title="Using update site for Eclipse 3.4"><span>Using update site for Eclipse 3.4</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/uninstall" data-title="Uninstall"><span>Uninstall</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface" data-title="User Interface"><span>User Interface</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/design_view" data-title="Design View"><span>Design View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/source_view" data-title="Source View"><span>Source View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/structure_view" data-title="Structure View"><span>Structure View</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/component_tree" data-title="Component Tree"><span>Component Tree</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane" data-title="Property Pane"><span>Property Pane</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane_context_menu" data-title="Property Pane Context Menu"><span>Property Pane Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string" data-title="String Editor"><span>String Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string_array" data-title="String Array Editor"><span>String Array Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_color" data-title="Color Editor"><span>Color Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_font" data-title="Font Editor"><span>Font Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_image" data-title="Icon / Image Editor"><span>Icon / Image Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_point" data-title="Point Editor"><span>Point Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_rectangle" data-title="Rectangle Editor"><span>Rectangle Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_inset" data-title="Inset Editor"><span>Inset Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_taborder" data-title="Tab Order Editor"><span>Tab Order Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/properties/property_editor_style_name" data-title="Style Name Editor"><span>Style Name Editor</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette" data-title="Palette"><span>Palette</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_context_menu" data-title="Palette Context Menu"><span>Palette Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_manager" data-title="Palette Manager"><span>Palette Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/palettes/gwt_palette" data-title="GWT Designer Palette"><span>GWT Designer Palette</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/NewComponentsTutorial.pdf" data-title="New Components Tutorial (PDF)"><span>New Components Tutorial (PDF)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/DesignerCustomizationAPI.pdf" data-title="Designer Customization API (PDF)"><span>Designer Customization API (PDF)</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/toolbar" data-title="Toolbar"><span>Toolbar</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/context_menu" data-title="Context Menu"><span>Context Menu</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features" data-title="Features"><span>Features</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/bidirectional" data-title="Bi-directional Code Generation"><span>Bi-directional Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt_code_generation" data-title="GWT Code Generation"><span>GWT Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/custom_composites" data-title="Custom Panels"><span>Custom Panels</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/factories" data-title="Factories"><span>Factories</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/visual_inheritance" data-title="Visual Inheritance"><span>Visual Inheritance</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/event_handling" data-title="Event Handling"><span>Event Handling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/menu_editing" data-title="Menu Editing"><span>Menu Editing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/morphing" data-title="Morphing"><span>Morphing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/editing_existing_window" data-title="Editing Existing Windows"><span>Editing Existing Windows</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_compiling" data-title="Application Compiling"><span>Application Compiling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_launching" data-title="Application Launching"><span>Application Launching</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/module_deployment" data-title="Build &amp; Deployment"><span>Build &amp; Deployment</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/css_support" data-title="CSS Support"><span>CSS Support</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/enhanced_compilation" data-title="Enhanced Compilation"><span>Enhanced Compilation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/image_bundles" data-title="Image Bundles"><span>Image Bundles</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/internationalization" data-title="Internationalization (i18n)"><span>Internationalization (i18n)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/junit_testcase" data-title="JUnit Test Creation"><span>JUnit Test Creation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/project" data-title="Projects"><span>Projects</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/refactoring" data-title="Refactoring"><span>Refactoring</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/remoteservice" data-title="Remote Services"><span>Remote Services</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gwt-ext" data-title="Using GWT-Ext"><span>Using GWT-Ext</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gxt" data-title="Using Ext GWT (GXT)"><span>Using Ext GWT (GXT)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/smartgwt" data-title="Using SmartGWT"><span>Using SmartGWT</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt" data-title="Panels"><span>Panels</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/absolutepanel" data-title="AbsolutePanel"><span>AbsolutePanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/dockpanel" data-title="Dock[Layout]Panel"><span>Dock[Layout]Panel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flextable" data-title="FlexTable"><span>FlexTable</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flowpanel" data-title="FlowPanel"><span>FlowPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/gridpanel" data-title="Grid"><span>Grid</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/layoutpanel" data-title="LayoutPanel"><span>LayoutPanel</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt" data-title="Wizards"><span>Wizards</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/entrypoint" data-title="Java EntryPoint"><span>Java EntryPoint</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/composite" data-title="Java Composite"><span>Java Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/dialogbox" data-title="Java DialogBox"><span>Java DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/popuppanel" data-title="Java PopupPanel"><span>Java PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_composite" data-title="UiBinder Composite"><span>UiBinder Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_dialogbox" data-title="UiBinder DialogBox"><span>UiBinder DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_popuppanel" data-title="UiBinder PopupPanel"><span>UiBinder PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/module" data-title="GWT Module"><span>GWT Module</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/library" data-title="GWT Library"><span>GWT Library</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences" data-title="Preferences"><span>Preferences</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_code_parsing" data-title="Code Parsing"><span>Code Parsing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt" data-title="GWT"><span>GWT</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_builder" data-title="Builder"><span>Builder</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_code_generation" data-title="Code Generation"><span>Code Generation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_nls" data-title="NLS"><span>NLS</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_variables" data-title="Variables"><span>Variables</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts" data-title="Layouts"><span>Layouts</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts_absolute" data-title="Absolute"><span>Absolute</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer" data-title="Google-Web Toolkit-Designer"><span>Google-Web Toolkit-Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_absolute_layout" data-title="Absolute Layout"><span>Absolute Layout</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_code_style" data-title="Code Style"><span>Code Style</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_uitoolkits" data-title="UI Toolkits"><span>UI Toolkits</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_export" data-title="Export/Import"><span>Export/Import</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials" data-title="Tutorials"><span>Tutorials</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/loginmanager" data-title="GWT Login Manager"><span>GWT Login Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/stockwatcher" data-title="GWT Stock Watcher"><span>GWT Stock Watcher</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/product_support" data-title="Product Support"><span>Product Support</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/error_reporting" data-title="Error Reporting"><span>Error Reporting</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/test_cases" data-title="Reproducible Test Cases"><span>Reproducible Test Cases</span></a></li><li class=""><a href="http://groups.google.com/group/google-web-toolkit" data-title="Forum"><span>Forum</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/accessibility" data-title="Accessibility"><span>Accessibility</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tipsandtricks" data-title="Tips &amp; Tricks"><span>Tips &amp; Tricks</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tos" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></li></ul><hr/><ul><li class=""><span class="tlw-title" data-title="Resources:">Resources:</span></li><li class=""><a href="/web-toolkit/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="/web-toolkit/books" data-title="Books"><span>Books</span></a></li><li class=""><a href="/web-toolkit/casestudies" data-title="Case Studies"><span>Case Studies</span></a></li><li class=""><a href="/web-toolkit/community" data-title="Community"><span>Community</span></a><ul><li class=""><a href="http://gwtgallery.appspot.com" data-title="App Gallery"><span>App Gallery</span></a></li><li class=""><a href="/web-toolkit/developer_spotlight" data-title="Developer Spotlight"><span>Developer Spotlight</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools" data-title="Tools &amp; Libraries"><span>Tools &amp; Libraries</span></a></li><li class=""><a href="/web-toolkit/media_gallery" data-title="Presentations"><span>Presentations</span></a></li><li class=""><a href="/web-toolkit/makinggwtbetter" data-title="Making GWT Better"><span>Making GWT Better</span></a></li><li class=""><a href="/web-toolkit/lifeofanissue" data-title="Issue Tracking"><span>Issue Tracking</span></a></li><li class=""><a href="http://googlewebtoolkit.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="/web-toolkit/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 class="page-title" >Compiling &amp; Debugging</h1>
+  
+  
+
+
+
+<p>
+Let's start with the core principle of GWT development:
+<ol class="nolist">
+  <li>If your GWT application runs in hosted mode as you expect...</li> 
+  <li>and the GWT compiler successfully compiles your application into JavaScript...</li> 
+  <li>then your application will work the same way in a web browser as it did in hosted mode.</li>
+</ol>  
+</p>
+
+<p>
+The rest of this section introduces hosted mode and web mode and explains how and when to use each.
+</p>
+
+<ol class="toc" id="pageToc">
+  <li><a href="#DevGuideHostedMode">Debugging in Hosted Mode</a></li>
+  <li><a href="#DevGuideWebMode">Running in Web Mode</a></li>
+  <li><a href="#DevGuideJavaToJavaScriptCompiler">Understanding the GWT Compiler</a></li>
+</ol>
+
+
+<h1 id="DevGuideHostedMode">Debugging in Hosted Mode</h1>
+
+<p>You will spend most of your development time running your application in <i>hosted mode</i>, which means that you are interacting with your GWT application without it having
+been translated into JavaScript. Anytime you edit, run, and debug applications from a Java integrated development environment (IDE), you are working in hosted mode. When an
+application is running in hosted mode, the Java Virtual Machine (JVM) is actually executing the application code as compiled Java bytecode, using GWT plumbing to automate an
+embedded browser window. This means that the debugging facilities of your IDE are available to debug both your client-side GWT code and any server-side Java code as well. By
+remaining in this traditional &quot;code-test-debug&quot; cycle, hosted mode is by far the most productive way to develop your application quickly.</p>
+
+<h2>Launching an application in hosted mode</h2>
+
+<p>To launch a hosted mode session, from the command line run <tt>ant hosted</tt>, assuming you have an Ant <tt>build.xml</tt> file generated by webAppCreator.</p>
+
+<p class="note"><strong>Tip:</strong> If you are using Eclipse, you can instead run the <tt>&lt;app&gt;.launch</tt> configuration file created by webAppCreator using the Run or Debug
+menus.</p>
+
+<p>If you didn't use webAppCreator, you can manually run the main class in <tt>com.google.gwt.dev.HostedMode</tt> found in <tt>gwt-dev-windows.jar</tt>,
+<tt>gwt-dev-linux.jar</tt>, or <tt>gwt-dev-mac.jar</tt>, depending on your OS.</p>
+
+<p><strong>Important:</strong> If you are not using a generated launch config, be aware that GWT hosted mode looks for <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideModules">modules</a> (and therefore <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideClientSide">client-side</a> source) using the JVM's classpath.
+Make sure to add your source directories first in your classpath.</p>
+
+<h2>GWT Hosted Mode</h2>
+
+<p>The first window you'll see is the Hosted Mode main window. The window is used to capture debugging logs and exceptions from the hosted browser.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/DevelopmentShell1.png"/></p>
+
+<h3>Serving the application</h3>
+
+<p>The first message in the log window is about starting an HTTP session. By default, hosted mode runs an internal Jetty instance to serve your web application. This embedded
+Jetty instance serves directly out of your project's war directory.</p>
+
+<p>You can disable this internal server by passing the <tt>-noserver</tt> option to hosted mode and instead run your own external server. See FAQ <a href="/web-toolkit/doc/1.6/FAQ_DebuggingAndCompiling#How_do_I_use_my_own_server_in_hosted_mode_instead_of_GWT's">&quot;How do I use my own server in hosted mode instead of GWT's built-in server?&quot;</a></p>
+
+<h2>The Hosted Browser</h2>
+
+<p>Hosted browsers are typically opened automatically via the <tt>-startupUrl</tt> command line option. You can also open a new hosted browser from the Hosted Mode main window.
+The hosted browser displays your application and gives you the standard controls of a web browser, plus a <i>Compile/Browse</i> button to compile the client-side code to
+JavaScript and run the application in <a href="/web-toolkit/doc/1.6/DevGuideCompilingAndDebugging#DevGuideWebMode">web mode</a>.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/HostedMode1.png"/></p>
+
+<h3>Refreshing hosted mode</h3>
+
+<p>You do not need to restart hosted mode after modifying your source code. Instead, with Hosted Mode still running, edit client code or resources, save your changes, then click
+the <i>Refresh</i> button in the hosted browser. On <i>Refresh</i>, your code is recompiled with the changes and the new version is loaded into the browser. Refreshing the hosted
+browser is much faster than closing and restarting Hosted Mode.</p>
+
+<p>You might notice that sometimes your changes take effect even if you <i>do not</i> refresh hosted mode. This behavior is a result of the way hosted mode interacts with the
+compiled code, but it is not always reliable. Specifically, it only happens when you make minor changes to existing functions. To ensure your changes are included, make it a habit
+to always refresh the hosted mode browser after making changes.</p>
+
+<h3>Reloading server code</h3>
+
+<p>Similarly, the <i>Restart Server</i> button in the Hosted Mode main window allows you to restart the embedded Jetty server without having to close and restart Hosted Mode. This
+is useful when you have made configuration or code changes to your server side code. All server side classes will be reloaded from scratch with fresh code for your
+<tt>war/WEB-INF/classes</tt> and <tt>war/WEB-INF/lib</tt> folders. If you are getting an <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/rpc/IncompatibleRemoteServiceException.html">IncompatibleRemoteServiceException</a> in hosted mode while using RPC, try restarting the server and refreshing the client.</p>
+
+<h2>Generating debug messages in hosted mode:
+GWT.log()</h2>
+
+<p>Debugging messages are displayed within the Hosted Mode log window. Some of these messages are from GWT. However, you can generate your own debug messages by using
+calls to <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/core/client/GWT.html#log(java.lang.String,%20java.lang.Throwable)">GWT.log()</a>.</p>
+
+<p>For example, modifying the standard project to emit a debug message inside the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/event/dom/client/ClickHandler.html">ClickHandler</a> results in a debug message
+displaying on the log window whenever the user clicks the button.</p>
+
+<pre class="prettyprint">
+   import com.google.gwt.core.client.GWT;
+
+   ...
+
+   button.addClickHandler(new ClickHandler() {
+      public void onClick(ClickEvent event) {
+        GWT.log(&quot;User Pressed a button.&quot;, null); // Added debugging message
+        if (label.getText().equals(&quot;&quot;))
+          label.setText(&quot;Hello World!&quot;);
+        else
+          label.setText(&quot;&quot;);
+      }
+    });
+</pre>
+
+<p><img src="/web-toolkit/doc/1.6/images/DevelopmentShell2.png"/></p>
+
+<p>Calls to GWT.log() are intended just for use while debugging your application. They are optimized out in web mode. For example, consider the following change to the onClick()
+method intended to intentionally trigger an exception:</p>
+
+<pre class="prettyprint">
+  public void onClick(Widget sender) {
+        GWT.log(&quot;User pressed a button.&quot;, null);
+        Object nullObject = null;
+        nullObject.toString(); // Should cause NullPointerException
+</pre>
+
+<p>When the hosted application encounters an exception, a message is printed on the log window. The exception is highlighted with a red icon. In this example, when you click on
+the button in the browser window, a NullPointerException is triggered and the back trace for the exception displays in the status area below the log area. Clicking on the
+exception message or icon displays the full text of the exception in the message area below.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/DevelopmentShell3.png"/></p>
+
+<h2>Enabling internal GWT debug messages</h2>
+
+<p>The log window can display more verbose debugging if you invoke it by specifying the <tt>-logLevel</tt> command-line argument. Specifying the level of <tt>SPAM</tt> turns on
+many messages inside of the GWT engine. These messages are displayed in a hierarchical tree which can be manipulated by clicking on individual lines or by using the Expand All and
+Collapse All icons in the toolbar.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/DevelopmentShell4.png"/></p>
+
+<h2>Using an IDE with Hosted Mode</h2>
+
+<p>When using an IDE such as Eclipse, JBuilder, or IntelliJ, it is easy to use the IDE's built-in Java debugger to debug your module. Simply set a breakpoint somewhere inside your
+code, (such as the <tt>onModuleLoad()</tt> entry point) where you want the debugger to stop and let you inspect the state of your program. 
+ For an example of debugging in hosted mode using the Eclipse IDE, see the Getting Started tutorial, <a href="/web-toolkit/doc/1.6/tutorial/debug">Debugging a GWT Application</a>.</p>
+
+<h2>An Example Launch</h2>
+
+<p>Let's look behind the scenes when you launch your GWT application in hosted mode. To run hosted mode, you start a Java VM using the main class
+<tt>com.google.com.gwt.dev.HostedMode</tt>. If you look inside a generated ant <tt>build.xml</tt>, you'll find something like this:</p>
+
+<pre class="prettyprint">
+&lt;target name=&quot;hosted&quot; depends=&quot;javac&quot; description=&quot;Run hosted mode&quot;&gt;
+  &lt;java failonerror=&quot;true&quot; fork=&quot;true&quot; classname=&quot;com.google.gwt.dev.HostedMode&quot;&gt;
+    &lt;classpath&gt;
+      &lt;pathelement location=&quot;src&quot;/&gt;
+      &lt;path refid=&quot;project.class.path&quot;/&gt;
+    &lt;/classpath&gt;
+    &lt;jvmarg value=&quot;-Xmx256M&quot;/&gt;
+    &lt;arg value=&quot;-startupUrl&quot;/&gt;
+    &lt;arg value=&quot;Hello.html&quot;/&gt;
+    &lt;!-- Additional arguments like -style PRETTY or -logLevel DEBUG --&gt;
+    &lt;arg value=&quot;com.google.gwt.sample.hello.Hello&quot;/&gt;
+  &lt;/java&gt;
+&lt;/target&gt;
+</pre>
+
+<p>This is similar to running the following command on the command line:</p>
+
+<pre class="prettyprint">
+java -Xmx256M -cp &quot;src;war/WEB-INF/classes;\gwt-windows-1.6.0\gwt-user.jar;\gwt-windows-1.6.0\gwt-dev-windows.jar&quot;
+  com.google.gwt.dev.HostedMode -startupUrl Hello.html com.google.gwt.sample.hello.Hello
+</pre>
+
+<p>The <tt>-startupUrl</tt> parameter tells Hosted Mode which URL(s) to launch in the hosted mode browser when it starts up. If the value excludes the domain, the domain is
+assumed to be <tt>localhost</tt>. The port is assumed to be the port running the embedded server. In the example above, this address is
+<tt>http://localhost:8888/Hello.html</tt>.</p>
+
+<p>The final parameter (the one at the end with no flag preceding it) is the module or set of modules we care about. This value is required in order to correctly initialize the
+war directory with bootstrap scripts for any GWT modules you may wish to run.</p>
+
+
+<h1 id="DevGuideWebMode">Running in Web Mode</h1>
+
+<p>After you have your application working well in <i>hosted</i> mode, you will want to try out your application in your target web browsers; that is, you want to run it in
+<i>web</i> mode. This is as easy as clicking the <i>Compile/Browse</i> button in the toolbar of the Hosted Mode browser.</p>
+
+<p><img src="/web-toolkit/doc/1.6/images/WebMode1.png"/></p>
+
+<p>After you click the <i>Compile/Browse</i> button, Hosted Mode pauses while the GWT compiler translates your Java source code (plus the source code of the GWT library and any
+third party libraries) into optimized JavaScript. If the compilation runs into errors, they will be displayed in the log window. After the compilation completes successfully, an
+external browser window opens displaying your HTML host page and your application. (Or, an existing browser session might display your application in a new tab.)</p>
+
+<p>Running your application in web mode allows you to test your application as it is deployed. If you have a servlet component specified in your <tt>web.xml</tt> file, your GWT
+RPC calls will also be served to the browser. You can also take a different browser or a browser running on another machine and point it at the same URL (substitute the hostname
+or IP address of your workstation for <tt>localhost</tt> in the URL.)</p>
+
+<p>Running in web mode is a good way to test:</p>
+
+<dl>
+<dt>The performance of your application</dt>
+<dd>
+<p>
+Hosted mode uses a special engine to run your app as a mix of both Java bytecode and native JavaScript. If your code makes many calls back and forth between Java and
+and JavaScript, your code may seem slower in hosted mode than it will actually be in web mode. This can be particularly true of UI code. On the other hand, intense algorithmic
+pure Java code will tend to run faster in hosted mode, since the JVM outperforms most JavaScript engines.
+</p>
+
+<p>If your application displays lots of data or has a large number of widgets, you will want to confirm that performance will be acceptable when the application is
+finally deployed.</p>
+</dd>
+
+<dt>How your application looks on different browsers</dt>
+<dd>Because GWT widgets use a browser's native DOM components, the look and feel of your application might change from browser to browser. More importantly, if you are
+using a style sheet, you will want to inspect your application carefully on each browser.</dd>
+
+<dt>How your application logic performs on different browsers</dt>
+<dd>GWT is designed to provide cross-browser support so that the average GWT developer does not need to worry about cross-browser support. But if you are a widget author
+or if you are using a third party JavaScript library, you will need to confirm that these components are working correctly on each target browser you plan to support.</dd>
+
+</dl>
+
+<h1 id="DevGuideJavaToJavaScriptCompiler">Understanding the GWT Compiler</h1>
+
+<p>The heart of GWT is a compiler that converts Java source into JavaScript, transforming your working Java application into an equivalent JavaScript application.</p> 
+
+<p>The GWT compiler supports the vast majority of the Java language. The <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideJavaCompatibility">GWT runtime library</a> emulates a relevant
+subset of the Java runtime library. If a JRE class or method is not supported, the compiler will emit an error.</p>
+
+<p>You can run the compiler with the name of the module you want to compile in one of the following manners:</p>
+
+<ul>
+<li>Run the main class <tt>com.google.gwt.dev.Compiler</tt> using <tt>java</tt> from the command-line.</li>
+
+<li>If you used the webAppCreator script to create your project, you can use Ant to run the generated <tt>build.xml</tt>.</li>
+
+<li>Use the <i>Compile/Browse</i> button from inside of hosted mode.</li>
+</ul>
+
+<p>Once compilation completes sucessfully, directories will be created containing the JavaScript implementation of your project. The compiler will create one directory for each
+module it compiles.</p>
+
+<pre>
+C:\gwt-windows-1.6.0\samples\Hello&gt;ant
+Buildfile: build.xml
+
+libs:
+
+javac:
+
+gwtc:
+     [java] Compiling module com.google.gwt.sample.hello.Hello
+     [java]    Compiling 5 permutations
+     [java]       Permutation compile succeeded
+     [java]    Linking into war
+     [java]       Link succeeded
+     [java]    Compilation succeeded -- 20.313s
+
+build:
+
+BUILD SUCCESSFUL
+Total time: 22 seconds
+</pre>
+
+<p>After running the GWT compiler your war directory should look something like this:</p>
+
+<pre>
+C:\gwt-windows-1.6.0\samples\Hello&gt;\bin\find war
+war
+war\hello
+war\hello\18EEC2DA45CB5F0C2050E2539AE61FCE.cache.html
+war\hello\813B962DC4C22396EA14405DDEF020EE.cache.html
+war\hello\86DA1DCEF4F40731BE71E7978CD4776A.cache.html
+war\hello\A37FC20FF4D8F11605B2C4C53AF20B6F.cache.html
+war\hello\E3C1ABB32E39A126A9194DB727F7742A.cache.html
+war\hello\14A43CD7E24B0A0136C2B8B20D6DF3C0.cache.png
+war\hello\548CDF11D6FE9011F3447CA200D7FB7F.cache.png
+war\hello\9DA92932034707C17CFF15F95086D53F.cache.png
+war\hello\A7CD51F9E5A7DED5F85AD1D82BA67A8A.cache.png
+war\hello\B8517E9C2E38AA39AB7C0051564224D3.cache.png
+war\hello\clear.cache.gif
+war\hello\hello.nocache.js
+war\hello\hosted.html
+war\Hello.html
+</pre>
+
+<p>In the above example, <tt>war/hello/hello.nocache.js</tt> is the script you would include in a host HTML page to load the Hello application. In this case, the host HTML page is
+located at <tt>war/Hello.html</tt> and loads the GWT startup script through the relative URL <tt>hello/hello.nocache.js</tt>.</p>
+
+<p>You may have noticed in the compilation target in the build.xml file generated by the webAppCreator uses the war output directory as both an input and output source. This doesn't have to be the case, and you can easily configure the war directory as the output directory only, while using other directories as source directory paths by adding build targets to copy static resources from the source to the final output directory. See this <a href="/web-toolkit/doc/1.6/FAQ_DebuggingAndCompiling#Is_the_war_directory_used_by_GWT_compiler_for_both_input_and_output">FAQ</a> for more details.</p>
+
+<p>The other thing you may have noticed is that there are a number of other files generated along with the GWT compiler output. Of these there are a few that are key to <a href="/web-toolkit/doc/1.6/DevGuideDeploying">deploying your application</a>.
+
+<h2>Key application files</h2>
+
+<p>After running the GWT compiler, you'll find the output in the WAR, or Web Archive, folder with the following structure:</p>
+
+<p><img src="/web-toolkit/images/war_output_dir.png"/></p>
+
+<p>If you've worked with GWT prior to the 1.6 release, the files in the <code>war/hello</code> directory are familiar to you. The only difference is where these files are now generated, and the fact that the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML page</a> and CSS files are not in the same directory as the rest of the <code>.cache.html/png</code> files. The path where these files are generated is controlled by the GWT module XML file. These are the key applications files to deploy you GWT application on your web server.</p>
+
+<dt>The host HTML page</dt>
+
+<p>The <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideHostPage">host HTML page</a> is the first page your clients should visit when they browse to your application and is also where the rest of your application files are loaded from. To load your application, the host HTML page must contain a <code>&lt;script&gt;</code> tag referencing your GWT application bootstrap file (described below). You would typically include a <code>&lt;link&gt;</code> tag referencing your application CSS file as well, unless you inject the stylesheet directly by adding the <code>&lt;stylesheet&gt;</code> tag to your module XML file.</p>
+
+You could also load the script from anywhere else in a website, but the default start page is typically the entry point that developers use to load their GWT applications. The host page from the Hello starter sample application mentioned above is shown below.</p>
+
+<pre class="prettyprint">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;Hello.css&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot; language='javascript' src='hello/hello.nocache.js'&gt;&lt;/script&gt;
+    &lt;!-- Along with page title and table headers defined --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<dt>The Bootstrap File</dt>
+
+<p>You may have noticed that one of the generated files is named after your module, followed by a <code>.nocache.js</code> suffix. This is the GWT bootstrap file. Similar to the output subdirectory <code>war/&lt;app_name&gt;</code>, the name of this file is also controlled by the <code>rename-to</code> attribute in your module XML file. This file is responsible for choosing the correct version of your application to load for your client based on their browser and locale, or any other custom selection rule (see <a href="/web-toolkit/doc/1.6/DevGuideCodingBasics#DevGuideDeferredBinding">Deferred Binding</a>). The various versions of your application compliant to each browser / locale are the <code>&lt;md5&gt;.cache.html</code> application files (discussed below).</p>
+
+<p>The host HTML page references this file so that clients visiting your page first download the bootstrap, and the bootstrap script in turn figures out which browser environment it is running in and determines the appropriate version of your application to load. See the <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideBootstrap">documentation</a> on the bootstrap process for more details.</p>
+
+<dt>Application Files</dt>
+
+<p>The <code>&lt;md5&gt;.cache.html</code> files generated in the <code>war/&lt;app_name&gt;</code> directory, along with the bootstrap script, are the most important part of the generated fileset. They represent one version of your application tailored to a specific browser (or locale). These are the application files that the bootstrap script selects after it determines which browser it's running on.</p>
+
+<p>Another generated application file that isn't strictly necessary to deploy your GWT application, but required if you're using GWT RPC and the support for the Serializable interface for types transferred through RPC, is the <code>&lt;md5&gt;.gwt.rpc</code> file. The serialization policy file must be accessible by your RPC <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/server/rpc/RemoteServiceServlet.html">RemoteServiceServlet</a> via the <a href="http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/ServletContext.html#getResource(java.lang.String)">ServletContext.getResource()</a> call.</p>
+
+<h2>Public Resources</h2>
+
+<p>All public resources, such as image files, stylesheets or XML files, can be placed anywhere under the war directory or any subdirectory therein during development. As long as references to these resources in your GWT application code hold when deployed, you can expect your application to work properly in production. In GWT 1.6, the <code>&lt;public&gt;</code> tag is still respected, so you can place public resources in a public directory, as defined in your module XML file, and these resources will be copied into the <code>war/&lt;app_name&gt;</code> folder. However, the best practice would be to place public resources in the war directory and work with them from that location. This complies with the standard <a href="http://jcp.org/aboutJava/communityprocess/mrel/jsr154/index2.html">Servlet 2.5 API specification</a>, and makes it easier to deploy your application if you're planning to deploy on a servlet container.</p>
+
+<p>If you're using <a href="/web-toolkit/doc/1.6/DevGuideUserInterface#DevGuideImageBundles">ImageBundles</a> in your application, the generated image bundles are placed in the <code>war/&lt;app_name&gt;</code> directory after compilation. In GWT 2.0, the concept of ImageBundles has been generalized for any static resource. This is called the ClientBundle, and respects the same rules as the ImageBundle.</p>
+
+<h2>Perfect Caching</h2>
+
+<p>Among other optimization and performance improvement techniques, GWT also offers the concept of &quot;Perfect Caching&quot;, which you can take advantage of if you deploy your application correctly.</p>
+
+<p>You may have noticed that the bootstrap script filename contains a <code>.nocache.js</code> suffix, whereas the rest of the GWT application files contain a <code>.cache.html</code> suffix. These are meant as indicators that you can use to configure your web server to implement perfect caching. The bootstrap script is named after a well-known application name (<code>&lt;app_name&gt;.nocache.js</code>), while the GWT application files all contain md5 sums in their names. Those md5 sums are computed from your GWT codebase at the time of compilation. The bootstrap script contains a lookup table that selects the right <code>&lt;md5&gt;.cache.html</code> file when your client first visits your site and loads up your GWT application. The bootstrap process is explained in greater detail <a href="/web-toolkit/doc/1.6/DevGuideOrganizingProjects#DevGuideBootstrap">here</a>.</p>
+
+<p>The fact that the application filenames will always change if your codebase changes means that your clients can safely cache these resources and don't need to refetch the GWT application files each time they visit your site. The resource that should never be cached is the bootstrap script, since it contains the logic necessary to lookup the correct application file. If you were to configure these rules on an Apache HTTP server, you might get something like this in your <code>.htaccess</code> config file:</p>
+
+<pre class="prettyprint">
+&lt;Files *.nocache.*&gt;
+  ExpiresDefault &quot;access&quot;
+&lt;/Files&gt;
+
+&lt;Files *.cache.*&gt;
+        ExpiresDefault &quot;now plus 1 year&quot;
+&lt;/Files&gt;
+</pre>
+
+<p>You could also leave out the rule for the <code>.nocache.js</code> bootstrap script, since by default most browsers won't cache resources that don't have cache headers set on the response.</p>
+
+  <div id="notice" style="text-align: center; border: 1em 0em 1em 0em">
+  Except as otherwise <a
+  href="http://code.google.com/policies.html#restrictions">noted</a>,
+  the content of this page is licensed under the <a rel="license"
+  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+  Attribution 3.0 License</a>.
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" 
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+    <license rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </License>
+</rdf:RDF> -->
+</div>
+
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div id="gc-content-last-updated">Last updated March 23, 2012.</div>
+
+</div>
+
+      </div>
+
+      </div>
+      
+
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="prod45d.360930183423672260" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b69593dd37b855df5c5d9951f1bf206e' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($);
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+// Add the handlers once the document has loaded.
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  </body>
+</html>

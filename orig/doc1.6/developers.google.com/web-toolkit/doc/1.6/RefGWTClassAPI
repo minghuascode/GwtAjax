@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+  
+  <title>GWT API Reference - Google Web Toolkit &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    <div id="sandbar">
+      
+      <a href="/sandbar?q=&page_url=/web-toolkit/doc/1.6/RefGWTClassAPI"></a>
+      <div id="gc-googlebar"></div>
+      <img src="/images/google-logo.png" style="display:none;"/>
+      
+    </div>
+    
+    
+
+    <div id="gc-wrapper">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Events</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      <div id="gc-appbar">
+        
+        <h1>
+          
+
+  <a href="/web-toolkit/">Google Web Toolkit</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/web-toolkit/"
+      data-size="medium"
+      data-count="count"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+
+        </h1>
+        
+      </div>
+      
+
+      
+      <div id="gc-main">
+        
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><span class="tlw-title" data-title="Docs:">Docs:</span></li><li class=""><a href="/web-toolkit/doc/latest" data-title="Latest Version"><span>Latest Version</span></a></li><li class=""><span class="tlw-title" data-title="Older Versions">Older Versions</span><ul><li class=""><a href="/web-toolkit/doc/2.4" data-title="2.4"><span>2.4</span></a></li><li class=""><a href="/web-toolkit/doc/2.3" data-title="2.3"><span>2.3</span></a></li><li class=""><a href="/web-toolkit/doc/2.2" data-title="2.2"><span>2.2</span></a></li><li class=""><a href="/web-toolkit/doc/2.1" data-title="2.1"><span>2.1</span></a></li><li class=""><a href="/web-toolkit/doc/2.0" data-title="2.0"><span>2.0</span></a></li></ul></li></ul><hr/><ul><li class=""><a href="/web-toolkit/download" data-title="Downloads"><span>Downloads</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/" data-title="GWT Designer"><span>GWT Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/download-gwtdesigner" data-title="Download"><span>Download</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/quick_start" data-title="Quick Start"><span>Quick Start</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/whatsnew" data-title="What&#39;s New"><span>What&#39;s New</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation" data-title="Installation"><span>Installation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/system" data-title="System Requirements"><span>System Requirements</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.7" data-title="Using update site for Eclipse 3.7"><span>Using update site for Eclipse 3.7</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.6" data-title="Using update site for Eclipse 3.6"><span>Using update site for Eclipse 3.6</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.5" data-title="Using update site for Eclipse 3.5"><span>Using update site for Eclipse 3.5</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/updatesite_3.4" data-title="Using update site for Eclipse 3.4"><span>Using update site for Eclipse 3.4</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/installation/uninstall" data-title="Uninstall"><span>Uninstall</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface" data-title="User Interface"><span>User Interface</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/design_view" data-title="Design View"><span>Design View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/source_view" data-title="Source View"><span>Source View</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/structure_view" data-title="Structure View"><span>Structure View</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/component_tree" data-title="Component Tree"><span>Component Tree</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane" data-title="Property Pane"><span>Property Pane</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_pane_context_menu" data-title="Property Pane Context Menu"><span>Property Pane Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string" data-title="String Editor"><span>String Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_string_array" data-title="String Array Editor"><span>String Array Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_color" data-title="Color Editor"><span>Color Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_font" data-title="Font Editor"><span>Font Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_image" data-title="Icon / Image Editor"><span>Icon / Image Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_point" data-title="Point Editor"><span>Point Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_rectangle" data-title="Rectangle Editor"><span>Rectangle Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_inset" data-title="Inset Editor"><span>Inset Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/property_editor_taborder" data-title="Tab Order Editor"><span>Tab Order Editor</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/properties/property_editor_style_name" data-title="Style Name Editor"><span>Style Name Editor</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette" data-title="Palette"><span>Palette</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_context_menu" data-title="Palette Context Menu"><span>Palette Context Menu</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/palette_manager" data-title="Palette Manager"><span>Palette Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/palettes/gwt_palette" data-title="GWT Designer Palette"><span>GWT Designer Palette</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/NewComponentsTutorial.pdf" data-title="New Components Tutorial (PDF)"><span>New Components Tutorial (PDF)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/DesignerCustomizationAPI.pdf" data-title="Designer Customization API (PDF)"><span>Designer Customization API (PDF)</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/toolbar" data-title="Toolbar"><span>Toolbar</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/userinterface/context_menu" data-title="Context Menu"><span>Context Menu</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features" data-title="Features"><span>Features</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/bidirectional" data-title="Bi-directional Code Generation"><span>Bi-directional Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt_code_generation" data-title="GWT Code Generation"><span>GWT Code Generation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/custom_composites" data-title="Custom Panels"><span>Custom Panels</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/factories" data-title="Factories"><span>Factories</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/visual_inheritance" data-title="Visual Inheritance"><span>Visual Inheritance</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/event_handling" data-title="Event Handling"><span>Event Handling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/menu_editing" data-title="Menu Editing"><span>Menu Editing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/morphing" data-title="Morphing"><span>Morphing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/editing_existing_window" data-title="Editing Existing Windows"><span>Editing Existing Windows</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_compiling" data-title="Application Compiling"><span>Application Compiling</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/application_launching" data-title="Application Launching"><span>Application Launching</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/module_deployment" data-title="Build &amp; Deployment"><span>Build &amp; Deployment</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/css_support" data-title="CSS Support"><span>CSS Support</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/enhanced_compilation" data-title="Enhanced Compilation"><span>Enhanced Compilation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/image_bundles" data-title="Image Bundles"><span>Image Bundles</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/internationalization" data-title="Internationalization (i18n)"><span>Internationalization (i18n)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/junit_testcase" data-title="JUnit Test Creation"><span>JUnit Test Creation</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/project" data-title="Projects"><span>Projects</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/refactoring" data-title="Refactoring"><span>Refactoring</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/remoteservice" data-title="Remote Services"><span>Remote Services</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gwt-ext" data-title="Using GWT-Ext"><span>Using GWT-Ext</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/gxt" data-title="Using Ext GWT (GXT)"><span>Using Ext GWT (GXT)</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/features/gwt/smartgwt" data-title="Using SmartGWT"><span>Using SmartGWT</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt" data-title="Panels"><span>Panels</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/absolutepanel" data-title="AbsolutePanel"><span>AbsolutePanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/dockpanel" data-title="Dock[Layout]Panel"><span>Dock[Layout]Panel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flextable" data-title="FlexTable"><span>FlexTable</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/flowpanel" data-title="FlowPanel"><span>FlowPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/gridpanel" data-title="Grid"><span>Grid</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/layoutmanagers/gwt/layoutpanel" data-title="LayoutPanel"><span>LayoutPanel</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt" data-title="Wizards"><span>Wizards</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/entrypoint" data-title="Java EntryPoint"><span>Java EntryPoint</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/composite" data-title="Java Composite"><span>Java Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/dialogbox" data-title="Java DialogBox"><span>Java DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/popuppanel" data-title="Java PopupPanel"><span>Java PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_composite" data-title="UiBinder Composite"><span>UiBinder Composite</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_dialogbox" data-title="UiBinder DialogBox"><span>UiBinder DialogBox</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/uibinder_popuppanel" data-title="UiBinder PopupPanel"><span>UiBinder PopupPanel</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/module" data-title="GWT Module"><span>GWT Module</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/wizards/gwt/library" data-title="GWT Library"><span>GWT Library</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences" data-title="Preferences"><span>Preferences</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_code_parsing" data-title="Code Parsing"><span>Code Parsing</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt" data-title="GWT"><span>GWT</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_builder" data-title="Builder"><span>Builder</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_code_generation" data-title="Code Generation"><span>Code Generation</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_nls" data-title="NLS"><span>NLS</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_variables" data-title="Variables"><span>Variables</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts" data-title="Layouts"><span>Layouts</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_layouts_absolute" data-title="Absolute"><span>Absolute</span></a></li></ul></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer" data-title="Google-Web Toolkit-Designer"><span>Google-Web Toolkit-Designer</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_absolute_layout" data-title="Absolute Layout"><span>Absolute Layout</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_code_style" data-title="Code Style"><span>Code Style</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/gwt/preferences_gpe_designer_event_handlers" data-title="Event Handlers"><span>Event Handlers</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_uitoolkits" data-title="UI Toolkits"><span>UI Toolkits</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/preferences/preferences_export" data-title="Export/Import"><span>Export/Import</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials" data-title="Tutorials"><span>Tutorials</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/loginmanager" data-title="GWT Login Manager"><span>GWT Login Manager</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tutorials/stockwatcher" data-title="GWT Stock Watcher"><span>GWT Stock Watcher</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/product_support" data-title="Product Support"><span>Product Support</span></a><ul><li class=""><a href="/web-toolkit/tools/gwtdesigner/error_reporting" data-title="Error Reporting"><span>Error Reporting</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/support/test_cases" data-title="Reproducible Test Cases"><span>Reproducible Test Cases</span></a></li><li class=""><a href="http://groups.google.com/group/google-web-toolkit" data-title="Forum"><span>Forum</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/accessibility" data-title="Accessibility"><span>Accessibility</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tipsandtricks" data-title="Tips &amp; Tricks"><span>Tips &amp; Tricks</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/web-toolkit/tools/gwtdesigner/tos" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></li></ul><hr/><ul><li class=""><span class="tlw-title" data-title="Resources:">Resources:</span></li><li class=""><a href="/web-toolkit/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="/web-toolkit/books" data-title="Books"><span>Books</span></a></li><li class=""><a href="/web-toolkit/casestudies" data-title="Case Studies"><span>Case Studies</span></a></li><li class=""><a href="/web-toolkit/community" data-title="Community"><span>Community</span></a><ul><li class=""><a href="http://gwtgallery.appspot.com" data-title="App Gallery"><span>App Gallery</span></a></li><li class=""><a href="/web-toolkit/developer_spotlight" data-title="Developer Spotlight"><span>Developer Spotlight</span></a></li></ul></li><li class=""><a href="/web-toolkit/tools" data-title="Tools &amp; Libraries"><span>Tools &amp; Libraries</span></a></li><li class=""><a href="/web-toolkit/media_gallery" data-title="Presentations"><span>Presentations</span></a></li><li class=""><a href="/web-toolkit/makinggwtbetter" data-title="Making GWT Better"><span>Making GWT Better</span></a></li><li class=""><a href="/web-toolkit/lifeofanissue" data-title="Issue Tracking"><span>Issue Tracking</span></a></li><li class=""><a href="http://googlewebtoolkit.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="/web-toolkit/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 class="page-title" >GWT API Reference</h1>
+  
+  
+
+
+
+<p>
+The Google Web Toolkit includes a class library designed to help you <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/ui/package-summary.html" rel="nofollow">build your user interface</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/user/client/rpc/package-summary.html" rel="nofollow">make RPC calls to your server</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/package-summary.html" rel="nofollow">internationalize your application</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/junit/client/package-summary.html" rel="nofollow">perform unit testing</a>, and lots more.
+For complete details about the GWT class library, click below to view the javadoc-style API reference.
+</p>
+
+<table>
+  <tr>
+    <td style="border: 1px solid #aaa; padding: 5px;">
+      <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/index.html?overview-summary.html" rel="nofollow">Browse the GWT API Documentation</a>
+    </td>
+  </tr>
+</table>
+
+
+ 
+  <div id="notice" style="text-align: center; border: 1em 0em 1em 0em">
+  Except as otherwise <a
+  href="http://code.google.com/policies.html#restrictions">noted</a>,
+  the content of this page is licensed under the <a rel="license"
+  href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+  Attribution 3.0 License</a>.
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" 
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+    <license rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </License>
+</rdf:RDF> -->
+</div>
+
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div id="gc-content-last-updated">Last updated March 23, 2012.</div>
+
+</div>
+
+      </div>
+
+      </div>
+      
+
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="prod45d.360930183423672260" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b69593dd37b855df5c5d9951f1bf206e' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($);
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+// Add the handlers once the document has loaded.
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  </body>
+</html>
