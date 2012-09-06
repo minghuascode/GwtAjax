@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.google.gwt.sample.hello.client;
+package com.example3.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -24,6 +24,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 /**
  * HelloWorld application.
+ * Package name changed from  com.google.gwt.sample.hello. to  com.example3.
  */
 public class Hello implements EntryPoint {
 

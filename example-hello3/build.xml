@@ -55,7 +55,7 @@
       <jvmarg value="${XstartOnFirstThreadFlag}"/>
       <jvmarg value="${d32Flag}"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
-      <arg value="com.google.gwt.sample.hello.Hello"/>
+      <arg value="com.example3.Hello"/>
     </java>
   </target>
 
@@ -75,7 +75,7 @@
       <arg value="DETAILED"/>
       <arg value="-logLevel"/>
       <arg value="DEBUG"/>
-      <arg value="com.google.gwt.sample.hello.Hello"/>
+      <arg value="com.example3.Hello"/>
     </java>
   </target>
 
@@ -86,7 +86,7 @@
       </classpath>
       <arg value="-XonlyEclipse"/>
       <arg value="-ignore"/>
-      <arg value="com.google.gwt.sample.hello.Hello"/>
+      <arg value="com.example3.Hello"/>
     </java>
   </target>
 

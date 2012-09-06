@@ -2,9 +2,12 @@
 
 src=nbprojlink
 
-rsync -rtv $1 --exclude war/hello* \
+rsync -rtv $@ --exclude war/hello* \
               --exclude war/WEB-INF/classes* \
               --exclude war/WEB-INF/lib* \
               --exclude nbproject* \
+              --exclude nbprojlink* \
+              --exclude projsync* \
+              --exclude .gitignore* \
   ${src}/  ./
 

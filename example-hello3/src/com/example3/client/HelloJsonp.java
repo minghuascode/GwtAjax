@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.google.gwt.sample.hello.client;
+package com.example3.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -140,13 +140,13 @@ public class HelloJsonp implements HelloJsonRequestHandler {
   private native static void createCallbackFunction( HelloJsonRequestHandler obj, 
                                                      String callbackName)/*-{
     tmpcallback = function(j) {
-      obj.@com.google.gwt.sample.hello.client.HelloJsonp::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
+      obj.@com.example3.client.HelloJsonp::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
     };
     eval( "window." + callbackName + "=tmpcallback" );
   }-*/;
   
   /*
-obj.@com.google.gwt.sample.hello.client.HelloJsonRequestHandler::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
+obj.@com.example3.client.HelloJsonRequestHandler::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
    */
 }
 
