@@ -16,10 +16,12 @@
 package com.example3.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
 
 /**
@@ -27,19 +29,48 @@ import com.google.gwt.user.client.ui.RootPanel;
  * Package name changed from  com.google.gwt.sample.hello. to  com.example3.
  */
 public class Hello implements EntryPoint {
-
+    
   public void onModuleLoad() {
+    thisHelloObj = this;
     Button b = new Button("Click me", new ClickHandler() {
       public void onClick(ClickEvent event) {
-        //Window.alert("Hello, AJAX");
-          HelloJsonp.get();
+        Window.alert("Hello, AJAX");
+        //  HelloJsonp.get();
       }
     });
 
     RootPanel.get().add(b);
+    
+    Button b2 = new Button("Click me b2", new ClickHandler() {
+      public void onClick(ClickEvent event) {
+        HelloFront front = new HelloFront();
+        front.init();
+      }
+    });
+    RootPanel.get().add(b2);
+    thisHelloRoot = RootPanel.get();
   }
   
   public static void callback(String m) {
     Window.alert("Hello, AJAX\n" + m);
+  }
+  
+  private static Hello thisHelloObj = null;
+  private static RootPanel thisHelloRoot = null;
+  public static void hookNewRoot(Panel pnl) {
+    if (thisHelloObj == null) {
+        GWT.log("Null thisHelloObj. Return", null);
+        return;
+    }
+    if (thisHelloRoot == null) {
+        GWT.log("Null thisHelloRoot. Return.", null);
+        return;
+    }
+    if (pnl == null) {
+        GWT.log("Null pnl. Return.",null);
+        return;
+    }
+    thisHelloRoot.clear();
+    thisHelloRoot.add(pnl);
   }
 }
