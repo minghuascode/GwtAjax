@@ -1,0 +1,15 @@
+
+Exploring GWT
+
+ orig/
+   -- Original GWT files downloaded from google.
+
+ example-hello2
+   -- A collection of example(s) source files derived from gwt samples.
+
+ example-hello3
+   -- A complete example derived from gwt samples.
+
+ README
+   -- This file.
+
