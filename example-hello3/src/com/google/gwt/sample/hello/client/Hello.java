@@ -30,10 +30,15 @@ public class Hello implements EntryPoint {
   public void onModuleLoad() {
     Button b = new Button("Click me", new ClickHandler() {
       public void onClick(ClickEvent event) {
-        Window.alert("Hello, AJAX");
+        //Window.alert("Hello, AJAX");
+          HelloJsonp.get();
       }
     });
 
     RootPanel.get().add(b);
+  }
+  
+  public static void callback(String m) {
+    Window.alert("Hello, AJAX\n" + m);
   }
 }

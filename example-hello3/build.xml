@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="Hello" default="build" basedir=".">
   <!-- Configure path to GWT SDK -->
-  <property name="gwt.sdk" location="../.." />
+  <property name="gwt.sdk" location="../../gwt-linux-1.7.1" />
 
   <!-- SWT on Mac requires the -XstartOFirstThreadFlag. -->
   <condition property="XstartOnFirstThreadFlag" value="-XstartOnFirstThread"
@@ -71,6 +71,10 @@
       <arg value="-startupUrl"/>
       <arg value="Hello.html"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+      <arg value="-style"/>
+      <arg value="DETAILED"/>
+      <arg value="-logLevel"/>
+      <arg value="DEBUG"/>
       <arg value="com.google.gwt.sample.hello.Hello"/>
     </java>
   </target>
