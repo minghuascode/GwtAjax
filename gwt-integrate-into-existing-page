@@ -1,0 +1,23 @@
+
+http://markmacumber.net/2009/04/integrating-gwt-into-an-existing-application.html
+
+
+  package mypackage;
+  public MyUtilityClass
+  {
+    public static int generateWidget(int intProp, String stringProp) {
+       ...GWT code goes here...
+    }
+    public static native void exportStaticMethod() /*-{
+       $wnd.loadMyBusinessWidget =
+          @mypackage.MyUtilityClass::generateWidget(Ijava/lang/String);
+    }-*/;
+  }
+
+On the start up of the app, in the onModuleLoad() method of the entry point, 
+(i.e. when the page loads through the *nocache.js file), we call the native 
+method exportStaticMethod() which then exposes the method loadMyBusinesWidget() 
+on the window page object that I can call anytime (and as you can see, pass in 
+parameters too!) like so:
+
+  window.loadMyBusinessWidget(123, 'some string');
